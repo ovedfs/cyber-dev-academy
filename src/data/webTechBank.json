@@ -1,0 +1,2017 @@
+[
+  {
+    "id": "wt-001",
+    "question": "¿Qué etiqueta se usa para declarar el tipo de documento HTML5?",
+    "options": [
+      "`<html>`",
+      "`<!DOCTYPE html>`",
+      "`<meta charset=\"UTF-8\">`",
+      "`<document>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-002",
+    "question": "¿Qué etiqueta contiene los metadatos de una página HTML?",
+    "options": [
+      "`<body>`",
+      "`<meta>`",
+      "`<head>`",
+      "`<footer>`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-003",
+    "question": "¿Cuál es la etiqueta semántica para la navegación principal?",
+    "options": [
+      "`<navigation>`",
+      "`<nav>`",
+      "`<menu>`",
+      "`<header>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-004",
+    "question": "¿Qué etiqueta se usa para insertar una imagen en HTML?",
+    "options": [
+      "`<image src=\"...\">`",
+      "`<img src=\"...\" alt=\"...\">`",
+      "`<pic src=\"...\">`",
+      "`<picture src=\"...\">`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-005",
+    "question": "¿Qué atributo de `<img>` es obligatorio para accesibilidad?",
+    "options": [
+      "`src`",
+      "`alt`",
+      "`title`",
+      "`width`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-006",
+    "question": "¿Qué etiqueta se usa para crear un hipervínculo?",
+    "options": [
+      "`<link>`",
+      "`<a>`",
+      "`<href>`",
+      "`<url>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-007",
+    "question": "¿Qué atributo de `<a>` abre el enlace en una nueva pestaña?",
+    "options": [
+      "`target=\"_self\"`",
+      "`target=\"_blank\"`",
+      "`target=\"new\"`",
+      "`target=\"_new\"`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-008",
+    "question": "¿Qué etiqueta representa el contenido principal de una página?",
+    "options": [
+      "`<main>`",
+      "`<body>`",
+      "`<content>`",
+      "`<section>`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-009",
+    "question": "¿Qué etiqueta se usa para una lista desordenada?",
+    "options": [
+      "`<ol>`",
+      "`<ul>`",
+      "`<li>`",
+      "`<list>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-010",
+    "question": "¿Qué etiqueta se usa para cada elemento de una lista?",
+    "options": [
+      "`<item>`",
+      "`<li>`",
+      "`<el>`",
+      "`<element>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-011",
+    "question": "¿Qué atributo de `<form>` especifica dónde enviar los datos?",
+    "options": [
+      "`method`",
+      "`action`",
+      "`target`",
+      "`enctype`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "html"
+  },
+  {
+    "id": "wt-012",
+    "question": "¿Qué tipo de `<input>` se usa para contraseñas?",
+    "options": [
+      "`text`",
+      "`password`",
+      "`secret`",
+      "`hidden`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-013",
+    "question": "¿Qué etiqueta se usa para agrupar opciones en un formulario?",
+    "options": [
+      "`<group>`",
+      "`<fieldset>`",
+      "`<optgroup>`",
+      "`<section>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "html"
+  },
+  {
+    "id": "wt-014",
+    "question": "¿Qué etiqueta semántica se usa para el pie de página?",
+    "options": [
+      "`<footer>`",
+      "`<bottom>`",
+      "`<end>`",
+      "`<foot>`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-015",
+    "question": "¿Qué etiqueta se usa para insertar un salto de línea?",
+    "options": [
+      "`<break>`",
+      "`<br>`",
+      "`<lb>`",
+      "`<newline>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-016",
+    "question": "¿Qué etiqueta se usa para texto en negrita con importancia semántica?",
+    "options": [
+      "`<b>`",
+      "`<strong>`",
+      "`<bold>`",
+      "`<important>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "html"
+  },
+  {
+    "id": "wt-017",
+    "question": "¿Qué etiqueta se usa para insertar un video en HTML5?",
+    "options": [
+      "`<movie>`",
+      "`<video>`",
+      "`<media>`",
+      "`<film>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-018",
+    "question": "¿Qué atributo es único y no debe repetirse en una página?",
+    "options": [
+      "`class`",
+      "`id`",
+      "`name`",
+      "`style`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-019",
+    "question": "¿Qué etiqueta se usa para una línea horizontal?",
+    "options": [
+      "`<line>`",
+      "`<hr>`",
+      "`<br>`",
+      "`<divider>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-020",
+    "question": "¿Qué etiqueta envuelve una sección temática de contenido?",
+    "options": [
+      "`<div>`",
+      "`<section>`",
+      "`<article>`",
+      "`<span>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "html"
+  },
+  {
+    "id": "wt-021",
+    "question": "¿Cómo se inserta un comentario en CSS?",
+    "options": [
+      "`// comentario`",
+      "`/* comentario */`",
+      "`<!-- comentario -->`",
+      "`# comentario`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-022",
+    "question": "¿Qué propiedad CSS cambia el color del texto?",
+    "options": [
+      "`text-color`",
+      "`color`",
+      "`font-color`",
+      "`foreground`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-023",
+    "question": "¿Qué propiedad CSS cambia el color de fondo?",
+    "options": [
+      "`bg-color`",
+      "`background-color`",
+      "`color-background`",
+      "`background`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-024",
+    "question": "¿Qué selector CSS selecciona elementos por su clase?",
+    "options": [
+      "`#nombre`",
+      "`.nombre`",
+      "`*nombre`",
+      "`$nombre`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-025",
+    "question": "¿Qué selector CSS selecciona elementos por su ID?",
+    "options": [
+      "`#nombre`",
+      "`.nombre`",
+      "`%nombre`",
+      "`&nombre`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-026",
+    "question": "¿Qué pseudoclase se activa cuando el mouse pasa sobre un elemento?",
+    "options": [
+      "`:click`",
+      "`:hover`",
+      "`:over`",
+      "`:mouse`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-027",
+    "question": "¿Qué propiedad CSS controla el tamaño de la fuente?",
+    "options": [
+      "`text-size`",
+      "`font-size`",
+      "`size`",
+      "`font-height`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-028",
+    "question": "¿Qué propiedad CSS hace que el texto esté en negrita?",
+    "options": [
+      "`font-weight: bold`",
+      "`text-bold: true`",
+      "`font-style: bold`",
+      "`weight: bold`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-029",
+    "question": "¿Qué propiedad CSS controla el margen exterior de un elemento?",
+    "options": [
+      "`padding`",
+      "`margin`",
+      "`border`",
+      "`spacing`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-030",
+    "question": "¿Qué propiedad CSS controla el relleno interior de un elemento?",
+    "options": [
+      "`margin`",
+      "`padding`",
+      "`gap`",
+      "`space`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-031",
+    "question": "¿Qué valor de `display` hace que un elemento ocupe todo el ancho disponible?",
+    "options": [
+      "`inline`",
+      "`block`",
+      "`inline-block`",
+      "`flex`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-032",
+    "question": "¿Qué propiedad CSS se usa para crear un layout flexible?",
+    "options": [
+      "`display: grid`",
+      "`display: flex`",
+      "`display: block`",
+      "`display: inline`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-033",
+    "question": "¿Qué propiedad de Flexbox alinea elementos horizontalmente?",
+    "options": [
+      "`align-items`",
+      "`justify-content`",
+      "`flex-direction`",
+      "`text-align`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-034",
+    "question": "¿Qué propiedad de Flexbox alinea elementos verticalmente?",
+    "options": [
+      "`justify-content`",
+      "`align-items`",
+      "`vertical-align`",
+      "`flex-align`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-035",
+    "question": "¿Qué propiedad CSS establece la dirección de los elementos flex?",
+    "options": [
+      "`flex-wrap`",
+      "`flex-direction`",
+      "`direction`",
+      "`flex-flow`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-036",
+    "question": "¿Qué propiedad de CSS Grid define las columnas?",
+    "options": [
+      "`grid-columns`",
+      "`grid-template-columns`",
+      "`columns`",
+      "`grid-cols`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-037",
+    "question": "¿Qué unidad de CSS Grid representa una fracción del espacio disponible?",
+    "options": [
+      "`px`",
+      "`%`",
+      "`fr`",
+      "`em`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-038",
+    "question": "¿Qué propiedad CSS hace que un elemento sea cuadrado usando `box-sizing`?",
+    "options": [
+      "`box-sizing: content-box`",
+      "`box-sizing: border-box`",
+      "`box-sizing: padding-box`",
+      "`box-sizing: margin-box`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-039",
+    "question": "¿Qué consulta de medios se usa para diseño responsive?",
+    "options": [
+      "`@media screen`",
+      "`@media (max-width: 768px)`",
+      "`@media mobile`",
+      "`@responsive`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-040",
+    "question": "¿Qué propiedad CSS controla la transparencia de un elemento?",
+    "options": [
+      "`transparency`",
+      "`opacity`",
+      "`alpha`",
+      "`visible`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-041",
+    "question": "¿Qué método selecciona un elemento del DOM por su ID?",
+    "options": [
+      "`document.querySelector(\"#id\")`",
+      "`document.getElementById(\"id\")`",
+      "`document.getElement(\"id\")`",
+      "`document.querySelector(\".id\")`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-042",
+    "question": "¿Qué método selecciona el primer elemento que coincide con un selector CSS?",
+    "options": [
+      "`document.querySelector()`",
+      "`document.querySelectorAll()`",
+      "`document.getElementById()`",
+      "`document.getElementsByClassName()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-043",
+    "question": "¿Qué propiedad cambia el contenido de texto de un elemento?",
+    "options": [
+      "`innerHTML`",
+      "`textContent`",
+      "`value`",
+      "`innerText`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-044",
+    "question": "¿Qué método agrega una clase CSS a un elemento?",
+    "options": [
+      "`element.className.add()`",
+      "`element.classList.add()`",
+      "`element.addClass()`",
+      "`element.classAdd()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-045",
+    "question": "¿Qué método elimina una clase CSS de un elemento?",
+    "options": [
+      "`element.classList.remove()`",
+      "`element.className.remove()`",
+      "`element.removeClass()`",
+      "`element.classDelete()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-046",
+    "question": "¿Qué método alterna una clase CSS en un elemento?",
+    "options": [
+      "`element.classList.switch()`",
+      "`element.classList.toggle()`",
+      "`element.toggleClass()`",
+      "`element.classToggle()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-047",
+    "question": "¿Qué método se usa para escuchar eventos en el DOM?",
+    "options": [
+      "`element.onClick()`",
+      "`element.addEventListener()`",
+      "`element.listen()`",
+      "`element.on()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-048",
+    "question": "¿Qué evento se dispara cuando se hace clic en un elemento?",
+    "options": [
+      "`hover`",
+      "`click`",
+      "`press`",
+      "`tap`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-049",
+    "question": "¿Qué método previene el comportamiento por defecto de un evento?",
+    "options": [
+      "`event.stopPropagation()`",
+      "`event.preventDefault()`",
+      "`event.stop()`",
+      "`event.cancel()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-050",
+    "question": "¿Qué evento se dispara cuando se envía un formulario?",
+    "options": [
+      "`click`",
+      "`submit`",
+      "`send`",
+      "`form`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-051",
+    "question": "¿Qué propiedad de los inputs contiene el valor escrito?",
+    "options": [
+      "`text`",
+      "`value`",
+      "`content`",
+      "`data`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-052",
+    "question": "¿Qué método crea un nuevo elemento HTML?",
+    "options": [
+      "`document.createElement()`",
+      "`document.newElement()`",
+      "`document.makeElement()`",
+      "`document.buildElement()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-053",
+    "question": "¿Qué método agrega un hijo al final de un elemento?",
+    "options": [
+      "`element.appendChild()`",
+      "`element.addChild()`",
+      "`element.append()`",
+      "`element.pushChild()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-054",
+    "question": "¿Qué evento se dispara cuando una tecla es presionada?",
+    "options": [
+      "`keypress`",
+      "`keydown`",
+      "`keyup`",
+      "`type`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-055",
+    "question": "¿Qué método de array ejecuta una función para cada elemento?",
+    "options": [
+      "`array.map()`",
+      "`array.forEach()`",
+      "`array.filter()`",
+      "`array.reduce()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-056",
+    "question": "¿Qué método de array crea un nuevo array con los resultados de una función?",
+    "options": [
+      "`array.forEach()`",
+      "`array.map()`",
+      "`array.filter()`",
+      "`array.reduce()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-057",
+    "question": "¿Qué método de array filtra elementos según una condición?",
+    "options": [
+      "`array.map()`",
+      "`array.filter()`",
+      "`array.find()`",
+      "`array.some()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-058",
+    "question": "¿Qué método de array encuentra el primer elemento que cumple una condición?",
+    "options": [
+      "`array.filter()`",
+      "`array.find()`",
+      "`array.includes()`",
+      "`array.indexOf()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-059",
+    "question": "¿Qué método de array verifica si incluye un valor?",
+    "options": [
+      "`array.contains()`",
+      "`array.includes()`",
+      "`array.has()`",
+      "`array.indexOf()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-060",
+    "question": "¿Qué método de array agrega un elemento al final?",
+    "options": [
+      "`array.push()`",
+      "`array.pop()`",
+      "`array.unshift()`",
+      "`array.shift()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-061",
+    "question": "¿Qué método de array elimina el último elemento?",
+    "options": [
+      "`array.push()`",
+      "`array.pop()`",
+      "`array.shift()`",
+      "`array.splice()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-062",
+    "question": "¿Qué método de array agrega un elemento al inicio?",
+    "options": [
+      "`array.push()`",
+      "`array.pop()`",
+      "`array.unshift()`",
+      "`array.shift()`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-063",
+    "question": "¿Qué método de array elimina el primer elemento?",
+    "options": [
+      "`array.pop()`",
+      "`array.shift()`",
+      "`array.unshift()`",
+      "`array.splice()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-064",
+    "question": "¿Qué método convierte un objeto JS a JSON?",
+    "options": [
+      "`JSON.parse()`",
+      "`JSON.stringify()`",
+      "`JSON.convert()`",
+      "`JSON.toString()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-065",
+    "question": "¿Qué método convierte un JSON a objeto JS?",
+    "options": [
+      "`JSON.parse()`",
+      "`JSON.stringify()`",
+      "`JSON.convert()`",
+      "`JSON.toObject()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-066",
+    "question": "¿Qué método de string elimina espacios al inicio y final?",
+    "options": [
+      "`string.trim()`",
+      "`string.strip()`",
+      "`string.clean()`",
+      "`string.cut()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-067",
+    "question": "¿Qué método de string convierte a minúsculas?",
+    "options": [
+      "`string.toLower()`",
+      "`string.toLowerCase()`",
+      "`string.lower()`",
+      "`string.toLow()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-068",
+    "question": "¿Qué método de string extrae una parte?",
+    "options": [
+      "`string.cut()`",
+      "`string.slice()`",
+      "`string.extract()`",
+      "`string.substring()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-069",
+    "question": "¿Qué método de string verifica si contiene un texto?",
+    "options": [
+      "`string.contains()`",
+      "`string.includes()`",
+      "`string.has()`",
+      "`string.indexOf()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-070",
+    "question": "¿Qué propiedad de `localStorage` guarda un valor?",
+    "options": [
+      "`localStorage.set()`",
+      "`localStorage.setItem()`",
+      "`localStorage.save()`",
+      "`localStorage.store()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-071",
+    "question": "¿Qué es React según su filosofía principal?",
+    "options": [
+      "Un framework MVC completo",
+      "Una biblioteca para construir interfaces de usuario basada en componentes",
+      "Un motor de plantillas HTML",
+      "Un compilador de JavaScript"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-072",
+    "question": "¿Qué significa SPA en React?",
+    "options": [
+      "Single Page Application",
+      "Simple Page Architecture",
+      "Standard Programming API",
+      "Server Preloaded App"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-073",
+    "question": "¿Qué es JSX en React?",
+    "options": [
+      "Un tipo de archivo JavaScript",
+      "Una extensión de sintaxis que permite escribir HTML en JavaScript",
+      "Un framework de estilos",
+      "Un gestor de estado"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-074",
+    "question": "¿Qué regla debe seguir JSX respecto al elemento raíz?",
+    "options": [
+      "Debe tener múltiples elementos raíz",
+      "Debe tener un único elemento raíz o Fragment",
+      "No puede tener elementos anidados",
+      "Debe usar un div siempre"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-075",
+    "question": "¿Qué atributo de HTML se reemplaza por `className` en JSX?",
+    "options": [
+      "`id`",
+      "`class`",
+      "`name`",
+      "`style`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-076",
+    "question": "¿Qué atributo de HTML se reemplaza por `htmlFor` en JSX?",
+    "options": [
+      "`for`",
+      "`id`",
+      "`name`",
+      "`target`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-077",
+    "question": "¿Cómo se evalúa una expresión JS dentro de JSX?",
+    "options": [
+      "`{{ expresión }}`",
+      "`{ expresión }`",
+      "`${ expresión }`",
+      "`( expresión )`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-078",
+    "question": "¿Qué son los componentes en React?",
+    "options": [
+      "Archivos CSS reutilizables",
+      "Funciones que retornan elementos React/JSX",
+      "Clases de estilos predefinidas",
+      "Módulos de Node.js"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-079",
+    "question": "¿Cómo se pasan datos a un componente React?",
+    "options": [
+      "Mediante `state`",
+      "Mediante `props`",
+      "Mediante `variables`",
+      "Mediante `store`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-080",
+    "question": "¿Qué son las `props` en React?",
+    "options": [
+      "El estado interno del componente",
+      "Los datos que un componente padre pasa a un componente hijo",
+      "Las funciones de ciclo de vida",
+      "Los estilos del componente"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-081",
+    "question": "¿Cómo se reciben las props en un componente funcional?",
+    "options": [
+      "Como parámetro de la función",
+      "Mediante `this.props`",
+      "Mediante `useProps()`",
+      "Como variable global"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-082",
+    "question": "¿Qué hook se usa para agregar estado a un componente funcional?",
+    "options": [
+      "`useEffect`",
+      "`useState`",
+      "`useContext`",
+      "`useReducer`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-083",
+    "question": "¿Cuál es la sintaxis correcta de `useState`?",
+    "options": [
+      "`const [valor, setValor] = useState(valorInicial)`",
+      "`const [valor, setValor] = useState()`",
+      "`const valor = useState(valorInicial)`",
+      "`const [valor] = useState(valorInicial)`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-084",
+    "question": "¿Qué hace `setValor(nuevoValor)` en React?",
+    "options": [
+      "Cambia el valor y actualiza el componente",
+      "Solo cambia el valor sin re-renderizar",
+      "Crea una nueva variable",
+      "Elimina el estado"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-085",
+    "question": "¿Qué evento se usa en React para manejar clics?",
+    "options": [
+      "`onclick`",
+      "`onClick`",
+      "`onPress`",
+      "`onTap`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-086",
+    "question": "¿Qué evento se usa en React para cambios en inputs?",
+    "options": [
+      "`onChange`",
+      "`onInput`",
+      "`onKeyup`",
+      "`onUpdate`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-087",
+    "question": "¿Cómo se renderiza una lista en React?",
+    "options": [
+      "Usando `for` loop",
+      "Usando `array.map()`",
+      "Usando `array.forEach()`",
+      "Usando `while` loop"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-088",
+    "question": "¿Qué atributo especial se necesita al renderizar listas en React?",
+    "options": [
+      "`id`",
+      "`key`",
+      "`ref`",
+      "`index`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-089",
+    "question": "¿Cómo se hace renderizado condicional en React?",
+    "options": [
+      "Usando `if` dentro de JSX",
+      "Usando operador ternario `? :` o `&&`",
+      "Usando `switch` dentro de JSX",
+      "Usando `for` loop"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-090",
+    "question": "¿Qué propiedad especial de React permite pasar hijos a un componente?",
+    "options": [
+      "`props.children`",
+      "`props.content`",
+      "`props.body`",
+      "`props.inner`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-091",
+    "question": "¿Qué comando de Git inicializa un nuevo repositorio?",
+    "options": [
+      "`git start`",
+      "`git init`",
+      "`git new`",
+      "`git create`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-092",
+    "question": "¿Qué comando de Git muestra el estado de los archivos?",
+    "options": [
+      "`git check`",
+      "`git status`",
+      "`git state`",
+      "`git list`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-093",
+    "question": "¿Qué comando de Git prepara archivos para un commit?",
+    "options": [
+      "`git commit`",
+      "`git add`",
+      "`git push`",
+      "`git stage`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-094",
+    "question": "¿Qué comando de Git crea un punto de restauración en el historial?",
+    "options": [
+      "`git save`",
+      "`git commit`",
+      "`git push`",
+      "`git checkpoint`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-095",
+    "question": "¿Qué bandera se usa en `git commit` para agregar un mensaje?",
+    "options": [
+      "`-m`",
+      "`-a`",
+      "`-msg`",
+      "`--message`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-096",
+    "question": "¿Qué comando de Git muestra el historial de commits?",
+    "options": [
+      "`git history`",
+      "`git log`",
+      "`git show`",
+      "`git timeline`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-097",
+    "question": "¿Qué comando de Git envía cambios al repositorio remoto?",
+    "options": [
+      "`git send`",
+      "`git push`",
+      "`git upload`",
+      "`git remote`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-098",
+    "question": "¿Qué comando de Git descarga cambios del repositorio remoto?",
+    "options": [
+      "`git download`",
+      "`git pull`",
+      "`git fetch`",
+      "`git sync`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-099",
+    "question": "¿Qué comando de Git clona un repositorio remoto?",
+    "options": [
+      "`git copy`",
+      "`git clone`",
+      "`git fork`",
+      "`git download`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-100",
+    "question": "¿Qué comando de Git crea una nueva rama?",
+    "options": [
+      "`git branch`",
+      "`git new-branch`",
+      "`git create-branch`",
+      "`git checkout -b`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-101",
+    "question": "¿Qué comando de Git cambia de rama?",
+    "options": [
+      "`git change`",
+      "`git checkout`",
+      "`git switch`",
+      "`git move`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-102",
+    "question": "¿Qué comando de Git fusiona ramas?",
+    "options": [
+      "`git merge`",
+      "`git join`",
+      "`git combine`",
+      "`git integrate`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-103",
+    "question": "¿Qué archivo se usa para excluir archivos de Git?",
+    "options": [
+      "`.gitignore`",
+      "`.exclude`",
+      "`ignore.txt`",
+      "`.gitconfig`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-104",
+    "question": "¿Qué comando vincula un repositorio local con uno remoto?",
+    "options": [
+      "`git remote add origin <URL>`",
+      "`git link <URL>`",
+      "`git connect <URL>`",
+      "`git bind <URL>`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-105",
+    "question": "¿Qué son las 3 áreas principales de Git?",
+    "options": [
+      "Local, Server, Cloud",
+      "Working Directory, Staging Area, Repository",
+      "Source, Build, Deploy",
+      "Main, Develop, Feature"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-106",
+    "question": "¿Qué etiqueta HTML se usa para un párrafo?",
+    "options": [
+      "`<paragraph>`",
+      "`<p>`",
+      "`<text>`",
+      "`<par>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-107",
+    "question": "¿Qué atributo de `<a>` especifica la URL del enlace?",
+    "options": [
+      "`link`",
+      "`src`",
+      "`href`",
+      "`url`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-108",
+    "question": "¿Qué etiqueta se usa para un encabezado de nivel 1?",
+    "options": [
+      "`<heading>`",
+      "`<h1>`",
+      "`<header>`",
+      "`<title>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-109",
+    "question": "¿Qué etiqueta se usa para contenido independiente como un blog post?",
+    "options": [
+      "`<section>`",
+      "`<article>`",
+      "`<div>`",
+      "`<content>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "html"
+  },
+  {
+    "id": "wt-110",
+    "question": "¿Qué etiqueta se usa para una lista ordenada?",
+    "options": [
+      "`<ul>`",
+      "`<ol>`",
+      "`<li>`",
+      "`<list>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-111",
+    "question": "¿Qué propiedad CSS controla el espaciado entre líneas?",
+    "options": [
+      "`line-height`",
+      "`letter-spacing`",
+      "`line-spacing`",
+      "`text-height`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-112",
+    "question": "¿Qué propiedad CSS controla la alineación del texto?",
+    "options": [
+      "`align`",
+      "`text-align`",
+      "`vertical-align`",
+      "`justify`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-113",
+    "question": "¿Qué valor de `position` mantiene un elemento fijo en la pantalla?",
+    "options": [
+      "`relative`",
+      "`absolute`",
+      "`fixed`",
+      "`sticky`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-114",
+    "question": "¿Qué propiedad CSS controla el ancho de un elemento?",
+    "options": [
+      "`width`",
+      "`size`",
+      "`max-width`",
+      "`height`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-115",
+    "question": "¿Qué propiedad CSS controla el borde de un elemento?",
+    "options": [
+      "`outline`",
+      "`border`",
+      "`stroke`",
+      "`edge`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-116",
+    "question": "¿Qué propiedad CSS hace que un elemento sea invisible pero ocupe espacio?",
+    "options": [
+      "`display: none`",
+      "`visibility: hidden`",
+      "`opacity: 0`",
+      "`hidden: true`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-117",
+    "question": "¿Qué propiedad CSS establece la fuente del texto?",
+    "options": [
+      "`font`",
+      "`font-family`",
+      "`typeface`",
+      "`text-font`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-118",
+    "question": "¿Qué propiedad de Flexbox envuelve los elementos en múltiples líneas?",
+    "options": [
+      "`flex-direction`",
+      "`flex-wrap`",
+      "`flex-flow`",
+      "`wrap`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-119",
+    "question": "¿Qué propiedad de CSS Grid define las filas?",
+    "options": [
+      "`grid-template-rows`",
+      "`grid-rows`",
+      "`rows`",
+      "`grid-row-template`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-120",
+    "question": "¿Qué propiedad CSS establece el grosor de la fuente?",
+    "options": [
+      "`font-weight`",
+      "`font-size`",
+      "`font-style`",
+      "`weight`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-121",
+    "question": "¿Qué método selecciona todos los elementos que coinciden con un selector CSS?",
+    "options": [
+      "`document.querySelector()`",
+      "`document.querySelectorAll()`",
+      "`document.getElementsByTagName()`",
+      "`document.findAll()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-122",
+    "question": "¿Qué propiedad establece el contenido HTML de un elemento?",
+    "options": [
+      "`textContent`",
+      "`innerHTML`",
+      "`value`",
+      "`outerHTML`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-123",
+    "question": "¿Qué método detiene la propagación de un evento?",
+    "options": [
+      "`event.preventDefault()`",
+      "`event.stopPropagation()`",
+      "`event.stop()`",
+      "`event.cancelBubble()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-124",
+    "question": "¿Qué evento se dispara cuando el DOM está completamente cargado?",
+    "options": [
+      "`load`",
+      "`DOMContentLoaded`",
+      "`ready`",
+      "`init`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-125",
+    "question": "¿Qué método de array reduce todos los elementos a un solo valor?",
+    "options": [
+      "`array.reduce()`",
+      "`array.filter()`",
+      "`array.map()`",
+      "`array.forEach()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-126",
+    "question": "¿Qué método de array verifica si ALGÚN elemento cumple una condición?",
+    "options": [
+      "`array.every()`",
+      "`array.some()`",
+      "`array.includes()`",
+      "`array.find()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-127",
+    "question": "¿Qué método de array verifica si TODOS los elementos cumplen una condición?",
+    "options": [
+      "`array.some()`",
+      "`array.every()`",
+      "`array.includes()`",
+      "`array.filter()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-128",
+    "question": "¿Qué método de array ordena los elementos?",
+    "options": [
+      "`array.order()`",
+      "`array.sort()`",
+      "`array.arrange()`",
+      "`array.organize()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-129",
+    "question": "¿Qué método de array combina dos arrays?",
+    "options": [
+      "`array.concat()`",
+      "`array.merge()`",
+      "`array.join()`",
+      "`array.combine()`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-130",
+    "question": "¿Qué método de array une elementos en un string?",
+    "options": [
+      "`array.concat()`",
+      "`array.join()`",
+      "`array.toString()`",
+      "`array.merge()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-131",
+    "question": "¿Qué hook de React se usa para efectos secundarios?",
+    "options": [
+      "`useState`",
+      "`useEffect`",
+      "`useContext`",
+      "`useReducer`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-132",
+    "question": "¿Qué es el Virtual DOM en React?",
+    "options": [
+      "El DOM real del navegador",
+      "Una representación ligera del DOM en memoria",
+      "Un DOM alternativo para testing",
+      "Un editor de DOM visual"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-133",
+    "question": "¿Cómo se define un componente funcional en React?",
+    "options": [
+      "`class MiComponente extends React.Component`",
+      "`function MiComponente() { return <div>...</div> }`",
+      "`const MiComponente = createComponent()`",
+      "`def MiComponente():`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "react"
+  },
+  {
+    "id": "wt-134",
+    "question": "¿Qué sucede cuando cambia el estado con `setState`/`setValor`?",
+    "options": [
+      "El componente se elimina",
+      "El componente se re-renderiza",
+      "La página se recarga",
+      "Nada, solo cambia el valor"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-135",
+    "question": "¿Qué es un Fragment en React?",
+    "options": [
+      "Un componente que muestra fragmentos de texto",
+      "Un contenedor que no agrega nodos extra al DOM",
+      "Una parte de un componente",
+      "Un tipo de hook"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-136",
+    "question": "¿Qué comando de Git muestra las diferencias entre archivos?",
+    "options": [
+      "`git diff`",
+      "`git show`",
+      "`git compare`",
+      "`git changes`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-137",
+    "question": "¿Qué comando de Git deshace cambios en el working directory?",
+    "options": [
+      "`git undo`",
+      "`git restore`",
+      "`git revert`",
+      "`git reset`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "git"
+  },
+  {
+    "id": "wt-138",
+    "question": "¿Qué comando de Git lista las ramas existentes?",
+    "options": [
+      "`git list`",
+      "`git branch`",
+      "`git branches`",
+      "`git show-branches`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-139",
+    "question": "¿Qué comando de Git descarga cambios sin fusionarlos?",
+    "options": [
+      "`git pull`",
+      "`git fetch`",
+      "`git download`",
+      "`git sync`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "git"
+  },
+  {
+    "id": "wt-140",
+    "question": "¿Qué comando de Git muestra el commit actual y sus cambios?",
+    "options": [
+      "`git log`",
+      "`git show`",
+      "`git status`",
+      "`git diff`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "git"
+  },
+  {
+    "id": "wt-141",
+    "question": "¿Qué etiqueta HTML se usa para un botón?",
+    "options": [
+      "`<input type=\"button\">`",
+      "`<button>`",
+      "`<btn>`",
+      "`<input type=\"submit\">`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-142",
+    "question": "¿Qué atributo de `<input>` define el tipo de control?",
+    "options": [
+      "`kind`",
+      "`type`",
+      "`format`",
+      "`style`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-143",
+    "question": "¿Qué etiqueta se usa para audio en HTML5?",
+    "options": [
+      "`<sound>`",
+      "`<audio>`",
+      "`<music>`",
+      "`<mp3>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "html"
+  },
+  {
+    "id": "wt-144",
+    "question": "¿Qué propiedad CSS controla la sombra de un elemento?",
+    "options": [
+      "`shadow`",
+      "`box-shadow`",
+      "`drop-shadow`",
+      "`element-shadow`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "css"
+  },
+  {
+    "id": "wt-145",
+    "question": "¿Qué propiedad CSS controla el radio de las esquinas?",
+    "options": [
+      "`corner-radius`",
+      "`border-radius`",
+      "`radius`",
+      "`round`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-146",
+    "question": "¿Qué propiedad CSS controla la imagen de fondo?",
+    "options": [
+      "`background-image`",
+      "`bg-image`",
+      "`image-background`",
+      "`background-img`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "css"
+  },
+  {
+    "id": "wt-147",
+    "question": "¿Qué propiedad CSS controla la dirección de los elementos en Grid?",
+    "options": [
+      "`grid-flow`",
+      "`grid-auto-flow`",
+      "`grid-direction`",
+      "`flow`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "css"
+  },
+  {
+    "id": "wt-148",
+    "question": "¿Qué método de `localStorage` obtiene un valor guardado?",
+    "options": [
+      "`localStorage.get()`",
+      "`localStorage.getItem()`",
+      "`localStorage.retrieve()`",
+      "`localStorage.load()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-149",
+    "question": "¿Qué método de `localStorage` elimina un valor?",
+    "options": [
+      "`localStorage.delete()`",
+      "`localStorage.removeItem()`",
+      "`localStorage.clear()`",
+      "`localStorage.erase()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-150",
+    "question": "¿Qué método de `localStorage` elimina todos los valores?",
+    "options": [
+      "`localStorage.removeAll()`",
+      "`localStorage.clear()`",
+      "`localStorage.deleteAll()`",
+      "`localStorage.reset()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "dom"
+  },
+  {
+    "id": "wt-151",
+    "question": "¿Qué es `npm` en el ecosistema React?",
+    "options": [
+      "Un framework de React",
+      "Un gestor de paquetes de Node.js",
+      "Un compilador de JSX",
+      "Un servidor web"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-152",
+    "question": "¿Qué comando de npm inicia un proyecto React con Vite?",
+    "options": [
+      "`npm create vite@latest`",
+      "`npm start react`",
+      "`npm init react`",
+      "`npm new vite`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "react"
+  },
+  {
+    "id": "wt-153",
+    "question": "¿Qué comando de npm instala dependencias?",
+    "options": [
+      "`npm install`",
+      "`npm add`",
+      "`npm get`",
+      "`npm download`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "git"
+  },
+  {
+    "id": "wt-154",
+    "question": "¿Qué comando de Git crea y cambia a una nueva rama simultáneamente?",
+    "options": [
+      "`git branch nueva-rama`",
+      "`git checkout -b nueva-rama`",
+      "`git switch nueva-rama`",
+      "`git branch -c nueva-rama`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "git"
+  },
+  {
+    "id": "wt-155",
+    "question": "¿Qué comando de Git deshace el último commit manteniendo los cambios?",
+    "options": [
+      "`git reset --soft HEAD~1`",
+      "`git revert HEAD`",
+      "`git reset --hard HEAD~1`",
+      "`git undo`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "git"
+  }
+]

@@ -1,0 +1,2082 @@
+[
+  {
+    "id": "th-001",
+    "question": "¿Cuál es la diferencia principal entre `let` y `const` en JavaScript?",
+    "options": [
+      "`let` se usa para números y `const` para strings",
+      "`const` no puede ser reasignada después de su declaración inicial",
+      "`let` no tiene alcance de bloque",
+      "`const` solo puede usarse en funciones"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-002",
+    "question": "¿Qué palabra clave se usaba antes de ES6 para declarar variables con alcance de función?",
+    "options": [
+      "`int`",
+      "`var`",
+      "`string`",
+      "`def`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-003",
+    "question": "¿Qué imprime este código? `let x = 5; { let x = 10; } console.log(x);`",
+    "options": [
+      "10",
+      "5",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "variables"
+  },
+  {
+    "id": "th-004",
+    "question": "¿Cuál de los siguientes NO es un nombre de variable válido en JavaScript?",
+    "options": [
+      "miVariable",
+      "_contador",
+      "2doIntento",
+      "$precio"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-005",
+    "question": "¿Qué alcance tiene una variable declarada con `let` dentro de un bloque `{}`?",
+    "options": [
+      "Alcance global",
+      "Alcance de función",
+      "Alcance de bloque",
+      "Alcance de módulo"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-006",
+    "question": "¿Qué convención de nomenclatura se usa comúnmente en JavaScript para nombres de variables?",
+    "options": [
+      "snake_case",
+      "kebab-case",
+      "camelCase",
+      "PascalCase"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-007",
+    "question": "¿Qué sucede si declaras una variable con `const` y tratas de reasignarla?",
+    "options": [
+      "Se reasigna silenciosamente",
+      "Lanza un TypeError",
+      "Lanza un ReferenceError",
+      "Se ignora la reasignación"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "variables"
+  },
+  {
+    "id": "th-008",
+    "question": "¿Cuál es el tipo de dato de `typeof \"Hola\"`?",
+    "options": [
+      "string",
+      "String",
+      "text",
+      "char"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-009",
+    "question": "¿Qué valor booleano es equivalente a `0` en JavaScript?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-010",
+    "question": "¿Cuál es el resultado de `typeof null` en JavaScript?",
+    "options": [
+      "\"null\"",
+      "\"undefined\"",
+      "\"object\"",
+      "\"boolean\""
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-011",
+    "question": "¿Qué tipo de dato representa `undefined`?",
+    "options": [
+      "Un valor que no ha sido asignado",
+      "Un valor nulo intencional",
+      "Un error en el código",
+      "Un número negativo"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-012",
+    "question": "¿Cuál de los siguientes es un tipo de dato primitivo en JavaScript?",
+    "options": [
+      "Array",
+      "Object",
+      "Boolean",
+      "Function"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-013",
+    "question": "¿Qué devuelve `typeof 42`?",
+    "options": [
+      "\"number\"",
+      "\"integer\"",
+      "\"float\"",
+      "\"numeric\""
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-014",
+    "question": "¿Cuál es la diferencia entre `null` y `undefined`?",
+    "options": [
+      "Son exactamente iguales",
+      "`null` es un valor asignado intencionalmente, `undefined` significa que no hay valor",
+      "`undefined` se asigna manualmente, `null` es automático",
+      "`null` solo existe en objetos"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-015",
+    "question": "¿Qué operador se usa para obtener el tipo de una variable?",
+    "options": [
+      "`getType`",
+      "`typeof`",
+      "`instanceof`",
+      "`type`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-016",
+    "question": "¿Cuál es el resultado de `10 + \"5\"` en JavaScript?",
+    "options": [
+      "15",
+      "\"105\"",
+      "\"10 + 5\"",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-017",
+    "question": "¿Qué operador se usa para la división en JavaScript?",
+    "options": [
+      "`\\`",
+      "`/`",
+      "`div`",
+      "`%`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-018",
+    "question": "¿Qué hace el operador `%` en JavaScript?",
+    "options": [
+      "Divide dos números",
+      "Calcula el porcentaje",
+      "Devuelve el residuo de una división",
+      "Concatena strings"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-019",
+    "question": "¿Cuál es el resultado de `15 % 4`?",
+    "options": [
+      "3",
+      "4",
+      "2",
+      "1"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-020",
+    "question": "¿Qué operador de asignación suma un valor a una variable?",
+    "options": [
+      "`=+`",
+      "`+=`",
+      "`+==`",
+      "`=+`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-021",
+    "question": "¿Cuál es el resultado de `5 === \"5\"`?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-022",
+    "question": "¿Cuál es la diferencia entre `==` y `===`?",
+    "options": [
+      "`==` compara valor y tipo, `===` solo valor",
+      "`==` solo compara valor, `===` compara valor y tipo",
+      "Son exactamente iguales",
+      "`===` solo funciona con números"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-023",
+    "question": "¿Qué operador lógico representa AND?",
+    "options": [
+      "`||`",
+      "`&&`",
+      "`!!`",
+      "`&`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-024",
+    "question": "¿Cuál es el resultado de `true && false`?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-025",
+    "question": "¿Qué operador lógico se usa para negar una expresión?",
+    "options": [
+      "`NOT`",
+      "`!`",
+      "`~`",
+      "`-`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-026",
+    "question": "¿Cuál es el resultado de `!true`?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-027",
+    "question": "¿Qué operador de comparación verifica si un valor es mayor o igual que otro?",
+    "options": [
+      "`>`",
+      "`=>`",
+      "`>=`",
+      "`=<`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-028",
+    "question": "¿Cuál es el resultado de `10 > 5 && 3 < 1`?",
+    "options": [
+      "true",
+      "false",
+      "10",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-029",
+    "question": "¿Qué estructura de control se usa para tomar decisiones en el código?",
+    "options": [
+      "`for`",
+      "`if`",
+      "`while`",
+      "`console.log`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-030",
+    "question": "¿Qué hace el siguiente código? `if (edad >= 18) { console.log(\"Mayor\"); } else { console.log(\"Menor\"); }`",
+    "options": [
+      "Imprime \"Mayor\" si edad es 18 o más, sino \"Menor\"",
+      "Imprime \"Menor\" si edad es 18 o más",
+      "Siempre imprime \"Mayor\"",
+      "Lanza un error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-031",
+    "question": "¿Qué operador ternario es equivalente a este if? `if (x > 0) { r = \"Positivo\"; } else { r = \"Negativo\"; }`",
+    "options": [
+      "`r = x > 0 ? \"Positivo\" : \"Negativo\";`",
+      "`r = if(x > 0) \"Positivo\" else \"Negativo\";`",
+      "`r = (x > 0) ? \"Positivo\" ? \"Negativo\";`",
+      "`r = x > 0 : \"Positivo\" ? \"Negativo\";`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-032",
+    "question": "¿Qué estructura se usa para evaluar múltiples casos posibles?",
+    "options": [
+      "`if-else`",
+      "`switch`",
+      "`for`",
+      "`while`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-033",
+    "question": "¿Qué palabra clave se usa para salir de un `switch`?",
+    "options": [
+      "`exit`",
+      "`break`",
+      "`stop`",
+      "`return`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-034",
+    "question": "¿Qué sucede si no usas `break` en un caso de `switch`?",
+    "options": [
+      "El switch lanza un error",
+      "Se ejecuta el siguiente caso (fall-through)",
+      "Se sale automáticamente",
+      "Se reinicia el switch"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-035",
+    "question": "¿Cuál es la sintaxis correcta de un `if` en JavaScript?",
+    "options": [
+      "`if (condicion) { }`",
+      "`if condicion { }`",
+      "`if (condicion) then { }`",
+      "`if { condicion }`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-036",
+    "question": "¿Qué imprime este código? `let x = 5; if (x > 10) { console.log(\"A\"); } else if (x > 3) { console.log(\"B\"); } else { console.log(\"C\"); }`",
+    "options": [
+      "A",
+      "B",
+      "C",
+      "Nada"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-037",
+    "question": "¿Qué bucle se usa cuando sabes exactamente cuántas veces iterar?",
+    "options": [
+      "`while`",
+      "`for`",
+      "`do-while`",
+      "`loop`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-038",
+    "question": "¿Cuál es la sintaxis correcta de un bucle `for`?",
+    "options": [
+      "`for (i = 0; i < 5; i++)`",
+      "`for (let i = 0; i < 5; i++)`",
+      "`for (let i = 0, i < 5, i++)`",
+      "`for let i = 0 to 5`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-039",
+    "question": "¿Qué hace `break` dentro de un bucle?",
+    "options": [
+      "Salta a la siguiente iteración",
+      "Termina el bucle inmediatamente",
+      "Reinicia el bucle",
+      "Pausa el bucle"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-040",
+    "question": "¿Qué hace `continue` dentro de un bucle?",
+    "options": [
+      "Termina el bucle",
+      "Salta a la siguiente iteración",
+      "Reinicia el bucle",
+      "Sale del programa"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-041",
+    "question": "¿Qué bucle ejecuta su bloque al menos una vez?",
+    "options": [
+      "`for`",
+      "`while`",
+      "`do-while`",
+      "`for-in`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-042",
+    "question": "¿Cuántas veces se ejecuta este bucle? `for (let i = 0; i < 3; i++)`",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "Infinitas"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-043",
+    "question": "¿Qué condición debe cumplirse para que un bucle `while` se ejecute?",
+    "options": [
+      "La condición debe ser false",
+      "La condición debe ser true",
+      "La condición debe ser 0",
+      "La condición debe ser null"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-044",
+    "question": "¿Qué es un bucle infinito?",
+    "options": [
+      "Un bucle que se ejecuta 100 veces",
+      "Un bucle cuya condición nunca se vuelve false",
+      "Un bucle sin llaves",
+      "Un bucle que usa `break`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-045",
+    "question": "¿Qué imprime este código? `for (let i = 0; i < 3; i++) { console.log(i); }`",
+    "options": [
+      "0 1 2",
+      "1 2 3",
+      "0 1 2 3",
+      "1 2"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-046",
+    "question": "¿Cómo se declara una función tradicional en JavaScript?",
+    "options": [
+      "`function = miFuncion() {}`",
+      "`function miFuncion() {}`",
+      "`def miFuncion() {}`",
+      "`func miFuncion() {}`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-047",
+    "question": "¿Qué son las funciones flecha (arrow functions)?",
+    "options": [
+      "Funciones que solo pueden usarse en bucles",
+      "Una sintaxis más corta para escribir funciones usando `=>`",
+      "Funciones que no pueden tener parámetros",
+      "Funciones que solo retornan strings"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-048",
+    "question": "¿Cuál es la sintaxis correcta de una función flecha?",
+    "options": [
+      "`const suma = (a, b) => { return a + b; }`",
+      "`const suma = (a, b) => a + b;`",
+      "`const suma = function(a, b) => a + b;`",
+      "Todas las anteriores son válidas"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-049",
+    "question": "¿Qué palabra clave se usa para devolver un valor desde una función?",
+    "options": [
+      "`return`",
+      "`send`",
+      "`output`",
+      "`give`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-050",
+    "question": "¿Qué imprime este código? `function suma(a, b) { return a + b; } console.log(suma(3, 4));`",
+    "options": [
+      "34",
+      "7",
+      "3 + 4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-051",
+    "question": "¿Qué son los parámetros en una función?",
+    "options": [
+      "Los valores que la función retorna",
+      "Las variables que recibe la función al ser llamada",
+      "El nombre de la función",
+      "Los comentarios dentro de la función"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-052",
+    "question": "¿Qué sucede si una función no tiene `return`?",
+    "options": [
+      "Retorna `null`",
+      "Retorna `undefined`",
+      "Retorna 0",
+      "Lanza un error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-053",
+    "question": "¿Cómo se asigna un valor por defecto a un parámetro?",
+    "options": [
+      "`function saludo(nombre = \"Invitado\")`",
+      "`function saludo(nombre: \"Invitado\")`",
+      "`function saludo(nombre || \"Invitado\")`",
+      "`function saludo(def nombre = \"Invitado\")`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-054",
+    "question": "¿Cuál es la diferencia entre una función declarada y una función flecha?",
+    "options": [
+      "No hay diferencia",
+      "Las funciones flecha no pueden tener parámetros",
+      "Las funciones flecha tienen una sintaxis más corta y no tienen su propio `this`",
+      "Las funciones declaradas no pueden usar `return`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "topic": "functions"
+  },
+  {
+    "id": "th-055",
+    "question": "¿Qué imprime este código? `const saludo = () => \"Hola\"; console.log(saludo());`",
+    "options": [
+      "undefined",
+      "Hola",
+      "saludo()",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-056",
+    "question": "¿Cómo se crea un array en JavaScript?",
+    "options": [
+      "`let arr = (1, 2, 3)`",
+      "`let arr = [1, 2, 3]`",
+      "`let arr = {1, 2, 3}`",
+      "`let arr = <1, 2, 3>`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-057",
+    "question": "¿Qué índice tiene el primer elemento de un array?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "Depende del array"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-058",
+    "question": "¿Cómo accedes al tercer elemento de un array llamado `colores`?",
+    "options": [
+      "`colores[3]`",
+      "`colores[2]`",
+      "`colores(2)`",
+      "`colores.3`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-059",
+    "question": "¿Qué propiedad devuelve la cantidad de elementos de un array?",
+    "options": [
+      "`size`",
+      "`length`",
+      "`count`",
+      "`total`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-060",
+    "question": "¿Qué imprime este código? `let nums = [10, 20, 30]; console.log(nums.length);`",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-061",
+    "question": "¿Cómo se crea un objeto literal en JavaScript?",
+    "options": [
+      "`let obj = [clave: valor]`",
+      "`let obj = { clave: \"valor\" }`",
+      "`let obj = (clave: \"valor\")`",
+      "`let obj = <clave: \"valor\">`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "objects"
+  },
+  {
+    "id": "th-062",
+    "question": "¿Cómo accedes a la propiedad `nombre` de un objeto `persona`?",
+    "options": [
+      "`persona[nombre]`",
+      "`persona.nombre`",
+      "`persona->nombre`",
+      "`persona::nombre`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "objects"
+  },
+  {
+    "id": "th-063",
+    "question": "¿Qué notación usarías para acceder a una propiedad con un nombre dinámico?",
+    "options": [
+      "`objeto.propiedad`",
+      "`objeto[propiedad]`",
+      "`objeto->propiedad`",
+      "`objeto::propiedad`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-064",
+    "question": "¿Qué imprime este código? `let obj = { a: 1, b: 2 }; console.log(obj[\"a\"]);`",
+    "options": [
+      "1",
+      "2",
+      "\"a\"",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "objects"
+  },
+  {
+    "id": "th-065",
+    "question": "¿Cómo agregas una nueva propiedad a un objeto existente?",
+    "options": [
+      "`objeto.add(\"nueva\", valor)`",
+      "`objeto.nueva = valor`",
+      "`objeto.push(\"nueva\", valor)`",
+      "`objeto[\"nueva\"] = valor`"
+    ],
+    "correctAnswer": 3,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-066",
+    "question": "¿Qué es una clase en Programación Orientada a Objetos?",
+    "options": [
+      "Un tipo de variable",
+      "Una plantilla para crear objetos",
+      "Una función especial",
+      "Un archivo de código"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-067",
+    "question": "¿Qué palabra clave se usa para crear una clase en JavaScript?",
+    "options": [
+      "`class`",
+      "`object`",
+      "`template`",
+      "`struct`"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-068",
+    "question": "¿Qué método especial se llama automáticamente al crear una instancia de una clase?",
+    "options": [
+      "`init()`",
+      "`start()`",
+      "`constructor()`",
+      "`create()`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-069",
+    "question": "¿Cómo se crea una instancia de una clase `Jugador`?",
+    "options": [
+      "`let j = Jugador.new()`",
+      "`let j = new Jugador()`",
+      "`let j = Jugador()`",
+      "`let j = create Jugador()`"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-070",
+    "question": "¿Qué representa `this` dentro de un método de una clase?",
+    "options": [
+      "La clase misma",
+      "La instancia actual del objeto",
+      "El método actual",
+      "El constructor"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "oop"
+  },
+  {
+    "id": "th-071",
+    "question": "¿Qué imprime este código? `class Gato { constructor(n) { this.nombre = n; } } let g = new Gato(\"Michi\"); console.log(g.nombre);`",
+    "options": [
+      "undefined",
+      "Michi",
+      "Gato",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "oop"
+  },
+  {
+    "id": "th-072",
+    "question": "¿Qué es una instancia en POO?",
+    "options": [
+      "La definición de una clase",
+      "Un objeto creado a partir de una clase",
+      "Un método de la clase",
+      "Una variable global"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-073",
+    "question": "¿Qué son las propiedades en una clase?",
+    "options": [
+      "Las funciones de la clase",
+      "Los valores o datos asociados a una clase",
+      "Los parámetros de los métodos",
+      "Los archivos de la clase"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-074",
+    "question": "¿Qué son los métodos en una clase?",
+    "options": [
+      "Las propiedades de la clase",
+      "Las funciones que pertenecen a la clase",
+      "Los constructores de la clase",
+      "Los nombres de la clase"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "oop"
+  },
+  {
+    "id": "th-075",
+    "question": "¿Cuál es la diferencia entre `let` y `var` respecto al scope?",
+    "options": [
+      "`let` tiene scope de bloque, `var` tiene scope de función",
+      "`var` tiene scope de bloque, `let` tiene scope de función",
+      "Ambos tienen scope de bloque",
+      "Ambos tienen scope global"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "variables"
+  },
+  {
+    "id": "th-076",
+    "question": "¿Qué imprime este código? `console.log(typeof \"42\");`",
+    "options": [
+      "\"number\"",
+      "\"string\"",
+      "\"boolean\"",
+      "\"object\""
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-077",
+    "question": "¿Cuál de los siguientes es un valor falsy en JavaScript?",
+    "options": [
+      "`\"false\"`",
+      "`[]`",
+      "`0`",
+      "`{}`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-078",
+    "question": "¿Qué devuelve `typeof true`?",
+    "options": [
+      "\"boolean\"",
+      "\"bool\"",
+      "\"true\"",
+      "\"logical\""
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-079",
+    "question": "¿Cuál es el resultado de `\"5\" - 3`?",
+    "options": [
+      "\"53\"",
+      "2",
+      "\"5-3\"",
+      "NaN"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "operators"
+  },
+  {
+    "id": "th-080",
+    "question": "¿Qué operador se usa para la concatenación de strings?",
+    "options": [
+      "`&`",
+      "`.`",
+      "`+`",
+      "`,`"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-081",
+    "question": "¿Cuál es el resultado de `!false || true`?",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "null"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-082",
+    "question": "¿Qué imprime este código? `let a = 10; a -= 3; console.log(a);`",
+    "options": [
+      "10",
+      "7",
+      "13",
+      "3"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-083",
+    "question": "¿Cuál es el resultado de `3 * 2 + 4`?",
+    "options": [
+      "18",
+      "10",
+      "14",
+      "12"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-084",
+    "question": "¿Qué imprime este código? `if (0) { console.log(\"true\"); } else { console.log(\"false\"); }`",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-085",
+    "question": "¿Qué imprime este código? `let x = 10; let r = x > 5 ? \"Mayor\" : \"Menor\"; console.log(r);`",
+    "options": [
+      "Menor",
+      "Mayor",
+      "true",
+      "false"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-086",
+    "question": "¿Qué imprime este código? `let dia = 2; switch(dia) { case 1: console.log(\"Lun\"); break; case 2: console.log(\"Mar\"); break; default: console.log(\"Otro\"); }`",
+    "options": [
+      "Lun",
+      "Mar",
+      "Otro",
+      "Nada"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "conditionals"
+  },
+  {
+    "id": "th-087",
+    "question": "¿Qué imprime este código? `for (let i = 1; i <= 3; i++) { if (i === 2) continue; console.log(i); }`",
+    "options": [
+      "1 2 3",
+      "1 3",
+      "2",
+      "1 2"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-088",
+    "question": "¿Qué imprime este código? `let i = 0; while (i < 3) { console.log(i); i++; }`",
+    "options": [
+      "0 1 2",
+      "1 2 3",
+      "0 1 2 3",
+      "1 2"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "loops"
+  },
+  {
+    "id": "th-089",
+    "question": "¿Qué imprime este código? `let i = 0; do { console.log(i); i++; } while (i < 2);`",
+    "options": [
+      "0",
+      "0 1",
+      "1",
+      "0 1 2"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-090",
+    "question": "¿Qué imprime este código? `for (let i = 0; i < 5; i++) { if (i === 3) break; console.log(i); }`",
+    "options": [
+      "0 1 2 3",
+      "0 1 2",
+      "0 1 2 3 4",
+      "3"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-091",
+    "question": "¿Qué imprime este código? `function doble(n) { return n * 2; } console.log(doble(5));`",
+    "options": [
+      "10",
+      "25",
+      "5",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-092",
+    "question": "¿Qué imprime este código? `const cuadrado = x => x * x; console.log(cuadrado(4));`",
+    "options": [
+      "8",
+      "16",
+      "4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-093",
+    "question": "¿Qué imprime este código? `function saludo(nombre = \"Amigo\") { return \"Hola \" + nombre; } console.log(saludo());`",
+    "options": [
+      "Hola ",
+      "Hola Amigo",
+      "Hola undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-094",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums[1]);`",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-095",
+    "question": "¿Qué imprime este código? `let frutas = [\"manzana\", \"pera\"]; frutas.push(\"uva\"); console.log(frutas.length);`",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-096",
+    "question": "¿Qué imprime este código? `let persona = { nombre: \"Ana\", edad: 25 }; console.log(persona.edad);`",
+    "options": [
+      "Ana",
+      "25",
+      "edad",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "objects"
+  },
+  {
+    "id": "th-097",
+    "question": "¿Qué imprime este código? `let obj = { x: 10, y: 20 }; console.log(obj[\"x\"] + obj.y);`",
+    "options": [
+      "10",
+      "20",
+      "30",
+      "1020"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-098",
+    "question": "¿Qué imprime este código? `class Animal { constructor(tipo) { this.tipo = tipo; } } let a = new Animal(\"Perro\"); console.log(a.tipo);`",
+    "options": [
+      "Animal",
+      "Perro",
+      "tipo",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "oop"
+  },
+  {
+    "id": "th-099",
+    "question": "¿Qué imprime este código? `class Calculadora { sumar(a, b) { return a + b; } } let calc = new Calculadora(); console.log(calc.sumar(2, 3));`",
+    "options": [
+      "5",
+      "23",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "oop"
+  },
+  {
+    "id": "th-100",
+    "question": "¿Qué imprime este código? `let x; console.log(x);`",
+    "options": [
+      "null",
+      "undefined",
+      "0",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-101",
+    "question": "¿Qué imprime este código? `console.log(10 === \"10\");`",
+    "options": [
+      "true",
+      "false",
+      "10",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-102",
+    "question": "¿Qué imprime este código? `console.log(10 == \"10\");`",
+    "options": [
+      "true",
+      "false",
+      "10",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-103",
+    "question": "¿Qué imprime este código? `let a = 5; let b = a++; console.log(a, b);`",
+    "options": [
+      "5, 5",
+      "6, 5",
+      "6, 6",
+      "5, 6"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "operators"
+  },
+  {
+    "id": "th-104",
+    "question": "¿Qué imprime este código? `let a = 5; let b = ++a; console.log(a, b);`",
+    "options": [
+      "5, 5",
+      "6, 5",
+      "6, 6",
+      "5, 6"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "topic": "operators"
+  },
+  {
+    "id": "th-105",
+    "question": "¿Qué imprime este código? `console.log(typeof (5 > 3));`",
+    "options": [
+      "\"number\"",
+      "\"boolean\"",
+      "\"string\"",
+      "\"object\""
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-106",
+    "question": "¿Qué imprime este código? `let arr = []; console.log(arr.length);`",
+    "options": [
+      "0",
+      "1",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-107",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; nums[1] = 5; console.log(nums);`",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 5, 3]",
+      "[5, 2, 3]",
+      "[1, 2, 5]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-108",
+    "question": "¿Qué imprime este código? `let obj = {}; obj.nombre = \"Luis\"; console.log(obj.nombre);`",
+    "options": [
+      "undefined",
+      "Luis",
+      "{}",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-109",
+    "question": "¿Qué imprime este código? `class Rectangulo { constructor(ancho, alto) { this.ancho = ancho; this.alto = alto; } area() { return this.ancho * this.alto; } } let r = new Rectangulo(4, 5); console.log(r.area());`",
+    "options": [
+      "9",
+      "20",
+      "45",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "oop"
+  },
+  {
+    "id": "th-110",
+    "question": "¿Qué imprime este código? `let x = 1; { let x = 2; { let x = 3; console.log(x); } }`",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "Error"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "hard",
+    "topic": "variables"
+  },
+  {
+    "id": "th-111",
+    "question": "¿Qué imprime este código? `const numeros = [1, 2, 3]; numeros.push(4); console.log(numeros.length);`",
+    "options": [
+      "3",
+      "4",
+      "Error porque es const",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "variables"
+  },
+  {
+    "id": "th-112",
+    "question": "¿Qué imprime este código? `console.log(Boolean(\"false\"));`",
+    "options": [
+      "false",
+      "true",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "types"
+  },
+  {
+    "id": "th-113",
+    "question": "¿Qué imprime este código? `console.log(0 || \"default\");`",
+    "options": [
+      "0",
+      "\"default\"",
+      "true",
+      "false"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "operators"
+  },
+  {
+    "id": "th-114",
+    "question": "¿Qué imprime este código? `console.log(\"\" && \"Hola\");`",
+    "options": [
+      "\"\"",
+      "\"Hola\"",
+      "true",
+      "false"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "operators"
+  },
+  {
+    "id": "th-115",
+    "question": "¿Qué imprime este código? `for (let i = 0; i < 3; i++) { for (let j = 0; j < 2; j++) { console.log(i + j); break; } }`",
+    "options": [
+      "0 1 2",
+      "0 1 2 1 2 3",
+      "0 1 2 3 4 5",
+      "0 0 0"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "loops"
+  },
+  {
+    "id": "th-116",
+    "question": "¿Qué imprime este código? `const fn = () => { return () => \"Hola\"; }; console.log(fn()());`",
+    "options": [
+      "fn",
+      "Hola",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "functions"
+  },
+  {
+    "id": "th-117",
+    "question": "¿Qué imprime este código? `let arr = [1, 2, 3]; let [a, b] = arr; console.log(a, b);`",
+    "options": [
+      "1, 2",
+      "1, 3",
+      "2, 3",
+      "undefined, undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-118",
+    "question": "¿Qué imprime este código? `let a = 1, b = 2; [a, b] = [b, a]; console.log(a, b);`",
+    "options": [
+      "1, 2",
+      "2, 1",
+      "1, 1",
+      "2, 2"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-119",
+    "question": "¿Qué imprime este código? `class Padre { constructor() { this.nombre = \"Padre\"; } } class Hijo extends Padre { constructor() { super(); this.nombre = \"Hijo\"; } } let h = new Hijo(); console.log(h.nombre);`",
+    "options": [
+      "Padre",
+      "Hijo",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "oop"
+  },
+  {
+    "id": "th-120",
+    "question": "¿Qué imprime este código? `let x = 5; let y = x; y = 10; console.log(x);`",
+    "options": [
+      "5",
+      "10",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "variables"
+  },
+  {
+    "id": "th-121",
+    "question": "¿Qué imprime este código? `let obj1 = { a: 1 }; let obj2 = obj1; obj2.a = 2; console.log(obj1.a);`",
+    "options": [
+      "1",
+      "2",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "objects"
+  },
+  {
+    "id": "th-122",
+    "question": "¿Qué imprime este código? `console.log(typeof function(){});`",
+    "options": [
+      "\"function\"",
+      "\"object\"",
+      "\"undefined\"",
+      "\"string\""
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-123",
+    "question": "¿Qué imprime este código? `console.log(typeof [1, 2, 3]);`",
+    "options": [
+      "\"array\"",
+      "\"object\"",
+      "\"list\"",
+      "\"number\""
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "types"
+  },
+  {
+    "id": "th-124",
+    "question": "¿Qué imprime este código? `let suma = (a, b) => a + b; console.log(suma(10, 20));`",
+    "options": [
+      "1020",
+      "30",
+      "10 + 20",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-125",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3, 4, 5]; let pares = nums.filter(n => n % 2 === 0); console.log(pares);`",
+    "options": [
+      "[1, 3, 5]",
+      "[2, 4]",
+      "[1, 2, 3, 4, 5]",
+      "[]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-126",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; let cuadrados = nums.map(n => n * n); console.log(cuadrados);`",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 4, 9]",
+      "[2, 4, 6]",
+      "[1, 8, 27]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-127",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3, 4]; let primerPar = nums.find(n => n % 2 === 0); console.log(primerPar);`",
+    "options": [
+      "1",
+      "2",
+      "4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-128",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; nums.forEach(n => console.log(n * 2));`",
+    "options": [
+      "1 2 3",
+      "2 4 6",
+      "2 3 4",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-129",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.includes(2));`",
+    "options": [
+      "true",
+      "false",
+      "2",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-130",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.indexOf(3));`",
+    "options": [
+      "3",
+      "2",
+      "1",
+      "0"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-131",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; nums.pop(); console.log(nums);`",
+    "options": [
+      "[1, 2, 3]",
+      "[1, 2]",
+      "[2, 3]",
+      "[1]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-132",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; nums.shift(); console.log(nums);`",
+    "options": [
+      "[1, 2, 3]",
+      "[2, 3]",
+      "[1, 2]",
+      "[1]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-133",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; nums.unshift(0); console.log(nums);`",
+    "options": [
+      "[1, 2, 3, 0]",
+      "[0, 1, 2, 3]",
+      "[0, 1, 2]",
+      "[1, 2, 3]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-134",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3, 4]; nums.splice(1, 2); console.log(nums);`",
+    "options": [
+      "[1, 2, 3, 4]",
+      "[1, 4]",
+      "[2, 3]",
+      "[1, 2]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-135",
+    "question": "¿Qué imprime este código? `let nombre = \"Ana\"; console.log(`Hola ${nombre}`);`",
+    "options": [
+      "Hola ${nombre}",
+      "Hola Ana",
+      "Hola $nombre",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-136",
+    "question": "¿Qué imprime este código? `console.log(\"JavaScript\".toLowerCase());`",
+    "options": [
+      "JAVASCRIPT",
+      "javascript",
+      "JavaScript",
+      "js"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "functions"
+  },
+  {
+    "id": "th-137",
+    "question": "¿Qué imprime este código? `console.log(\"  hola  \".trim());`",
+    "options": [
+      "  hola  ",
+      "hola",
+      "  hola",
+      "hola  "
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-138",
+    "question": "¿Qué imprime este código? `console.log(\"programacion\".slice(0, 6));`",
+    "options": [
+      "program",
+      "progra",
+      "programa",
+      "programacion"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "functions"
+  },
+  {
+    "id": "th-139",
+    "question": "¿Qué imprime este código? `console.log(JSON.stringify({a: 1, b: 2}));`",
+    "options": [
+      "{a: 1, b: 2}",
+      "{\"a\":1,\"b\":2}",
+      "[object Object]",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-140",
+    "question": "¿Qué imprime este código? `console.log(JSON.parse('{\"x\":10}').x);`",
+    "options": [
+      "10",
+      "\"10\"",
+      "x",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-141",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.some(n => n > 2));`",
+    "options": [
+      "true",
+      "false",
+      "3",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-142",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.every(n => n > 0));`",
+    "options": [
+      "true",
+      "false",
+      "1",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-143",
+    "question": "¿Qué imprime este código? `let nums = [3, 1, 2]; nums.sort(); console.log(nums);`",
+    "options": [
+      "[3, 1, 2]",
+      "[1, 2, 3]",
+      "[3, 2, 1]",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-144",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; let total = nums.reduce((acc, n) => acc + n, 0); console.log(total);`",
+    "options": [
+      "3",
+      "6",
+      "123",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-145",
+    "question": "¿Qué imprime este código? `class Contador { constructor() { this.valor = 0; } incrementar() { this.valor++; } } let c = new Contador(); c.incrementar(); c.incrementar(); console.log(c.valor);`",
+    "options": [
+      "0",
+      "1",
+      "2",
+      "undefined"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "medium",
+    "topic": "oop"
+  },
+  {
+    "id": "th-146",
+    "question": "¿Qué imprime este código? `let x = null; console.log(x === null);`",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "easy",
+    "topic": "types"
+  },
+  {
+    "id": "th-147",
+    "question": "¿Qué imprime este código? `console.log(3 ** 2);`",
+    "options": [
+      "6",
+      "9",
+      "5",
+      "32"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-148",
+    "question": "¿Qué imprime este código? `let x = 10; x *= 2; console.log(x);`",
+    "options": [
+      "10",
+      "12",
+      "20",
+      "102"
+    ],
+    "correctAnswer": 2,
+    "difficulty": "easy",
+    "topic": "operators"
+  },
+  {
+    "id": "th-149",
+    "question": "¿Qué imprime este código? `let x = 5; let y = 3; console.log(x > y && y > 0);`",
+    "options": [
+      "true",
+      "false",
+      "5",
+      "3"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-150",
+    "question": "¿Qué imprime este código? `let x = 5; let y = 3; console.log(x < y || y < 0);`",
+    "options": [
+      "true",
+      "false",
+      "5",
+      "3"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "operators"
+  },
+  {
+    "id": "th-151",
+    "question": "¿Qué imprime este código? `let nums = [10, 20, 30]; for (let n of nums) { console.log(n); }`",
+    "options": [
+      "0 1 2",
+      "10 20 30",
+      "1 2 3",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-152",
+    "question": "¿Qué imprime este código? `let obj = { a: 1, b: 2 }; for (let key in obj) { console.log(key); }`",
+    "options": [
+      "1 2",
+      "a b",
+      "a:1 b:2",
+      "undefined"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "medium",
+    "topic": "loops"
+  },
+  {
+    "id": "th-153",
+    "question": "¿Qué imprime este código? `function test() { var x = 1; if (true) { var x = 2; } console.log(x); } test();`",
+    "options": [
+      "1",
+      "2",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "variables"
+  },
+  {
+    "id": "th-154",
+    "question": "¿Qué imprime este código? `function test() { let x = 1; if (true) { let x = 2; } console.log(x); } test();`",
+    "options": [
+      "1",
+      "2",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "variables"
+  },
+  {
+    "id": "th-155",
+    "question": "¿Qué imprime este código? `const persona = { nombre: \"Carlos\", saludar() { return \"Hola, soy \" + this.nombre; } }; console.log(persona.saludar());`",
+    "options": [
+      "Hola, soy Carlos",
+      "Hola, soy undefined",
+      "Hola, soy persona",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "objects"
+  },
+  {
+    "id": "th-156",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.concat([4, 5]));`",
+    "options": [
+      "[1, 2, 3, 4, 5]",
+      "[1, 2, 3, [4, 5]]",
+      "[4, 5, 1, 2, 3]",
+      "undefined"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-157",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; console.log(nums.join(\"-\"));`",
+    "options": [
+      "1-2-3",
+      "123",
+      "[1-2-3]",
+      "1,2,3"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "medium",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-158",
+    "question": "¿Qué imprime este código? `let nums = [1, [2, 3], [4, [5]]]; console.log(nums.flat());`",
+    "options": [
+      "[1, 2, 3, 4, [5]]",
+      "[1, 2, 3, 4, 5]",
+      "[1, [2, 3], [4, [5]]]",
+      "Error"
+    ],
+    "correctAnswer": 0,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-159",
+    "question": "¿Qué imprime este código? `let nums = [1, 2, 3]; let [primero, ...resto] = nums; console.log(resto);`",
+    "options": [
+      "[1, 2]",
+      "[2, 3]",
+      "[1, 3]",
+      "[3]"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "arrays"
+  },
+  {
+    "id": "th-160",
+    "question": "¿Qué imprime este código? `let a = { x: 1 }; let b = { x: 1 }; console.log(a === b);`",
+    "options": [
+      "true",
+      "false",
+      "undefined",
+      "Error"
+    ],
+    "correctAnswer": 1,
+    "difficulty": "hard",
+    "topic": "objects"
+  }
+]
