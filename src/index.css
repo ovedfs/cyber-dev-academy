@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* Estilos base Cyberpunk */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #00e5ff #0a0a0f;
+}
+
+/* Scrollbar para navegadores WebKit */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00e5ff;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(0, 229, 255, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00ff66;
+  box-shadow: 0 0 6px rgba(0, 255, 102, 0.4);
+}
+
+/* Selección de texto */
+::selection {
+  background: rgba(0, 229, 255, 0.3);
+  color: #00e5ff;
+}
+
+/* Animaciones personalizadas */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(2px, -2px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+.animate-glitch {
+  animation: glitch 0.3s ease-in-out;
+}
+
+/* Efecto de texto neón */
+.text-glow-cyan {
+  text-shadow: 0 0 10px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
+}
+
+.text-glow-green {
+  text-shadow: 0 0 10px rgba(0, 255, 102, 0.6), 0 0 20px rgba(0, 255, 102, 0.3);
+}
+
+.text-glow-purple {
+  text-shadow: 0 0 10px rgba(157, 0, 255, 0.6), 0 0 20px rgba(157, 0, 255, 0.3);
+}
