@@ -203,11 +203,11 @@ cyber-dev-academy/
 - [x] Creación de componentes base (`CyberButton`, `CyberCard`, `Navbar`, `XPBar`, `Modal`).
 - [x] Configuración del estado global de gamificación y `localStorage` (`useLocalStorage`, `useGameProgress`).
 
-### **Fase 2: Estructuración y Generación de Bancos de Datos**
-- [ ] Creación de `theoryBank.json` (150+ preguntas teóricas de programación).
-- [ ] Creación de `webTechBank.json` (150+ preguntas de HTML, CSS, JS, React, Git).
-- [ ] Diseño de las 10 misiones para "Fix the Code" con código HTML/CSS/JS roto y scripts de validación.
-- [ ] Creación de retos de lógica JS.
+### **Fase 2: Estructuración y Generación de Bancos de Datos** ✅ *(Completada el 25/07/2026)*
+- [x] Creación de `theoryBank.json` (150+ preguntas teóricas de programación).
+- [x] Creación de `webTechBank.json` (150+ preguntas de HTML, CSS, JS, React, Git).
+- [x] Diseño de las 10 misiones para "Fix the Code" con código HTML/CSS/JS roto y scripts de validación.
+- [x] Creación de retos de lógica JS.
 **Importante:** Para determinar los topicos de los bancos de datos revisar el **Anexo 1** al final de este documento.
 
 ### **Fase 3: Desarrollo de la Arena de Exámenes**
