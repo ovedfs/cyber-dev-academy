@@ -44,7 +44,7 @@ function App() {
               CyberDev Academy
             </h1>
             <p className="font-mono text-base sm:text-lg text-cyber-purple mt-4 max-w-2xl mx-auto">
-              {'>'} Plataforma gamificada de aprendizaje en programación y ciberseguridad
+              {'>'} Plataforma gamificada de práctica de programación web
             </p>
           </div>
         </section>
@@ -103,7 +103,7 @@ function App() {
           <CyberCard borderColor="cyan">
             <div className="font-mono text-sm space-y-2">
               <p className="text-cyber-green">{'>'} CONSOLE.LOG("Bienvenido a CyberDev Academy");</p>
-              <p className="text-cyber-cyan">{'>'} // Tu viaje como hacker en formación comienza aquí</p>
+              <p className="text-cyber-cyan">{'>'} // Tu viaje como programador en formación comienza aquí</p>
               <p className="text-cyber-purple">{'>'} // Próximamente: Exámenes, Fix the Code, Lógica y más...</p>
               <p className="text-cyber-yellow animate-pulse">{'>'} SYSTEM_READY</p>
             </div>
@@ -124,7 +124,7 @@ function App() {
           </p>
           <p className="text-cyber-text">
             Plataforma educativa gamificada con estética cyberpunk para
-            aprender programación web y ciberseguridad.
+            aprender y practicar programación web.
           </p>
           <p className="text-cyber-cyan">
             {'>'} Stack: React + Vite + Tailwind CSS

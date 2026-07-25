@@ -1,13 +1,13 @@
 # 🚀 PLAN DE DESARROLLO ARQUITECTÓNICO & TÉCNICO
-## **CyberDev Academy: Plataforma Gamificada de Aprendizaje Web y Programación**
+## **CyberDev Academy: Plataforma Gamificada de Práctica de Programación Web**
 
 ---
 
 ## 📄 1. RESUMEN EJECUTIVO Y OBJETIVO DEL PROYECTO
 
-**CyberDev Academy** es una aplicación web interactiva, educativa y gamificada con estética **Cyberpunk / Dark Mode Hacker**, diseñada para estudiantes de educación secundaria (12 a 15 años) con conocimientos iniciales en HTML, CSS, JavaScript, React básico y Git/GitHub.
+**CyberDev Academy** es una aplicación web interactiva, educativa y gamificada con estética **Cyberpunk / Dark Mode**, diseñada para estudiantes de educación secundaria (12 a 15 años) con conocimientos iniciales en HTML, CSS, JavaScript, React básico y Git/GitHub.
 
-La plataforma busca transformar la evaluación de conceptos teóricos y la práctica de programación en un entorno inmersivo tipo videojuego ("hackers en formación"). A través de dos simuladores de examen teóricos/técnicos de 25 preguntas aleatorias, un entorno de resolución de errores en código vivo (*Fix the Code*) alimentado por Monaco Editor (VS Code) con Hot Reload, y una zona de entrenamiento de lógica de algoritmos, los alumnos desarrollan destrezas de depuración y razonamiento computacional.
+La plataforma busca transformar la evaluación de conceptos teóricos y la práctica de programación en un entorno inmersivo tipo videojuego ("programadores en formación"). A través de dos simuladores de examen teóricos/técnicos de 25 preguntas aleatorias, un entorno de resolución de errores en código vivo (*Fix the Code*) alimentado por Monaco Editor (VS Code) con Hot Reload, y una zona de entrenamiento de lógica de algoritmos, los alumnos desarrollan destrezas de depuración y razonamiento computacional.
 
 ---
 
@@ -18,7 +18,7 @@ La plataforma busca transformar la evaluación de conceptos teóricos y la prác
 | **Framework Base** | **React 18 + Vite** | Entorno de desarrollo ultrarrápido, estructura basada en componentes y compilación optimizada. |
 | **Estilado & UI** | **Tailwind CSS + CSS Modules** | Paleta Cyberpunk customizada, efectos Neon Glow, animaciones de terminal. |
 | **Editor de Código** | **Monaco Editor (`@monaco-editor/react`)** | Integración del motor nativo de Visual Studio Code para edición multitestaña de HTML, CSS y JS. |
-| **Icons & Visuals** | **Lucide React + Canvas Confetti** | Iconografía tipo hacker/cyberpunk y efectos de partículas/animaciones de recompensa. |
+| **Icons & Visuals** | **Lucide React + Canvas Confetti** | Iconografía cyberpunk y efectos de partículas/animaciones de recompensa. |
 | **Efectos de Sonido** | **Howler.js (`use-sound`)** | Retroalimentación auditiva tipo arcade para aciertos, errores, niveles completados y escritura en terminal. |
 | **Generación de PDF** | **`html2pdf.js` / Native Print API** | Reportes detallados de resultados con semáforo de aciertos/errores, insignias y recomendaciones. |
 | **Persistencia** | **Browser `localStorage`** | Guardado de progreso local, XP, insignias desbloqueadas, partidas guardadas y configuración de usuario. |
@@ -26,7 +26,7 @@ La plataforma busca transformar la evaluación de conceptos teóricos y la prác
 
 ---
 
-## 🎨 3. GUÍA DE DISEÑO & IDENTIDAD VISUAL (CYBERPUNK HACKER)
+## 🎨 3. GUÍA DE DISEÑO & IDENTIDAD VISUAL (CYBERPUNK)
 
 ### 3.1 Paleta de Colores (`tailwind.config.js`)
 ```javascript
@@ -70,7 +70,7 @@ cyber-dev-academy/
 ├── public/
 │   ├── favicon.ico
 │   ├── assets/
-│   │   ├── badges/               # SVG de medallas y rangos hacker
+│   │   ├── badges/               # SVG de medallas y rangos
 │   │   └── sounds/               # Efectos MP3/WAV (success, error, levelup, click)
 │   └── index.html
 ├── src/
@@ -148,8 +148,8 @@ cyber-dev-academy/
 - **Dashboard de Resultados y PDF:**
   - **Semáforo:** Preguntas correctas (Verde Neón), Incorrectas (Rojo/Rosa Neón).
   - **Calificación:** Escala 0 a 100 y de 0.0 a 10.0.
-  - **Rango Asignado:** ej. *Script Kiddie* (<60), *Web Developer Apprentice* (60-79), *Full-Stack Padawan* (80-89), *Cyber Master* (90-100).
-  - **Generación PDF:** Botón "Guardar Reporte Oficial PDF" que compila los aciertos, las áreas a reforzar y el certificado firmado con estética hacker.
+  - **Rango Asignado:** ej. *Web Explorer* (<60), *HTML Padawan* (60-79), *CSS Apprentice* (80-89), *JS Developer* (90-100).
+  - **Generación PDF:** Botón "Guardar Reporte Oficial PDF" que compila los aciertos, las áreas a reforzar y el certificado de logro.
 
 ---
 
@@ -158,7 +158,7 @@ cyber-dev-academy/
   - **Panel Izquierdo:** Editor Monaco multi-pestaña (`index.html`, `styles.css`, `script.js`).
   - **Panel Derecho:** iFrame aislado (`sandbox`) con renderizado en vivo y *Hot Reload* debounced a 500ms tras dejar de escribir.
 - **Sistema de Diagnóstico & Pistas:**
-  - **Consola de Errores Hacker:** Muestra mensajes de error interpretados en lenguaje sencillo para estudiantes de secundaria.
+  - **Consola de Errores:** Muestra mensajes de error interpretados en lenguaje sencillo para estudiantes de secundaria.
   - **Botón de Tip/Pista:** Oculta pistas progresivas. El uso de pistas consume 15 XP del recompensa final.
 - **Validación de Éxito:**
   - El sistema ejecuta pruebas automatizadas en el DOM del iFrame (ej. comprobar que existe un elemento `#titulo` con estilo `color: red` o que un botón ejecuta un evento `click`).
@@ -183,7 +183,7 @@ cyber-dev-academy/
 - **Insignias y Logros Desbloqueables:**
   - 🛡️ *Git Committer:* Responder correctamente 5 preguntas seguidas sobre Git.
   - ⚡ *Bug Hunter:* Corregir 3 páginas del laboratorio.
-  - 🎓 *Cyber Graduate:* Obtener un puntaje perfecto (100/100) en cualquier simulador.
+  - 🎓 *Web Graduate:* Obtener un puntaje perfecto (100/100) en cualquier simulador.
 - **Guardado en LocalStorage:**
   - Salva el nivel del mapa, XP acumulado, estrellas por misión y estado de los simuladores para que el alumno no pierda su progreso al cerrar el navegador.
 

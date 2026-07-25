@@ -1,11 +1,11 @@
 import useLocalStorage from './useLocalStorage'
 
 const RANKS = [
-  { minXP: 0, name: 'Script Kiddie' },
-  { minXP: 200, name: 'Web Developer Apprentice' },
-  { minXP: 500, name: 'Full-Stack Padawan' },
-  { minXP: 800, name: 'Cyber Master' },
-  { minXP: 1000, name: 'Hacker Elite' },
+  { minXP: 0, name: '🌱 Web Explorer' },
+  { minXP: 200, name: '🧩 HTML Padawan' },
+  { minXP: 500, name: '🎨 CSS Apprentice' },
+  { minXP: 800, name: '⚡ JS Developer' },
+  { minXP: 1000, name: '🚀 React Master' },
 ]
 
 const XP_PER_LEVEL = 1000

@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "CyberDev Academy - Plataforma gamificada de aprendizaje en programación y ciberseguridad con estética cyberpunk",
+  "description": "CyberDev Academy - Plataforma gamificada de aprendizaje en programación web con estética cyberpunk",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

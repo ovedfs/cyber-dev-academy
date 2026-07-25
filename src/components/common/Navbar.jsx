@@ -29,7 +29,7 @@ export default function Navbar({
             {'>'} CyberDev_
           </span>
           <span className="font-mono text-xs text-cyber-green animate-pulse">
-            ● ONLINE
+            ● READY
           </span>
         </div>
 
