@@ -208,6 +208,7 @@ cyber-dev-academy/
 - [ ] Creación de `webTechBank.json` (150+ preguntas de HTML, CSS, JS, React, Git).
 - [ ] Diseño de las 10 misiones para "Fix the Code" con código HTML/CSS/JS roto y scripts de validación.
 - [ ] Creación de retos de lógica JS.
+**Importante:** Para determinar los topicos de los bancos de datos revisar el **Anexo 1** al final de este documento.
 
 ### **Fase 3: Desarrollo de la Arena de Exámenes**
 - [ ] Implementación de `useExamEngine` y algoritmo de aleatorización.
@@ -256,6 +257,188 @@ npm run dev
 # 4. Compilar para producción
 npm run build
 ```
+
+---
+
+## 📚 8. ANEXO 1 "Temario Detallado por Módulo y Tecnología"
+
+### 1. 🧠 Programación Básica (Conceptos Generales)
+*Orientado al Simulador Teórico de Fundamentos y Desafíos de Lógica.*
+
+* **Variables y Constantes:**
+  * Declaración con `let` y `const` (y diferencias históricas con `var`).
+  * Alcance (*Scope*): Bloque vs. Función vs. Global.
+  * Convenciones de nombre y buenas prácticas (*camelCase*, nombres descriptivos).
+* **Tipos de Datos Primarios:**
+  * Primitivos: `String`, `Number`, `Boolean`, `null`, `undefined`.
+  * Verificación de tipos con el operador `typeof`.
+* **Operadores Básicos:**
+  * Aritméticos: `+`, `-`, `*`, `/`, `%` (módulo).
+  * Asignación: `=`, `+=`, `-=`, `*=`, `/=`.
+  * Comparación e Igualdad: `==`, `===` (estricta), `!=`, `!==`, `>`, `<`, `>=`, `<=`.
+  * Lógicos: `&&` (AND), `||` (OR), `!` (NOT).
+* **Estructuras de Control / Condicionales:**
+  * Control de flujo con `if`, `else if` y `else`.
+  * Operador ternario (`condicion ? valor1 : valor2`).
+  * Selección múltiple con `switch` y `case`.
+* **Ciclos y Bucle Iterativo:**
+  * Bucle `for` clásico (inicialización, condición, incremento).
+  * Bucle `while` y concepto de bucle infinito.
+  * Control de ciclos: `break` y `continue`.
+* **Funciones:**
+  * Declaración de funciones tradicionales vs. Funciones flecha (*Arrow Functions*).
+  * Parámetros, argumentos y valores por defecto.
+  * Retorno de valores con la palabra clave `return`.
+* **Estructuras de Datos Iniciales:**
+  * **Arreglos (*Arrays*):** Creación, índices, acceso a elementos y propiedad `.length`.
+  * **Objetos Literales:** Clave-valor, acceso con notación de punto (`objeto.propiedad`) y corchetes (`objeto['propiedad']`).
+* **Introducción a POO (Programación Orientada a Objetos):**
+  * Conceptos fundamentales: Clase (*Class*), Objeto / Instancia, Propiedades y Métodos.
+  * Uso básico de la palabra clave `this` y el método `constructor()`.
+
+---
+
+### 2. 🌐 HTML5 (Estructura Web)
+*Orientado al Simulador Técnico Web y Laboratorio "Fix the Code".*
+
+* **Estructura Documental Básica:**
+  * Anuncio de tipo de documento: `<!DOCTYPE html>`.
+  * Elementos raíz y metadatos: `<html>`, `<head>`, `<body>`, `<meta charset="UTF-8">`, `<title>`.
+  * Inclusión de recursos externos: `<link rel="stylesheet" ...>` y `<script src="...">`.
+* **Etiquetas Semánticas:**
+  * Estructuración del maquetado: `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`.
+  * Importancia de la semántica para SEO y accesibilidad.
+* **Contenido y Jerarquía de Texto:**
+  * Encabezados principales y secundarios: `<h1>` a `<h6>`.
+  * Estructuración de párrafos: `<p>`, `<br>`, `<hr>`.
+  * Listas: Ordenadas (`<ol>`), desordenadas (`<ul>`) e ítems (`<li>`).
+  * Énfasis de texto: `<strong>`, `<em>`, `<span>`.
+* **Multimedia y Enlaces:**
+  * Hipervínculos: `<a href="..." target="_blank">` y anclas locales.
+  * Inserción de imágenes: `<img src="..." alt="...">` (uso obligatorio del atributo `alt`).
+  * Audio y Video básico: `<audio>`, `<video>`, `<source>`.
+* **Formularios Interactivos:**
+  * Elemento `<form>` y atributos `action` y `method`.
+  * Controles de entrada: `<input>` (tipos: `text`, `password`, `email`, `number`, `checkbox`, `radio`, `submit`, `color`, `date`).
+  * Etiquetas de campo y selección: `<label>`, `<textarea>`, `<select>`, `<option>`, `<button>`.
+* **Identificadores y Clases:**
+  * Reglas de atributos: `id` (único e irrepetible por página) vs `class` (reutilizable).
+
+---
+
+### 3. 🎨 CSS3 (Estilos y Diseño)
+*Orientado al Simulador Técnico Web y Laboratorio "Fix the Code".*
+
+* **Sintaxis y Métodos de Inserción:**
+  * Estilos en línea, hoja interna (`<style>`) y hoja externa (`.css`).
+  * Estructura de reglas: `selector { propiedad: valor; }`.
+* **Selectores y Especificidad:**
+  * Selectores básicos: Etiqueta, Clase (`.mi-clase`), ID (`#mi-id`).
+  * Selectores combinados y universales (`*`, `div p`).
+  * Pseudoclases interactivas: `:hover`, `:active`, `:focus`, `:first-child`, `:nth-child()`.
+* **Modelo de Caja (*Box Model*):**
+  * Áreas de la caja: Contenido (`content`), Relleno (`padding`), Borde (`border`), Margen (`margin`).
+  * Control de dimensiones: `width`, `height`, `max-width`, `min-width`.
+  * Modificación del cálculo de caja: `box-sizing: border-box`.
+* **Colores, Tipografías y Fondos:**
+  * Representación de color: Nombre, Nombres HEX (`#ff0000`), RGB (`rgb(255, 0, 0)`), RGBA/HSLA.
+  * Estilos de texto: `font-family`, `font-size`, `font-weight`, `text-align`, `text-decoration`, `line-height`.
+  * Propiedades de fondo: `background-color`, `background-image`, `background-size`.
+* **Posicionamiento y Layout:**
+  * Comportamiento de flujo: `display` (`block`, `inline`, `inline-block`, `none`).
+  * Posicionamiento CSS: `position` (`static`, `relative`, `absolute`, `fixed`, `sticky`), `top`, `right`, `bottom`, `left`, `z-index`.
+* **Flexbox (Caja Flexible):**
+  * Contenedor Padre: `display: flex`, `flex-direction`, `justify-content`, `align-items`, `flex-wrap`, `gap`.
+  * Elementos Hijos: `flex-grow`, `flex-shrink`, `flex-basis`.
+* **CSS Grid (Rejilla Básica):**
+  * Contenedor Padre: `display: grid`, `grid-template-columns`, `grid-template-rows`, `gap`.
+  * Uso de la unidad de fracción `fr` y función `repeat()`.
+* **Unidades de Medida y Responsive Design:**
+  * Absolutas (`px`) vs Relativas (`%`, `em`, `rem`, `vw`, `vh`).
+  * Adaptabilidad: Consultas de medios básicas (`@media (max-width: 768px) { ... }`).
+
+---
+
+### 4. ⚡ JavaScript Moderno & DOM (Lógica Dinámica)
+*Orientado a Simuladores, Fix the Code y Zona de Lógica.*
+
+* **Manipulación y Selección del DOM:**
+  * Métodos de selección: `document.getElementById()`, `document.querySelector()`, `document.querySelectorAll()`.
+  * Lectura y modificación de contenido: `.textContent`, `.innerHTML`, `.value` (para inputs).
+  * Estilos y Clases CSS: `.style.propiedad`, `.classList.add()`, `.classList.remove()`, `.classList.toggle()`.
+  * Modificación de atributos: `.setAttribute()`, `.getAttribute()`.
+* **Manejo de Eventos (*Event Listeners*):**
+  * Escuchadores de eventos: `element.addEventListener('evento', callback)`.
+  * Eventos comunes: `click`, `submit`, `input`, `change`, `keydown`, `keyup`, `DOMContentLoaded`.
+  * Control de comportamiento por defecto: `event.preventDefault()`.
+* **Métodos de Arrays Avanzados:**
+  * Iteración y transformación: `.forEach()`, `.map()`.
+  * Filtro y búsqueda: `.filter()`, `.find()`, `.includes()`, `.some()`, `.every()`.
+  * Mutación de arreglos: `.push()`, `.pop()`, `.shift()`, `.unshift()`, `.splice()`.
+* **Template Literals y Strings:**
+  * Cadenas interpoladas con backticks (`` `Hola ${nombre}` ``).
+  * Métodos de String: `.toLowerCase()`, `.toUpperCase()`, `.includes()`, `.trim()`, `.slice()`.
+* **Formatos de Datos (JSON):**
+  * Estructura JSON vs Objeto JS.
+  * Conversión: `JSON.parse()` y `JSON.stringify()`.
+
+---
+
+### 5. ⚛️ React Básico (Componentes e Interfaz Reactiva)
+*Orientado al Simulador Técnico Web y Ejercicios de Lógica.*
+
+* **Conceptos Fundamentales:**
+  * Filosofía de React: Arquitectura basada en Componentes.
+  * Concepto de SPA (*Single Page Application*) y Virtual DOM.
+* **Sintaxis JSX:**
+  * Reglas de formato: Un único elemento raíz (o Fragment `<>...</>`), cierre de todas las etiquetas.
+  * Diferencias con HTML: `className` en lugar de `class`, `htmlFor` en lugar de `for`.
+  * Evaluación de expresiones JS dentro de JSX usando llaves `{}`.
+* **Componentes y Propiedades (*Props*):**
+  * Creación de Componentes Funcionales.
+  * Paso y recepción de datos a través de `props`.
+  * Desestructuración de *props* (`function MiComponente({ titulo, subtitulo })`).
+  * Propiedad especial `children`.
+* **Estado en React (`useState`):**
+  * Importación y declaración del hook: `const [valor, setValor] = useState(valorInicial);`.
+  * Concepto de Reactividad y Re-renderizado.
+  * Actualización correcta del estado en eventos.
+* **Manejo de Eventos en React:**
+  * Atributos de evento sintéticos: `onClick`, `onChange`, `onSubmit`.
+  * Binding de funciones y paso de parámetros.
+* **Renderizado Condicional y Listas:**
+  * Muestreo condicional mediante operador ternario `? :` y operador `&&`.
+  * Renderizado de listas mediante `.map()`.
+  * Importancia y uso del atributo `key` en listas iteradas.
+
+---
+
+### 6. 🐙 Git & GitHub (Control de Versiones y Colaboración)
+*Orientado al Simulador Técnico Web.*
+
+* **Conceptos Fundamentales:**
+  * ¿Qué es un Sistema de Control de Versiones (VCS)?
+  * Repositorio Local vs Repositorio Remoto.
+  * Las 3 áreas de Git: Directorio de Trabajo (*Working Directory*), Área de Preparación (*Staging Area*) y Repositorio (*Git Directory/.git*).
+* **Comandos Esenciales en Terminal:**
+  * `git init`: Inicialización de un nuevo repositorio.
+  * `git status`: Inspección del estado de los archivos (modificados, rastreados, no rastreados).
+  * `git add <archivo>` / `git add .`: Preparación de cambios para el commit.
+  * `git commit -m "Mensaje"`: Creación de un punto de restauración en el historial.
+  * `git log` / `git log --oneline`: Visualización del historial de versiones.
+* **Manejo de Ramas (*Branches*):**
+  * Concepto de rama principal (`main` / `master`) y ramas de características (*feature branches*).
+  * `git branch`: Listar o crear ramas.
+  * `git checkout <rama>` / `git switch <rama>`: Moverse entre ramas.
+  * `git merge`: Fusión básica de ramas.
+* **Flujo de Trabajo con GitHub:**
+  * `git clone <URL>`: Clondación de repositorios remotos.
+  * `git remote add origin <URL>`: Vinculación con repositorios remotos.
+  * `git push -u origin <rama>`: Enviar cambios al servidor remoto.
+  * `git pull`: Descargar e integrar cambios remotos.
+* **Buenas Prácticas:**
+  * Mensajes de *commit* claros, concisos y descriptivos.
+  * Uso y configuración del archivo `.gitignore` (exclusión de `node_modules`, `.env`, etc.).
 
 ---
 *Plan arquitectónico generado y listo para ejecución.*
