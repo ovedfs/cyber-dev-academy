@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import CyberCard from '../common/CyberCard'
+import FormattedQuestion from '../common/FormattedQuestion'
 
 const difficultyConfig = {
   easy: { label: 'Fácil', color: 'text-cyber-green', border: 'green' },
@@ -76,9 +77,9 @@ export default function QuestionCard({
         </div>
 
         {/* Pregunta */}
-        <h3 className="font-mono text-base sm:text-lg text-cyber-text mb-6 leading-relaxed">
-          {question.question}
-        </h3>
+        <div className="mb-6">
+          <FormattedQuestion text={question.question} />
+        </div>
 
         {/* Opciones */}
         <div className="space-y-3">
