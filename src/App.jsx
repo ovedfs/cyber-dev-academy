@@ -6,6 +6,7 @@ import CyberButton from './components/common/CyberButton'
 import Modal from './components/common/Modal'
 import useGameProgress from './hooks/useGameProgress'
 import ArenaExamsView from './views/ArenaExamsView'
+import FixTheCodeView from './views/FixTheCodeView'
 
 function App() {
   const {
@@ -15,9 +16,11 @@ function App() {
     getXPInLevel,
     toggleSound,
     completeExam,
+    completeChallenge,
+    addBadge,
   } = useGameProgress()
 
-  const [currentView, setCurrentView] = useState('home') // home | exams
+  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code
   const [modalOpen, setModalOpen] = useState(false)
 
   const handleExamComplete = (examId, results) => {
@@ -32,6 +35,17 @@ function App() {
     }
   }
 
+  const handleChallengeComplete = (challengeId, xpEarned) => {
+    // Marcar desafío como completado
+    completeChallenge(challengeId)
+    // Otorgar XP
+    addXP(xpEarned)
+    // Verificar si es el primer desafío completado para dar insignia
+    if (gameState.completedChallenges.length === 0) {
+      addBadge('bug-hunter')
+    }
+  }
+
   // Renderizado de vistas
   const renderView = () => {
     switch (currentView) {
@@ -40,6 +54,14 @@ function App() {
           <ArenaExamsView
             onBack={() => setCurrentView('home')}
             onComplete={handleExamComplete}
+          />
+        )
+      case 'fix-code':
+        return (
+          <FixTheCodeView
+            onBack={() => setCurrentView('home')}
+            onComplete={handleChallengeComplete}
+            completedChallenges={gameState.completedChallenges}
           />
         )
       default:
@@ -116,17 +138,17 @@ function App() {
                 </div>
               </CyberCard>
 
-              <CyberCard borderColor="purple" className="opacity-60">
+              <CyberCard borderColor="purple" className="cursor-pointer hover:scale-[1.02] transition-transform">
                 <div className="text-center">
                   <Wrench className="mx-auto mb-3 text-cyber-purple" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-purple mb-2">
                     Fix the Code
                   </h2>
                   <p className="font-mono text-xs text-cyber-text mb-4">
-                    Próximamente — Depuración en vivo con Monaco Editor
+                    Depuración en vivo con Monaco Editor — 10 desafíos
                   </p>
-                  <CyberButton color="purple" disabled>
-                    PRÓXIMAMENTE
+                  <CyberButton color="purple" onClick={() => setCurrentView('fix-code')}>
+                    ACCEDER
                   </CyberButton>
                 </div>
               </CyberCard>

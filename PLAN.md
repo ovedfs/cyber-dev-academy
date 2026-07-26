@@ -216,11 +216,15 @@ cyber-dev-academy/
 - [x] Desarrollo del Dashboard de resultados con semáforo y cálculo de calificación.
 - [x] Integración del módulo de exportación de reportes a PDF imprimibles.
 
-### **Fase 4: Desarrollo del Laboratorio "Fix the Code"**
-- [ ] Integración de Monaco Editor (`@monaco-editor/react`) con pestañas HTML/CSS/JS.
-- [ ] Construcción del iFrame sandbox de renderizado con Hot Reload.
-- [ ] Implementación del motor de verificación DOM/JS para solución de bugs.
-- [ ] Sistema de pistas (Tips) con penalización de XP.
+### **Fase 4: Desarrollo del Laboratorio "Fix the Code"** ✅ *(Completada el 26/07/2026)*
+- [x] Integración de Monaco Editor (`@monaco-editor/react`) con pestañas HTML/CSS/JS y tema cyberpunk.
+- [x] Construcción del iFrame sandbox de renderizado con Hot Reload (debounce 500ms).
+- [x] Implementación del motor de validación de soluciones (BugValidator) con pruebas text-based.
+- [x] Sistema de pistas (Tips) con penalización de XP (-15 XP por pista usada).
+- [x] Vista de ancho completo con 3 paneles redimensionables (sidebar, editor+consola, preview).
+- [x] Consola de validación tipo overlay con mensajes genéricos (sin revelar respuestas correctas).
+- [x] Efectos de confetti y modal de victoria al superar cada desafío.
+- [x] 10 desafíos "Fix the Code" de HTML, CSS, JS y React con bugs reales.
 
 ### **Fase 5: Módulo de Lógica, Mapa de Misiones y Gamificación**
 - [ ] Implementación del mapa interactivo de misiones con nodos desbloqueables.

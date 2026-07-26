@@ -653,11 +653,11 @@ nav ul li:first-child a {
   margin: 50px auto;
   padding: 20px;
 }`,
-      js: `// Obtener el contenedor
-const contenedor = document.getElementById('contenido');
+      js: `// OBTENER el contenedor (BUG: nombre incorrecto del método)
+const contenedor = document.getElementById('contenedor');
 
 // Crear un nuevo párrafo
-const parrafo = document.createElement('p');
+const parrafo = document.createElement('div');
 
 // Asignar el texto
 parrafo.textContent = 'Hola Mundo';
@@ -700,8 +700,8 @@ contenedor.appendChild(parrafo);`
     },
     validation: {
       tests: [
-        { description: "El script debe usar document.getElementById", test: "js.includes('document.getElementById')" },
-        { description: "El script debe usar document.createElement", test: "js.includes('document.createElement')" },
+        { description: "El script debe usar getElementById('contenido')", test: "js.includes(\"getElementById('contenido')\")" },
+        { description: "El script debe crear un elemento <p>", test: "js.includes(\"createElement('p')\")" },
         { description: "El script debe usar appendChild", test: "js.includes('appendChild')" }
       ]
     },
