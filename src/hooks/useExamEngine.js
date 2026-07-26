@@ -105,10 +105,10 @@ export default function useExamEngine(questionBank, timeLimit = 0) {
     const score10 = parseFloat((score / 10).toFixed(1))
 
     // Determinar rango
-    let rank = '🌱 Web Explorer'
-    if (score >= 90) rank = '⚡ JS Developer'
-    else if (score >= 80) rank = '🎨 CSS Apprentice'
-    else if (score >= 60) rank = '🧩 HTML Padawan'
+    let rank = 'Web Explorer'
+    if (score >= 90) rank = 'JS Developer'
+    else if (score >= 80) rank = 'CSS Apprentice'
+    else if (score >= 60) rank = 'HTML Padawan'
 
     return {
       total,

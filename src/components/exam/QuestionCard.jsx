@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Check, X } from 'lucide-react'
 import CyberCard from '../common/CyberCard'
 import FormattedQuestion from '../common/FormattedQuestion'
 
@@ -116,11 +117,11 @@ export default function QuestionCard({
                       }
                     `}
                   >
-                    {showResult && isCorrect
-                      ? '✓'
-                      : showResult && isSelected && !isCorrect
-                      ? '✗'
-                      : optionLabels[index]}
+                    {showResult && isCorrect ? (
+                      <Check size={16} strokeWidth={3} aria-label="Respuesta correcta" />
+                    ) : showResult && isSelected && !isCorrect ? (
+                      <X size={16} strokeWidth={3} aria-label="Respuesta incorrecta" />
+                    ) : optionLabels[index]}
                   </span>
                   <span className="flex-1 pt-0.5">{option}</span>
                 </div>
@@ -132,8 +133,8 @@ export default function QuestionCard({
         {/* Indicador de respondida */}
         {isAnswered && !showResult && (
           <div className="mt-4 text-right">
-            <span className="font-mono text-[10px] text-cyber-green uppercase tracking-wider">
-              ✓ Respondida
+            <span className="inline-flex items-center gap-1 font-mono text-[10px] text-cyber-green uppercase tracking-wider">
+              <Check size={13} strokeWidth={3} aria-hidden="true" /> Respondida
             </span>
           </div>
         )}

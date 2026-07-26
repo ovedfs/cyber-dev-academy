@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { X } from 'lucide-react'
 
 export default function Modal({
   isOpen,
@@ -48,7 +49,7 @@ export default function Modal({
         className={`
           bg-cyber-card border rounded-lg p-6 max-w-lg w-full mx-4
           ${borderColors[borderColor] || borderColors.cyan}
-          animate-in zoom-in-95 duration-200
+          animate-modal-enter
           ${className}
         `}
       >
@@ -59,9 +60,10 @@ export default function Modal({
           </h2>
           <button
             onClick={onClose}
-            className="font-mono text-sm text-cyber-pink hover:text-cyber-pink/80 transition-colors border border-cyber-border rounded px-2 py-0.5 hover:border-cyber-pink/50"
+            className="inline-flex items-center justify-center text-cyber-pink hover:text-cyber-pink/80 transition-colors border border-cyber-border rounded p-1.5 hover:border-cyber-pink/50"
+            aria-label="Cerrar diálogo"
           >
-            [X]
+            <X size={16} aria-hidden="true" />
           </button>
         </div>
 

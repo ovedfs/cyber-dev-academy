@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Menu, Power, Volume2, VolumeX, X } from 'lucide-react'
 import XPBar from './XPBar'
 
 export default function Navbar({
@@ -28,8 +29,8 @@ export default function Navbar({
           <span className="font-mono text-lg font-bold text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">
             {'>'} CyberDev_
           </span>
-          <span className="font-mono text-xs text-cyber-green animate-pulse">
-            ● READY
+          <span className="flex items-center gap-1 font-mono text-xs text-cyber-green animate-pulse">
+            <Power size={12} aria-hidden="true" /> READY
           </span>
         </div>
 
@@ -51,7 +52,10 @@ export default function Navbar({
             className="font-mono text-xs text-cyber-cyan hover:text-cyber-green transition-colors duration-150 border border-cyber-border rounded px-2 py-1 hover:border-cyber-cyan/50"
             title={soundEnabled ? 'Desactivar sonido' : 'Activar sonido'}
           >
-            {soundEnabled ? '[SND:ON]' : '[SND:OFF]'}
+            <span className="flex items-center gap-1">
+              {soundEnabled ? <Volume2 size={14} aria-hidden="true" /> : <VolumeX size={14} aria-hidden="true" />}
+              <span className="hidden sm:inline">{soundEnabled ? 'SONIDO: ON' : 'SONIDO: OFF'}</span>
+            </span>
           </button>
 
           {/* Menú hamburguesa mobile */}
@@ -59,7 +63,7 @@ export default function Navbar({
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden font-mono text-xs text-cyber-cyan border border-cyber-border rounded px-2 py-1"
           >
-            {menuOpen ? '[X]' : '[=]'}
+            {menuOpen ? <X size={16} aria-label="Cerrar menú" /> : <Menu size={16} aria-label="Abrir menú" />}
           </button>
         </div>
       </div>

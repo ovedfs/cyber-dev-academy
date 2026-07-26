@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Award, BookOpenCheck, Lightbulb, Wrench } from 'lucide-react'
 import Navbar from './components/common/Navbar'
 import CyberCard from './components/common/CyberCard'
 import CyberButton from './components/common/CyberButton'
@@ -18,10 +19,6 @@ function App() {
 
   const [currentView, setCurrentView] = useState('home') // home | exams
   const [modalOpen, setModalOpen] = useState(false)
-
-  const handleAddXP = () => {
-    addXP(50)
-  }
 
   const handleExamComplete = (examId, results) => {
     completeExam(examId, results.score)
@@ -106,7 +103,7 @@ function App() {
             <section className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
               <CyberCard borderColor="green" className="cursor-pointer hover:scale-[1.02] transition-transform">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">📝</div>
+                  <BookOpenCheck className="mx-auto mb-3 text-cyber-green" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-green mb-2">
                     Arena de Exámenes
                   </h2>
@@ -121,7 +118,7 @@ function App() {
 
               <CyberCard borderColor="purple" className="opacity-60">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🔧</div>
+                  <Wrench className="mx-auto mb-3 text-cyber-purple" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-purple mb-2">
                     Fix the Code
                   </h2>
@@ -136,7 +133,7 @@ function App() {
 
               <CyberCard borderColor="yellow" className="opacity-60">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">💡</div>
+                  <Lightbulb className="mx-auto mb-3 text-cyber-yellow" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-yellow mb-2">
                     Laboratorio de Lógica
                   </h2>
@@ -151,7 +148,7 @@ function App() {
 
               <CyberCard borderColor="cyan" className="opacity-60">
                 <div className="text-center">
-                  <div className="text-3xl mb-3">🏆</div>
+                  <Award className="mx-auto mb-3 text-cyber-cyan" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-cyan mb-2">
                     Perfil y Logros
                   </h2>
@@ -167,9 +164,6 @@ function App() {
 
             {/* Actions */}
             <section className="flex flex-wrap gap-4 justify-center mb-12">
-              <CyberButton color="green" onClick={handleAddXP}>
-                +50 XP
-              </CyberButton>
               <CyberButton color="cyan" variant="outline" onClick={() => setModalOpen(true)}>
                 Acerca del Sistema
               </CyberButton>
@@ -193,6 +187,9 @@ function App() {
 
   return (
     <div className="min-h-screen bg-cyber-dark text-cyber-text font-sans">
+      <a href="#main-content" className="cyber-skip-link bg-cyber-cyan text-cyber-dark px-3 py-2 rounded font-mono text-xs font-bold">
+        Saltar al contenido
+      </a>
       {/* Navbar */}
       <Navbar
         currentXP={getXPInLevel()}
@@ -204,8 +201,10 @@ function App() {
       />
 
       {/* Main Content */}
-      <main className="pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        {renderView()}
+      <main id="main-content" className="pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div key={currentView} className="animate-page-enter">
+          {renderView()}
+        </div>
       </main>
 
       {/* Modal */}

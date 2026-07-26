@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BookOpen, Brain, Clock3, Target } from 'lucide-react'
 import CyberCard from '../components/common/CyberCard'
 import CyberButton from '../components/common/CyberButton'
 import ExamRunner from '../components/exam/ExamRunner'
@@ -41,7 +42,7 @@ export default function ArenaExamsView({ onBack, onComplete }) {
         {/* Examen Teórico */}
         <CyberCard borderColor="green" className="cursor-pointer hover:scale-[1.02] transition-transform">
           <div className="text-center">
-            <div className="text-4xl mb-4">🧠</div>
+            <Brain className="mx-auto mb-4 text-cyber-green" size={42} strokeWidth={1.5} aria-hidden="true" />
             <h2 className="font-mono text-xl font-bold text-cyber-green mb-2">
               Examen Teórico
             </h2>
@@ -49,11 +50,11 @@ export default function ArenaExamsView({ onBack, onComplete }) {
               Conceptos de programación: variables, funciones, POO, estructuras de control y más.
             </p>
             <div className="space-y-1 mb-4">
-              <p className="font-mono text-[10px] text-cyber-cyan">
-                📚 {theoryBank.length} preguntas disponibles
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-cyan">
+                <BookOpen size={13} aria-hidden="true" /> {theoryBank.length} preguntas disponibles
               </p>
-              <p className="font-mono text-[10px] text-cyber-yellow">
-                🎯 25 preguntas · 30 min
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-yellow">
+                <Target size={13} aria-hidden="true" /> 25 preguntas <span aria-hidden="true">·</span> <Clock3 size={13} aria-hidden="true" /> 30 min
               </p>
             </div>
             <CyberButton
@@ -70,7 +71,7 @@ export default function ArenaExamsView({ onBack, onComplete }) {
         {/* Examen Técnico Web */}
         <CyberCard borderColor="cyan" className="cursor-pointer hover:scale-[1.02] transition-transform">
           <div className="text-center">
-            <div className="text-4xl mb-4">🌐</div>
+            <BookOpen className="mx-auto mb-4 text-cyber-cyan" size={42} strokeWidth={1.5} aria-hidden="true" />
             <h2 className="font-mono text-xl font-bold text-cyber-cyan mb-2">
               Examen Técnico Web
             </h2>
@@ -78,11 +79,11 @@ export default function ArenaExamsView({ onBack, onComplete }) {
               HTML5, CSS3, JavaScript, React y Git. Tecnologías fundamentales del desarrollo web.
             </p>
             <div className="space-y-1 mb-4">
-              <p className="font-mono text-[10px] text-cyber-cyan">
-                📚 {webTechBank.length} preguntas disponibles
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-cyan">
+                <BookOpen size={13} aria-hidden="true" /> {webTechBank.length} preguntas disponibles
               </p>
-              <p className="font-mono text-[10px] text-cyber-yellow">
-                🎯 25 preguntas · 30 min
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-yellow">
+                <Target size={13} aria-hidden="true" /> 25 preguntas <span aria-hidden="true">·</span> <Clock3 size={13} aria-hidden="true" /> 30 min
               </p>
             </div>
             <CyberButton

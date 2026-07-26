@@ -35,6 +35,7 @@ export default function CyberButton({
   onClick,
   disabled = false,
   className = '',
+  type = 'button',
   ...props
 }) {
   const [isPressed, setIsPressed] = useState(false)
@@ -48,10 +49,11 @@ export default function CyberButton({
 
   const baseClasses = `
     relative font-mono font-semibold uppercase tracking-wider
-    rounded-md border transition-all duration-150 ease-in-out
+    inline-flex items-center justify-center gap-2 rounded-md border transition-all duration-150 ease-in-out
     disabled:opacity-40 disabled:cursor-not-allowed
+    focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyber-cyan focus-visible:ring-offset-2 focus-visible:ring-offset-cyber-dark
     ${sizeClasses[size] || sizeClasses.md}
-    ${isPressed ? 'scale-95' : 'hover:scale-105'}
+    ${isPressed ? 'scale-95' : 'motion-safe:hover:scale-105'}
   `
 
   const solidClasses = `
@@ -70,6 +72,7 @@ export default function CyberButton({
   return (
     <button
       className={`${baseClasses} ${variantClasses} ${className}`}
+      type={type}
       onClick={onClick}
       disabled={disabled}
       onMouseDown={() => setIsPressed(true)}

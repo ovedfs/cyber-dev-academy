@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { AlertTriangle, BarChart3, ChevronLeft, ChevronRight, Clock3, Lightbulb } from 'lucide-react'
 import useExamEngine from '../../hooks/useExamEngine'
 import QuestionCard from './QuestionCard'
 import CyberButton from '../common/CyberButton'
@@ -57,9 +58,9 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
             {examTitle}
           </h2>
           <div className="mt-6 font-mono text-sm text-cyber-text space-y-2">
-            <p className="text-cyber-yellow">⚠️ 25 preguntas · 30 minutos · Sin límite de intentos</p>
-            <p className="text-cyber-purple">📊 Dificultad balanceada: 10 fáciles · 10 intermedias · 5 avanzadas</p>
-            <p className="text-cyber-cyan">💡 Puedes navegar entre preguntas libremente</p>
+            <p className="flex items-center justify-center gap-2 text-cyber-yellow"><AlertTriangle size={16} aria-hidden="true" /> 25 preguntas · 30 minutos · Sin límite de intentos</p>
+            <p className="flex items-center justify-center gap-2 text-cyber-purple"><BarChart3 size={16} aria-hidden="true" /> Dificultad balanceada: 10 fáciles · 10 intermedias · 5 avanzadas</p>
+            <p className="flex items-center justify-center gap-2 text-cyber-cyan"><Lightbulb size={16} aria-hidden="true" /> Puedes navegar entre preguntas libremente</p>
           </div>
         </div>
 
@@ -96,7 +97,7 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <CyberButton color="pink" variant="outline" size="sm" onClick={handleBackToMenu}>
-              ← SALIR
+              <ChevronLeft size={16} aria-hidden="true" /> SALIR
             </CyberButton>
             <h2 className="font-mono text-lg font-semibold text-cyber-cyan">
               {'>'} {examTitle}
@@ -113,7 +114,7 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
                   : 'text-cyber-green border-cyber-green/30'
               }`}
             >
-              ⏱ {formatTime(timeRemaining)}
+              <Clock3 className="inline-block mr-1" size={15} aria-hidden="true" /> {formatTime(timeRemaining)}
             </span>
           </div>
         </div>
@@ -174,7 +175,7 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
           onClick={prevQuestion}
           disabled={currentIndex === 0}
         >
-          ← ANTERIOR
+          <ChevronLeft size={16} aria-hidden="true" /> ANTERIOR
         </CyberButton>
 
         <div className="flex gap-3">
@@ -183,7 +184,7 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
           </CyberButton>
           {currentIndex < totalQuestions - 1 && (
             <CyberButton color="cyan" onClick={nextQuestion}>
-              SIGUIENTE →
+              SIGUIENTE <ChevronRight size={16} aria-hidden="true" />
             </CyberButton>
           )}
           {currentIndex === totalQuestions - 1 && (
@@ -205,8 +206,8 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
               Has respondido {answeredCount} de {totalQuestions} preguntas.
             </p>
             {answeredCount < totalQuestions && (
-              <p className="font-mono text-xs text-cyber-yellow mb-4">
-                ⚠️ Quedan {totalQuestions - answeredCount} preguntas sin responder.
+              <p className="flex items-center gap-2 font-mono text-xs text-cyber-yellow mb-4">
+                <AlertTriangle size={15} aria-hidden="true" /> Quedan {totalQuestions - answeredCount} preguntas sin responder.
               </p>
             )}
             <div className="flex gap-3 justify-end mt-6">

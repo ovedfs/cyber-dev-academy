@@ -27,7 +27,7 @@ export default function CyberCard({
         bg-cyber-card border rounded-lg p-6
         ${borderColors[borderColor] || borderColors.cyan}
         ${glow ? glowShadows[borderColor] || glowShadows.cyan : ''}
-        transition-all duration-150 hover:border-opacity-60
+        transition-all duration-200 hover:border-opacity-60
         ${className}
       `}
       {...props}
