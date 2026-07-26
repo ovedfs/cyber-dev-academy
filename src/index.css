@@ -1,5 +1,27 @@
 @import "tailwindcss";
 
+/* Definición de colores personalizados para Tailwind v4 */
+@theme {
+  --color-cyber-dark: #0a0a0f;
+  --color-cyber-card: #12131c;
+  --color-cyber-border: #1f2438;
+  --color-cyber-green: #00ff66;
+  --color-cyber-cyan: #00e5ff;
+  --color-cyber-purple: #9d00ff;
+  --color-cyber-pink: #ff007f;
+  --color-cyber-yellow: #ffcc00;
+  --color-cyber-text: #e0e0e0;
+
+  --font-family-mono: 'Fira Code', 'JetBrains Mono', monospace;
+  --font-family-sans: 'Inter', 'system-ui', sans-serif;
+
+  --shadow-neon-cyan: 0 0 15px rgba(0, 229, 255, 0.4);
+  --shadow-neon-green: 0 0 15px rgba(0, 255, 102, 0.4);
+  --shadow-neon-purple: 0 0 15px rgba(157, 0, 255, 0.4);
+  --shadow-neon-pink: 0 0 15px rgba(255, 0, 127, 0.4);
+  --shadow-neon-yellow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
 /* Estilos base Cyberpunk */
 * {
   scrollbar-width: thin;
