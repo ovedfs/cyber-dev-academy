@@ -35,8 +35,12 @@ export default function FixTheCodeView({
   completedChallenges: externalCompletedChallenges = [],
   hintsUsed: externalHintsUsed = 0,
 }) {
-  // Estado del desafío actual
-  const [currentChallengeId, setCurrentChallengeId] = useState(bugChallenges[0]?.id || null)
+  // Estado del desafío actual: buscar el primer desafío no completado
+  const getInitialChallengeId = () => {
+    const firstPending = bugChallenges.find((c) => !externalCompletedChallenges.includes(c.id))
+    return firstPending?.id || bugChallenges[0]?.id || null
+  }
+  const [currentChallengeId, setCurrentChallengeId] = useState(getInitialChallengeId)
   const [userFiles, setUserFiles] = useState({ html: '', css: '', js: '' })
   const [originalFiles, setOriginalFiles] = useState({ html: '', css: '', js: '' })
 

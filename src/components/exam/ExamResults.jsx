@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Check, Download, TriangleAlert, X } from 'lucide-react'
+import { Check, Download, Printer, TriangleAlert, X } from 'lucide-react'
 import CyberCard from '../common/CyberCard'
 import CyberButton from '../common/CyberButton'
 
@@ -74,21 +74,34 @@ export default function ExamResults({ results, examTitle, onRetry, onBack }) {
       const safeTitle = examTitle.toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/(^-|-$)/g, '')
 
       const pdf = new jsPDF({ unit: 'mm', format: 'a4', orientation: 'portrait' })
-      const margin = 15
+      const margin = 18
       const pageWidth = pdf.internal.pageSize.getWidth()
       const pageHeight = pdf.internal.pageSize.getHeight()
       const contentWidth = pageWidth - margin * 2
-      let cursorY = 18
+      let cursorY = 25
+
+      // Colores del tema claro
+      const COLORS = {
+        primary: [0, 102, 204],      // Azul principal
+        secondary: [51, 51, 51],      // Texto oscuro
+        dark: [30, 30, 30],           // Títulos
+        gray: [100, 100, 100],        // Texto secundario
+        lightGray: [240, 240, 240],   // Fondos suaves
+        white: [255, 255, 255],       // Fondo blanco
+        green: [0, 150, 80],          // Correcto
+        red: [200, 50, 50],           // Incorrecto
+        orange: [200, 140, 0],        // Advertencia
+      }
 
       const addPageIfNeeded = (space = 7) => {
-        if (cursorY + space > pageHeight - 16) {
+        if (cursorY + space > pageHeight - 20) {
           pdf.addPage()
-          cursorY = 18
+          cursorY = 25
         }
       }
 
-      const addText = (text, { size = 10, color = [25, 25, 35], gap = 5 } = {}) => {
-        pdf.setFont('helvetica', 'normal')
+      const addText = (text, { size = 10, color = COLORS.dark, gap = 5, bold = false } = {}) => {
+        pdf.setFont('helvetica', bold ? 'bold' : 'normal')
         pdf.setFontSize(size)
         pdf.setTextColor(...color)
         const lines = pdf.splitTextToSize(String(text), contentWidth)
@@ -100,56 +113,230 @@ export default function ExamResults({ results, examTitle, onRetry, onBack }) {
         cursorY += gap
       }
 
-      const addHeading = (text) => {
-        addPageIfNeeded(12)
-        pdf.setFont('helvetica', 'bold')
-        pdf.setFontSize(13)
-        pdf.setTextColor(0, 120, 135)
-        pdf.text(text, margin, cursorY)
-        cursorY += 8
+      const addDivider = () => {
+        addPageIfNeeded(6)
+        pdf.setDrawColor(200, 200, 200)
+        pdf.setLineWidth(0.3)
+        pdf.line(margin, cursorY, margin + contentWidth, cursorY)
+        cursorY += 6
       }
 
-      pdf.setFillColor(10, 10, 15)
-      pdf.rect(0, 0, pageWidth, pageHeight, 'F')
-      addHeading('CYBERDEV ACADEMY - REPORTE DE EXAMEN')
-      addText(examTitle, { size: 15, color: [0, 229, 255], gap: 8 })
-      addText(`Fecha: ${new Date().toLocaleDateString('es-MX')}`, { color: [220, 220, 225], gap: 3 })
-      addText(`Puntaje: ${score}/100 (${score10}/10) | Rango: ${rank}`, { size: 11, color: [0, 255, 102], gap: 3 })
-      addText(`Correctas: ${correct}/${total} | Incorrectas: ${incorrect}/${total} | Tiempo: ${formatTime(timeUsed)}`, { color: [220, 220, 225], gap: 8 })
+      const addSectionTitle = (text) => {
+        addPageIfNeeded(10)
+        // Fondo de sección
+        pdf.setFillColor(...COLORS.primary)
+        pdf.roundedRect(margin, cursorY, contentWidth, 7, 1.5, 1.5, 'F')
+        pdf.setFont('helvetica', 'bold')
+        pdf.setFontSize(10)
+        pdf.setTextColor(...COLORS.white)
+        pdf.text(text, margin + 3, cursorY + 5)
+        cursorY += 12
+      }
 
-      addHeading('ANALISIS POR TEMA')
+      // ===== ENCABEZADO =====
+      // Fondo del encabezado
+      pdf.setFillColor(240, 245, 255)
+      pdf.roundedRect(margin, cursorY, contentWidth, 35, 2, 2, 'F')
+      // Línea decorativa izquierda
+      pdf.setFillColor(...COLORS.primary)
+      pdf.rect(margin, cursorY, 3, 35, 'F')
+
+      pdf.setFont('helvetica', 'bold')
+      pdf.setFontSize(18)
+      pdf.setTextColor(...COLORS.primary)
+      pdf.text('CYBERDEV ACADEMY', margin + 8, cursorY + 10)
+
+      pdf.setFontSize(11)
+      pdf.setTextColor(...COLORS.secondary)
+      pdf.text('Reporte de Evaluación', margin + 8, cursorY + 20)
+
+      pdf.setFontSize(8)
+      pdf.setTextColor(...COLORS.gray)
+      pdf.text(`Fecha: ${new Date().toLocaleDateString('es-MX', { year: 'numeric', month: 'long', day: 'numeric' })}`, margin + 8, cursorY + 29)
+      cursorY += 40
+
+      // ===== INFORMACIÓN DEL EXAMEN =====
+      addSectionTitle('INFORMACIÓN DEL EXAMEN')
+      addText(`Examen: ${examTitle}`, { size: 11, bold: true, gap: 2 })
+      addText(`Rango obtenido: ${rank}`, { size: 10, gap: 2 })
+
+      // Tabla de resultados
+      const tableX = margin
+      const tableY = cursorY
+      const colWidths = [62, 62, 62]
+      const rowHeight = 7
+
+      pdf.setFillColor(245, 247, 250)
+      pdf.roundedRect(tableX, tableY, contentWidth, rowHeight * 2 + 4, 1.5, 1.5, 'F')
+
+      // Cabeceras
+      pdf.setFillColor(...COLORS.primary)
+      pdf.roundedRect(tableX, tableY, colWidths[0], rowHeight, 1, 1, 'F')
+      pdf.roundedRect(tableX + colWidths[0], tableY, colWidths[1], rowHeight, 1, 1, 'F')
+      pdf.roundedRect(tableX + colWidths[0] + colWidths[1], tableY, colWidths[2], rowHeight, 1, 1, 'F')
+
+      pdf.setFont('helvetica', 'bold')
+      pdf.setFontSize(9)
+      pdf.setTextColor(...COLORS.white)
+      pdf.text('Puntaje', tableX + colWidths[0] / 2, tableY + 5, { align: 'center' })
+      pdf.text('Correctas', tableX + colWidths[0] + colWidths[1] / 2, tableY + 5, { align: 'center' })
+      pdf.text('Tiempo usado', tableX + colWidths[0] + colWidths[1] + colWidths[2] / 2, tableY + 5, { align: 'center' })
+
+      // Filas
+      pdf.setFont('helvetica', 'bold')
+      pdf.setFontSize(11)
+      const scoreColor = score >= 80 ? COLORS.green : score >= 60 ? COLORS.orange : COLORS.red
+      pdf.setTextColor(...scoreColor)
+      pdf.text(`${score}/100`, tableX + colWidths[0] / 2, tableY + rowHeight + 5, { align: 'center' })
+
+      pdf.setFont('helvetica', 'normal')
+      pdf.setFontSize(10)
+      pdf.setTextColor(...COLORS.dark)
+      pdf.text(`${correct}/${total}`, tableX + colWidths[0] + colWidths[1] / 2, tableY + rowHeight + 5, { align: 'center' })
+      pdf.text(formatTime(timeUsed), tableX + colWidths[0] + colWidths[1] + colWidths[2] / 2, tableY + rowHeight + 5, { align: 'center' })
+
+      cursorY = tableY + rowHeight * 2 + 8
+
+      // ===== ANÁLISIS POR TEMA =====
+      addDivider()
+      addSectionTitle('ANÁLISIS POR TEMA')
+
       Object.entries(topicAnalysis).forEach(([topic, data]) => {
         const percentage = Math.round((data.correct / data.total) * 100)
-        addText(`${topic}: ${data.correct}/${data.total} (${percentage}%)`, { gap: 2 })
+        const barColor = percentage >= 80 ? COLORS.green : percentage >= 60 ? COLORS.orange : COLORS.red
+
+        addText(`${topic}`, { size: 9, bold: true, gap: 1 })
+        addText(`${data.correct}/${data.total} (${percentage}%)`, { size: 8, color: COLORS.gray, gap: 4 })
+
+        // Barra de progreso
+        addPageIfNeeded(6)
+        pdf.setFillColor(230, 230, 230)
+        pdf.roundedRect(margin, cursorY, contentWidth, 4, 2, 2, 'F')
+        pdf.setFillColor(...barColor)
+        pdf.roundedRect(margin, cursorY, contentWidth * (percentage / 100), 4, 2, 2, 'F')
+        cursorY += 8
       })
-      cursorY += 4
 
-      addHeading('RECOMENDACIONES')
-      addText(
-        weakTopics.length > 0
-          ? `Refuerza: ${weakTopics.map(({ topic, percentage }) => `${topic} (${percentage}%)`).join(', ')}.`
-          : 'Dominio solido en todos los temas evaluados. Continua practicando para mantener tu nivel.',
-        { color: weakTopics.length > 0 ? [170, 115, 0] : [0, 150, 75], gap: 8 },
-      )
+      // ===== RECOMENDACIONES =====
+      addDivider()
+      addSectionTitle('RECOMENDACIONES')
 
-      addHeading('DETALLE DE RESPUESTAS')
+      if (weakTopics.length > 0) {
+        addText('Áreas que requieren refuerzo:', { size: 9, bold: true, gap: 3 })
+        weakTopics.forEach(({ topic, percentage }) => {
+          addText(`  • ${topic} (${percentage}% de aciertos)`, { size: 9, color: COLORS.orange, gap: 2 })
+        })
+        addText('Recomendamos repasar estos temas y practicar con ejercicios adicionales.', { size: 9, color: COLORS.gray, gap: 4 })
+      } else {
+        addText('¡Dominio sólido en todos los temas evaluados!', { size: 10, color: COLORS.green, bold: true, gap: 2 })
+        addText('Continúa practicando para mantener y mejorar tu nivel actual.', { size: 9, color: COLORS.gray, gap: 4 })
+      }
+
+      // ===== DETALLE DE RESPUESTAS =====
+      addDivider()
+      addSectionTitle('DETALLE DE RESPUESTAS')
+
       details.forEach((detail, index) => {
+        addPageIfNeeded(16)
+
         const userAnswer = detail.userAnswer >= 0
           ? `${String.fromCharCode(65 + detail.userAnswer)}. ${detail.options[detail.userAnswer]}`
           : 'Sin responder'
         const correctAnswer = `${String.fromCharCode(65 + detail.correctAnswer)}. ${detail.options[detail.correctAnswer]}`
-        addText(`${index + 1}. ${detail.isCorrect ? 'CORRECTA' : 'INCORRECTA'} - ${detail.question}`, { size: 9, color: detail.isCorrect ? [0, 125, 65] : [175, 30, 70], gap: 1 })
-        addText(`Tu respuesta: ${userAnswer}`, { size: 8, color: [220, 220, 225], gap: 1 })
-        if (!detail.isCorrect) addText(`Respuesta correcta: ${correctAnswer}`, { size: 8, color: [0, 125, 65], gap: 3 })
-        else cursorY += 2
+
+        // Fondo de la pregunta
+        const bgColor = detail.isCorrect ? [235, 250, 240] : [255, 240, 240]
+        const borderColor = detail.isCorrect ? COLORS.green : COLORS.red
+
+        // Calcular altura del bloque
+        const questionLines = pdf.splitTextToSize(detail.question, contentWidth - 20)
+        const blockHeight = Math.max(20, questionLines.length * 4.5 + 16)
+
+        if (cursorY + blockHeight > pageHeight - 20) {
+          pdf.addPage()
+          cursorY = 25
+        }
+
+        pdf.setFillColor(...bgColor)
+        pdf.setDrawColor(...borderColor)
+        pdf.setLineWidth(0.5)
+        pdf.roundedRect(margin, cursorY, contentWidth, blockHeight, 1.5, 1.5, 'FD')
+
+        // Indicador de resultado
+        pdf.setFillColor(...borderColor)
+        const indicatorX = margin + 3
+        const indicatorY = cursorY + 4
+        pdf.circle(indicatorX + 4, indicatorY + 4, 3.5, 'F')
+
+        pdf.setFont('helvetica', 'bold')
+        pdf.setFontSize(7)
+        pdf.setTextColor(...COLORS.white)
+        pdf.text(detail.isCorrect ? '✓' : '✗', indicatorX + 4, indicatorY + 5.5, { align: 'center' })
+
+        // Número y pregunta
+        pdf.setFont('helvetica', 'bold')
+        pdf.setFontSize(9)
+        pdf.setTextColor(...COLORS.dark)
+        const questionText = `${index + 1}. ${detail.isCorrect ? 'CORRECTA' : 'INCORRECTA'}`
+        pdf.text(questionText, indicatorX + 10, indicatorY + 3)
+
+        pdf.setFont('helvetica', 'normal')
+        pdf.setFontSize(8)
+        pdf.setTextColor(...COLORS.secondary)
+        const qLines = pdf.splitTextToSize(detail.question, contentWidth - 20)
+        pdf.text(qLines, indicatorX + 10, indicatorY + 9)
+
+        // Tema y dificultad
+        pdf.setFontSize(7)
+        pdf.setTextColor(...COLORS.gray)
+        const diffLabel = detail.difficulty === 'easy' ? 'Fácil' : detail.difficulty === 'medium' ? 'Intermedio' : 'Avanzado'
+        pdf.text(`Tema: ${detail.topic} · ${diffLabel}`, indicatorX + 10, cursorY + blockHeight - 3)
+
+        // Tu respuesta
+        const answerY = cursorY + blockHeight + 3
+        pdf.setFont('helvetica', 'bold')
+        pdf.setFontSize(8)
+        pdf.setTextColor(...COLORS.dark)
+        pdf.text('Tu respuesta:', margin + 5, answerY)
+
+        pdf.setFont('helvetica', 'normal')
+        pdf.setFontSize(8)
+        pdf.setTextColor(...(detail.isCorrect ? COLORS.green : COLORS.red))
+        const userAnswerLines = pdf.splitTextToSize(userAnswer, contentWidth - 20)
+        pdf.text(userAnswerLines, margin + 5, answerY + 4)
+
+        // Respuesta correcta (solo si falló)
+        if (!detail.isCorrect) {
+          const correctY = answerY + 4 + (userAnswerLines.length * 4)
+          pdf.setFont('helvetica', 'bold')
+          pdf.setFontSize(8)
+          pdf.setTextColor(...COLORS.green)
+          pdf.text('Respuesta correcta:', margin + 5, correctY)
+
+          pdf.setFont('helvetica', 'normal')
+          const correctLines = pdf.splitTextToSize(correctAnswer, contentWidth - 20)
+          pdf.text(correctLines, margin + 5, correctY + 4)
+
+          cursorY = correctY + 4 + (correctLines.length * 4) + 6
+        } else {
+          cursorY = answerY + 4 + (userAnswerLines.length * 4) + 6
+        }
       })
 
+      // ===== PIE DE PÁGINA =====
       const totalPages = pdf.getNumberOfPages()
       for (let page = 1; page <= totalPages; page++) {
         pdf.setPage(page)
-        pdf.setFontSize(8)
-        pdf.setTextColor(150, 150, 160)
-        pdf.text(`CyberDev Academy | Página ${page} de ${totalPages}`, pageWidth - margin, pageHeight - 8, { align: 'right' })
+        // Línea de pie
+        pdf.setDrawColor(200, 200, 200)
+        pdf.setLineWidth(0.3)
+        pdf.line(margin, pageHeight - 14, margin + contentWidth, pageHeight - 14)
+
+        pdf.setFont('helvetica', 'normal')
+        pdf.setFontSize(7)
+        pdf.setTextColor(...COLORS.gray)
+        pdf.text('CyberDev Academy - Plataforma Gamificada de Aprendizaje', margin, pageHeight - 8)
+        pdf.text(`Página ${page} de ${totalPages}`, margin + contentWidth, pageHeight - 8, { align: 'right' })
       }
 
       pdf.save(`reporte-${safeTitle || 'cyberdev'}-${new Date().toISOString().slice(0, 10)}.pdf`)
