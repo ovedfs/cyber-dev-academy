@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Award, BookOpenCheck, Lightbulb, Wrench } from 'lucide-react'
+import { Award, BookOpenCheck, Lightbulb, Wrench, Map } from 'lucide-react'
 import Navbar from './components/common/Navbar'
 import CyberCard from './components/common/CyberCard'
 import CyberButton from './components/common/CyberButton'
@@ -7,6 +7,7 @@ import Modal from './components/common/Modal'
 import useGameProgress from './hooks/useGameProgress'
 import ArenaExamsView from './views/ArenaExamsView'
 import FixTheCodeView from './views/FixTheCodeView'
+import MissionMap from './components/mission/MissionMap'
 
 function App() {
   const {
@@ -20,7 +21,7 @@ function App() {
     addBadge,
   } = useGameProgress()
 
-  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code
+  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions
   const [modalOpen, setModalOpen] = useState(false)
 
   const handleExamComplete = (examId, results) => {
@@ -32,6 +33,18 @@ function App() {
       addXP(100)
     } else {
       addXP(50)
+    }
+  }
+
+  const handleNavigateToMission = (mission) => {
+    // Navegar a la vista correspondiente según el tipo de misión
+    if (mission.type === 'exam') {
+      setCurrentView('exams')
+    } else if (mission.type === 'fix-code') {
+      setCurrentView('fix-code')
+    } else if (mission.type === 'logic') {
+      // Lógica aún no implementada como vista
+      setCurrentView('home')
     }
   }
 
@@ -62,6 +75,14 @@ function App() {
             onBack={() => setCurrentView('home')}
             onComplete={handleChallengeComplete}
             completedChallenges={gameState.completedChallenges}
+          />
+        )
+      case 'missions':
+        return (
+          <MissionMap
+            gameState={gameState}
+            onBack={() => setCurrentView('home')}
+            onNavigateToMission={handleNavigateToMission}
           />
         )
       default:
@@ -168,17 +189,17 @@ function App() {
                 </div>
               </CyberCard>
 
-              <CyberCard borderColor="cyan" className="opacity-60">
+              <CyberCard borderColor="cyan" className="cursor-pointer hover:scale-[1.02] transition-transform">
                 <div className="text-center">
-                  <Award className="mx-auto mb-3 text-cyber-cyan" size={34} strokeWidth={1.5} aria-hidden="true" />
+                  <Map className="mx-auto mb-3 text-cyber-cyan" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-cyan mb-2">
-                    Perfil y Logros
+                    Mapa de Misiones
                   </h2>
                   <p className="font-mono text-xs text-cyber-text mb-4">
-                    Próximamente — Estadísticas, medallas y rango developer
+                    Explora tu progreso y desbloquea nuevas misiones
                   </p>
-                  <CyberButton color="cyan" disabled>
-                    PRÓXIMAMENTE
+                  <CyberButton color="cyan" onClick={() => setCurrentView('missions')}>
+                    EXPLORAR
                   </CyberButton>
                 </div>
               </CyberCard>
