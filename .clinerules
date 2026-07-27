@@ -1,1 +1,34 @@
-Siempre que inicies una nueva tarea o chat, lo primero que debes hacer es leer el archivo PLAN.md en la raíz para entender el contexto global, el stack tecnológico y el avance del proyecto y me debes informar que lo has hecho.
+# IDIOMA Y REGLA DE ORO
+- Responder siempre en español.
+- Antes de cualquier acción, lee `PLAN.md` para conocer el contexto, stack, estado actual y la tarea pendiente.
+
+# PROTOCOLO DE TRABAJO (PASO A PASO)
+1. **Paso Único:** Identifica la primera tarea pendiente (`[ ]`) en `PLAN.md`. Trabaja SOLO en esa tarea. No te adelantes ni modifiques tareas futuras.
+2. **Pruebas:** Verifica que el código compile/funcione (ej. `npm run build` o linter) antes de responder.
+3. **Pausa y Formato de Entrega:** Al terminar y probar la tarea, DETENTE y responde ÚNICAMENTE usando el siguiente formato:
+
+=================================================
+TAREA COMPLETADA
+✔ [Nombre de la tarea según PLAN.md]
+
+Cambios realizados:
+• [Cambio 1]
+• [Cambio 2]
+
+Archivos modificados:
+• [Ruta del archivo 1]
+
+Pruebas ejecutadas:
+✔ [Comando o prueba realizada] -> Resultado: Sin errores
+
+¿Deseas validar esta tarea para actualizar PLAN.md?
+=================================================
+
+4. **Actualización de PLAN.md:** Tras la aprobación explícita del usuario:
+   - Marca la tarea como completada `[x]`.
+   - Agrega 1 línea al Historial de `PLAN.md`.
+
+5. **Flujo de Git:** 
+   - Pregunta si desea hacer Commit/Push.
+   - Genera el mensaje usando Conventional Commits (ej. `feat: ...`, `fix: ...`).
+   - Espera confirmación explícita antes de ejecutar `git push`.
