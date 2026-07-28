@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Award, BookOpenCheck, Lightbulb, Wrench, Map } from 'lucide-react'
+import { Award, BookOpenCheck, Lightbulb, Wrench, Map, Code2 } from 'lucide-react'
 import Navbar from './components/common/Navbar'
 import CyberCard from './components/common/CyberCard'
 import CyberButton from './components/common/CyberButton'
@@ -8,6 +8,7 @@ import useGameProgress from './hooks/useGameProgress'
 import ArenaExamsView from './views/ArenaExamsView'
 import FixTheCodeView from './views/FixTheCodeView'
 import MissionMap from './components/mission/MissionMap'
+import LogicLabView from './views/LogicLabView'
 
 function App() {
   const {
@@ -21,7 +22,7 @@ function App() {
     addBadge,
   } = useGameProgress()
 
-  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions
+  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions | logic
   const [modalOpen, setModalOpen] = useState(false)
 
   const handleExamComplete = (examId, results) => {
@@ -43,8 +44,7 @@ function App() {
     } else if (mission.type === 'fix-code') {
       setCurrentView('fix-code')
     } else if (mission.type === 'logic') {
-      // Lógica aún no implementada como vista
-      setCurrentView('home')
+      setCurrentView('logic')
     }
   }
 
@@ -75,6 +75,14 @@ function App() {
             onBack={() => setCurrentView('home')}
             onComplete={handleChallengeComplete}
             completedChallenges={gameState.completedChallenges}
+          />
+        )
+      case 'logic':
+        return (
+          <LogicLabView
+            onBack={() => setCurrentView('home')}
+            onComplete={handleChallengeComplete}
+            completedChallenges={gameState.completedLogicChallenges}
           />
         )
       case 'missions':
@@ -174,17 +182,17 @@ function App() {
                 </div>
               </CyberCard>
 
-              <CyberCard borderColor="yellow" className="opacity-60">
+              <CyberCard borderColor="yellow" className="cursor-pointer hover:scale-[1.02] transition-transform">
                 <div className="text-center">
-                  <Lightbulb className="mx-auto mb-3 text-cyber-yellow" size={34} strokeWidth={1.5} aria-hidden="true" />
+                  <Code2 className="mx-auto mb-3 text-cyber-yellow" size={34} strokeWidth={1.5} aria-hidden="true" />
                   <h2 className="font-mono text-lg font-bold text-cyber-yellow mb-2">
                     Laboratorio de Lógica
                   </h2>
                   <p className="font-mono text-xs text-cyber-text mb-4">
-                    Próximamente — Algoritmos y desafíos de programación
+                    Algoritmos y desafíos de programación — 10 retos
                   </p>
-                  <CyberButton color="yellow" disabled>
-                    PRÓXIMAMENTE
+                  <CyberButton color="yellow" onClick={() => setCurrentView('logic')}>
+                    ACCEDER
                   </CyberButton>
                 </div>
               </CyberCard>

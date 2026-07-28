@@ -15,8 +15,8 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 
 ## 📌 Estado del Proyecto
 - **Fase Actual:** Fase 5 (Lógica & Gamificación)
-- **Última Tarea:** Mapa de Misiones (`MissionMap.jsx`) completado.
-- **Próxima Tarea:** Zona de Lógica (`LogicLabView.jsx`).
+- **Última Tarea:** Zona de Lógica (`LogicLabView.jsx`) completado.
+- **Próxima Tarea:** Sistema de Logros (`AchievementBadge.jsx`).
 
 ---
 
@@ -43,7 +43,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 
 ### Fase 5: Lógica & Gamificación (📍 EN PROGRESO)
 - [x] **Mapa de Misiones (`MissionMap.jsx`):** Renderizar nodos estilo videojuego con estados (bloqueado/desbloqueado/estrellas) vinculados al XP del usuario.
-- [ ] **Zona de Lógica (`LogicLabView.jsx`):** Vista de retos interactivos de algoritmos JS (arreglos, métodos, funciones) evaluando el resultado en tiempo real.
+- [x] **Zona de Lógica (`LogicLabView.jsx`):** Vista de retos interactivos de algoritmos JS (arreglos, métodos, funciones) evaluando el resultado en tiempo real con Monaco Editor, motor de evaluación, tips pedagógicos y consola de resultados.
 - [ ] **Sistema de Logros (`AchievementBadge.jsx`):** Galería de medallas/insignias guardadas en `localStorage` que se desbloquean al cumplir hitos (ej. 3 bugs corregidos, puntaje perfecto).
 - [ ] **Audio/FX:** Integrar efectos de sonido con Howler.js (acierto, error, level up) y partículas Confetti al ganar.
 
@@ -57,3 +57,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 ## 📝 Historial de Cambios
 - **2026-07-26:** Finalizada Fase 4 (Monaco Editor, Sandbox, Validador y Pistas).
 - **2026-07-27:** Completado Mapa de Misiones con 23 misiones en 3 módulos, nodos con estados bloqueado/desbloqueado/completado, barras de progreso y navegación integrada.
+- **2026-07-27:** Completada Zona de Lógica con 10 retos JS, Monaco Editor, evaluador con test cases, tips pedagógicos y consola redimensionable.
