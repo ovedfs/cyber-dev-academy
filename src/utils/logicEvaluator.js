@@ -16,20 +16,26 @@ export function evaluateLogicChallenge(challenge, userCode) {
   }
 
   try {
-    // Extraer la función del código del usuario
-    // Evaluamos el código completo y luego buscamos la función definida
-    const fn = new Function(
-      ...challenge.testCases[0].input.map((_, i) => `arg${i}`),
-      userCode
-        .replace(/\/\/.*$/gm, '') // Quitar comentarios de una línea
-        .replace(/\/\*[\s\S]*?\*\//g, '') // Quitar comentarios multi-línea
-        .replace(/console\.log\(.*?\)/g, '') // Quitar console.logs
-        .replace(/function\s+\w+\s*\(([^)]*)\)\s*{/, 'return function($1) {')
-    )
+    // Extraer el nombre de la función definida por el usuario
+    const funcNameMatch = userCode.match(/function\s+(\w+)\s*\(/)
+    const funcName = funcNameMatch ? funcNameMatch[1] : null
+
+    if (!funcName) {
+      throw new Error('No se encontró una función definida en tu código.')
+    }
+
+    // Limpiar el código: solo quitamos comentarios, NO console.logs
+    const cleanCode = userCode
+      .replace(/\/\/.*$/gm, '') // Quitar comentarios de una línea
+      .replace(/\/\*[\s\S]*?\*\//g, '') // Quitar comentarios multi-línea
+
+    // Ejecutar el código limpio para definir la función en el ámbito
+    const fn = new Function(cleanCode + `\nreturn ${funcName};`)
+    const userFunction = fn()
 
     for (const testCase of challenge.testCases) {
       try {
-        const actual = fn(...testCase.input)
+        const actual = userFunction(...testCase.input)
         const passed = deepEqual(actual, testCase.expected)
         results.push({
           input: testCase.input,

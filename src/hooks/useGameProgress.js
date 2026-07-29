@@ -66,13 +66,39 @@ export default function useGameProgress() {
     }))
   }
 
-  const completeLogicChallenge = (challengeId) => {
-    setGameState((prev) => ({
-      ...prev,
-      completedLogicChallenges: prev.completedLogicChallenges.includes(challengeId)
-        ? prev.completedLogicChallenges
-        : [...prev.completedLogicChallenges, challengeId],
-    }))
+  // Helper para normalizar completedLogicChallenges (soporta objetos {id, code} o strings legacy)
+  const getNormalizedLogicIds = (list) => {
+    return list.map((item) => (typeof item === 'string' ? item : item.id))
+  }
+
+  const getLogicChallengeCode = (challengeId) => {
+    const entry = gameState.completedLogicChallenges.find(
+      (item) => (typeof item === 'string' ? item : item.id) === challengeId
+    )
+    return entry && typeof entry === 'object' ? entry.code : null
+  }
+
+  const completeLogicChallenge = (challengeId, userCode = '') => {
+    setGameState((prev) => {
+      const normalized = getNormalizedLogicIds(prev.completedLogicChallenges)
+      if (normalized.includes(challengeId)) {
+        // Actualizar código si ya existe
+        return {
+          ...prev,
+          completedLogicChallenges: prev.completedLogicChallenges.map((item) => {
+            const id = typeof item === 'string' ? item : item.id
+            return id === challengeId ? { id: challengeId, code: userCode } : item
+          }),
+        }
+      }
+      return {
+        ...prev,
+        completedLogicChallenges: [
+          ...prev.completedLogicChallenges,
+          { id: challengeId, code: userCode },
+        ],
+      }
+    })
   }
 
   const addBadge = (badgeId) => {
@@ -112,6 +138,7 @@ export default function useGameProgress() {
     completeExam,
     completeChallenge,
     completeLogicChallenge,
+    getLogicChallengeCode,
     addBadge,
     toggleSound,
     resetProgress,

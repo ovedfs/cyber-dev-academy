@@ -44,10 +44,14 @@ export default function LogicLabView({
   onComplete,
   completedChallenges: externalCompletedChallenges = [],
 }) {
-  // Estado del desafío actual
+  // Normalizar IDs de completados (soporta objetos {id, code} o strings legacy)
+  const completedIdsList = externalCompletedChallenges.map(
+    (item) => (typeof item === 'string' ? item : item.id)
+  )
+
+  // Estado del desafío actual (siempre empieza en el primer desafío, el alumno elige libremente)
   const getInitialChallengeId = () => {
-    const firstPending = logicChallenges.find((c) => !externalCompletedChallenges.includes(c.id))
-    return firstPending?.id || logicChallenges[0]?.id || null
+    return logicChallenges[0]?.id || null
   }
   const [currentChallengeId, setCurrentChallengeId] = useState(getInitialChallengeId)
   const [userCode, setUserCode] = useState('')
@@ -63,8 +67,14 @@ export default function LogicLabView({
   const [victoryModalOpen, setVictoryModalOpen] = useState(false)
   const [victoryData, setVictoryData] = useState(null)
 
-  // Estado de completados
+  // Estado de completados (sincronizado con prop externa)
   const [completedIds, setCompletedIds] = useState(externalCompletedChallenges)
+
+  // Sincronizar cuando la prop externa cambia (ej. al volver a entrar)
+  useEffect(() => {
+    setCompletedIds(externalCompletedChallenges)
+  }, [externalCompletedChallenges])
+
 
   // Estado de sidebar y tips
   const [sidebarCollapsed, setSidebarCollapsed] = useState(false)
@@ -106,17 +116,27 @@ export default function LogicLabView({
     document.body.style.userSelect = 'none'
   }, [consoleHeight])
 
+  // Helper para obtener el código guardado de un desafío completado
+  const getSavedCode = useCallback((challengeId) => {
+    const entry = externalCompletedChallenges.find(
+      (item) => (typeof item === 'string' ? item : item.id) === challengeId
+    )
+    return entry && typeof entry === 'object' ? entry.code : null
+  }, [externalCompletedChallenges])
+
   // Cargar desafío cuando cambia el ID
   useEffect(() => {
     const challenge = logicChallenges.find((c) => c.id === currentChallengeId)
     if (challenge) {
-      setUserCode(challenge.starterCode)
+      const savedCode = getSavedCode(currentChallengeId)
+      const codeToUse = savedCode || challenge.starterCode
+      setUserCode(codeToUse)
       setOriginalCode(challenge.starterCode)
       setValidationResult(null)
       setConsoleExpanded(false)
       setTipVisible(false)
     }
-  }, [currentChallengeId])
+  }, [currentChallengeId, getSavedCode])
 
   // Manejar cambio en el editor (Monaco)
   const handleCodeChange = useCallback((value) => {
@@ -161,14 +181,19 @@ export default function LogicLabView({
   const handleVictoryClose = useCallback(() => {
     setVictoryModalOpen(false)
     if (victoryData) {
-      setCompletedIds((prev) =>
-        prev.includes(victoryData.challenge.id) ? prev : [...prev, victoryData.challenge.id]
-      )
+      setCompletedIds((prev) => {
+        const normalized = prev.map(
+          (item) => (typeof item === 'string' ? item : item.id)
+        )
+        return normalized.includes(victoryData.challenge.id)
+          ? prev
+          : [...prev, { id: victoryData.challenge.id, code: userCode }]
+      })
       if (onComplete) {
-        onComplete(victoryData.challenge.id, victoryData.xpEarned)
+        onComplete(victoryData.challenge.id, victoryData.xpEarned, userCode)
       }
     }
-  }, [victoryData, onComplete])
+  }, [victoryData, onComplete, userCode])
 
   // Manejar selección de desafío
   const handleSelectChallenge = useCallback((challengeId) => {
@@ -185,7 +210,7 @@ export default function LogicLabView({
 
   const challenge = logicChallenges.find((c) => c.id === currentChallengeId)
   const challengeIndex = logicChallenges.findIndex((c) => c.id === currentChallengeId)
-  const isCompleted = completedIds.includes(currentChallengeId)
+  const isCompleted = completedIdsList.includes(currentChallengeId)
   const currentTip = challenge ? CHALLENGE_TIPS[challenge.id] : null
 
   // Dificultad badge
@@ -329,7 +354,7 @@ export default function LogicLabView({
                 </p>
                 {logicChallenges.map((c, i) => {
                   const isSelected = c.id === currentChallengeId
-                  const isDone = completedIds.includes(c.id)
+                  const isDone = completedIdsList.includes(c.id)
                   return (
                     <button
                       key={c.id}

@@ -47,7 +47,9 @@ export default function MissionMap({
     } else if (mission.type === 'fix-code') {
       isCompleted = gameState.completedChallenges.includes(mission.id)
     } else if (mission.type === 'logic') {
-      isCompleted = gameState.completedLogicChallenges.includes(mission.id)
+      isCompleted = gameState.completedLogicChallenges.some(
+        (item) => (typeof item === 'string' ? item : item.id) === mission.id
+      )
     }
 
     if (isCompleted) return 'completed'

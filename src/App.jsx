@@ -19,6 +19,7 @@ function App() {
     toggleSound,
     completeExam,
     completeChallenge,
+    completeLogicChallenge,
     addBadge,
   } = useGameProgress()
 
@@ -59,6 +60,17 @@ function App() {
     }
   }
 
+  const handleLogicChallengeComplete = (challengeId, xpEarned, userCode) => {
+    // Marcar desafío de lógica como completado en su propio array (con código)
+    completeLogicChallenge(challengeId, userCode)
+    // Otorgar XP
+    addXP(xpEarned)
+    // Verificar si es el primer desafío de lógica completado para dar insignia
+    if (gameState.completedLogicChallenges.length === 0) {
+      addBadge('logic-pioneer')
+    }
+  }
+
   // Renderizado de vistas
   const renderView = () => {
     switch (currentView) {
@@ -81,7 +93,7 @@ function App() {
         return (
           <LogicLabView
             onBack={() => setCurrentView('home')}
-            onComplete={handleChallengeComplete}
+            onComplete={handleLogicChallengeComplete}
             completedChallenges={gameState.completedLogicChallenges}
           />
         )

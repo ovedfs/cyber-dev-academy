@@ -58,3 +58,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-26:** Finalizada Fase 4 (Monaco Editor, Sandbox, Validador y Pistas).
 - **2026-07-27:** Completado Mapa de Misiones con 23 misiones en 3 módulos, nodos con estados bloqueado/desbloqueado/completado, barras de progreso y navegación integrada.
 - **2026-07-27:** Completada Zona de Lógica con 10 retos JS, Monaco Editor, evaluador con test cases, tips pedagógicos y consola redimensionable.
+- **2026-07-28:** Persistencia de código solución en desafíos de lógica + libre elección de desafíos + compatibilidad con datos legacy en localStorage.
