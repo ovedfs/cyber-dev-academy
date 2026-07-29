@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Award, BookOpenCheck, Lightbulb, Wrench, Map, Code2 } from 'lucide-react'
+import { BookOpenCheck, Wrench, Map, Code2, Trophy } from 'lucide-react'
 import Navbar from './components/common/Navbar'
 import CyberCard from './components/common/CyberCard'
 import CyberButton from './components/common/CyberButton'
@@ -9,6 +9,7 @@ import ArenaExamsView from './views/ArenaExamsView'
 import FixTheCodeView from './views/FixTheCodeView'
 import MissionMap from './components/mission/MissionMap'
 import LogicLabView from './views/LogicLabView'
+import AchievementsView from './views/AchievementsView'
 
 function App() {
   const {
@@ -23,7 +24,7 @@ function App() {
     addBadge,
   } = useGameProgress()
 
-  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions | logic
+  const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions | logic | achievements
   const [modalOpen, setModalOpen] = useState(false)
 
   const handleExamComplete = (examId, results) => {
@@ -103,6 +104,15 @@ function App() {
             gameState={gameState}
             onBack={() => setCurrentView('home')}
             onNavigateToMission={handleNavigateToMission}
+          />
+        )
+      case 'achievements':
+        return (
+          <AchievementsView
+            gameState={gameState}
+            addBadge={addBadge}
+            addXP={addXP}
+            onBack={() => setCurrentView('home')}
           />
         )
       default:
@@ -220,6 +230,24 @@ function App() {
                   </p>
                   <CyberButton color="cyan" onClick={() => setCurrentView('missions')}>
                     EXPLORAR
+                  </CyberButton>
+                </div>
+              </CyberCard>
+            </section>
+
+            {/* Logros */}
+            <section className="mb-8">
+              <CyberCard borderColor="pink" className="cursor-pointer hover:scale-[1.02] transition-transform">
+                <div className="text-center">
+                  <Trophy className="mx-auto mb-3 text-cyber-pink" size={34} strokeWidth={1.5} aria-hidden="true" />
+                  <h2 className="font-mono text-lg font-bold text-cyber-pink mb-2">
+                    Logros
+                  </h2>
+                  <p className="font-mono text-xs text-cyber-text mb-4">
+                    {gameState.badges.length} de 14 insignias desbloqueadas — Revisa tu colección
+                  </p>
+                  <CyberButton color="pink" onClick={() => setCurrentView('achievements')}>
+                    VER LOGROS
                   </CyberButton>
                 </div>
               </CyberCard>
