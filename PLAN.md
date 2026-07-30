@@ -47,6 +47,15 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - [x] **Sistema de Logros (`AchievementBadge.jsx`):** Galería de medallas/insignias guardadas en `localStorage` que se desbloquean al cumplir hitos (ej. 3 bugs corregidos, puntaje perfecto).
 - [x] **Audio/FX:** Integrar efectos de sonido con Howler.js (acierto, error, level up) y partículas Confetti al ganar.
 
+### 🔧 Correcciones Pre-Fase 6
+- [x] **Logo como enlace al home:** Navbar ahora tiene botón que navega al inicio.
+- [x] **Backticks en respuestas:** Limpiar opciones con backticks en bancos de preguntas.
+- [x] **Tipos de examen invertidos:** Intercambiar bancos theoryBank ↔ webTechBank.
+- [x] **Separar pregunta de código:** Mejorar espaciado en FormattedQuestion.
+- [ ] **Formato for loop:** Corregir parser para que no divida `for(...)` en líneas.
+- [ ] **Clases en LogicLab:** Evaluador debe soportar `class` además de `function`.
+- [ ] **Mapa de Misiones:** Corregir contador de exámenes completados.
+
 ### Fase 6: Optimización y Despliegue
 - [ ] Pruebas en pantalla/laptops de resolución estándar
 - [ ] Optimización de carga (Lazy loading para Monaco Editor)
@@ -61,3 +70,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-28:** Persistencia de código solución en desafíos de lógica + libre elección de desafíos + compatibilidad con datos legacy en localStorage.
 - **2026-07-28:** Completado Sistema de Logros: 14 logros, hook useAchievements, galería con filtros, tooltips, barra de progreso, banner de nuevos logros y tarjeta de acceso en home.
 - **2026-07-29:** Completado Audio/FX: sonidos procedurales con Web Audio API (correcto, error, level up, click) + confetti en exámenes, desafíos, lógica y logros. Finalizada Fase 5.
+- **2026-07-29:** Corrección #1: Logo CyberDev como enlace al home (Navbar + App).
+- **2026-07-29:** Corrección #2: Backticks eliminados de opciones en theoryBank.json y webTechBank.json. Scripts de limpieza pendientes de eliminar.
+- **2026-07-29:** Corrección #3: Tipos de examen invertidos — Examen Teórico ahora usa webTechBank y Examen Técnico Web usa theoryBank.
+- **2026-07-29:** Corrección #4: Separar pregunta de código en FormattedQuestion — inline code para palabras clave aisladas, block code para código multilínea/completo.

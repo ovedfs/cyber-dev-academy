@@ -9,6 +9,7 @@ export default function Navbar({
   rank = 'Script Kiddie',
   soundEnabled = true,
   onToggleSound,
+  onHome,
   className = '',
 }) {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -24,15 +25,19 @@ export default function Navbar({
       `}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between gap-4">
-        {/* Logo / Brand */}
-        <div className="flex items-center gap-2">
+        {/* Logo / Brand - enlace al home */}
+        <button
+          onClick={() => onHome && onHome()}
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer bg-transparent border-none"
+          title="Ir al inicio"
+        >
           <span className="font-mono text-lg font-bold text-cyber-cyan drop-shadow-[0_0_8px_rgba(0,229,255,0.6)]">
             {'>'} CyberDev_
           </span>
           <span className="flex items-center gap-1 font-mono text-xs text-cyber-green animate-pulse">
             <Power size={12} aria-hidden="true" /> READY
           </span>
-        </div>
+        </button>
 
         {/* XP Bar (centro) - oculto en mobile */}
         <div className="hidden md:block flex-1 max-w-md">

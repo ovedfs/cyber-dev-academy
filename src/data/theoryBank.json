@@ -3,10 +3,10 @@
     "id": "th-001",
     "question": "¿Cuál es la diferencia principal entre `let` y `const` en JavaScript?",
     "options": [
-      "`let` se usa para números y `const` para strings",
-      "`const` no puede ser reasignada después de su declaración inicial",
-      "`let` no tiene alcance de bloque",
-      "`const` solo puede usarse en funciones"
+      "let se usa para números y const para strings",
+      "const no puede ser reasignada después de su declaración inicial",
+      "let no tiene alcance de bloque",
+      "const solo puede usarse en funciones"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -16,10 +16,10 @@
     "id": "th-002",
     "question": "¿Qué palabra clave se usaba antes de ES6 para declarar variables con alcance de función?",
     "options": [
-      "`int`",
-      "`var`",
-      "`string`",
-      "`def`"
+      "int",
+      "var",
+      "string",
+      "def"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -173,9 +173,9 @@
     "question": "¿Cuál es la diferencia entre `null` y `undefined`?",
     "options": [
       "Son exactamente iguales",
-      "`null` es un valor asignado intencionalmente, `undefined` significa que no hay valor",
-      "`undefined` se asigna manualmente, `null` es automático",
-      "`null` solo existe en objetos"
+      "null es un valor asignado intencionalmente, undefined significa que no hay valor",
+      "undefined se asigna manualmente, null es automático",
+      "null solo existe en objetos"
     ],
     "correctAnswer": 1,
     "difficulty": "medium",
@@ -185,10 +185,10 @@
     "id": "th-015",
     "question": "¿Qué operador se usa para obtener el tipo de una variable?",
     "options": [
-      "`getType`",
-      "`typeof`",
-      "`instanceof`",
-      "`type`"
+      "getType",
+      "typeof",
+      "instanceof",
+      "type"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -211,10 +211,10 @@
     "id": "th-017",
     "question": "¿Qué operador se usa para la división en JavaScript?",
     "options": [
-      "`\\`",
-      "`/`",
-      "`div`",
-      "`%`"
+      "\\",
+      "/",
+      "div",
+      "%"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -250,10 +250,10 @@
     "id": "th-020",
     "question": "¿Qué operador de asignación suma un valor a una variable?",
     "options": [
-      "`=+`",
-      "`+=`",
-      "`+==`",
-      "`=+`"
+      "=+",
+      "+=",
+      "+==",
+      "=+"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -276,10 +276,10 @@
     "id": "th-022",
     "question": "¿Cuál es la diferencia entre `==` y `===`?",
     "options": [
-      "`==` compara valor y tipo, `===` solo valor",
-      "`==` solo compara valor, `===` compara valor y tipo",
+      "== compara valor y tipo, === solo valor",
+      "== solo compara valor, === compara valor y tipo",
       "Son exactamente iguales",
-      "`===` solo funciona con números"
+      "=== solo funciona con números"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -289,10 +289,10 @@
     "id": "th-023",
     "question": "¿Qué operador lógico representa AND?",
     "options": [
-      "`||`",
-      "`&&`",
-      "`!!`",
-      "`&`"
+      "||",
+      "&&",
+      "!!",
+      "&"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -315,10 +315,10 @@
     "id": "th-025",
     "question": "¿Qué operador lógico se usa para negar una expresión?",
     "options": [
-      "`NOT`",
-      "`!`",
-      "`~`",
-      "`-`"
+      "NOT",
+      "!",
+      "~",
+      "-"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -341,10 +341,10 @@
     "id": "th-027",
     "question": "¿Qué operador de comparación verifica si un valor es mayor o igual que otro?",
     "options": [
-      "`>`",
-      "`=>`",
-      "`>=`",
-      "`=<`"
+      ">",
+      "=>",
+      ">=",
+      "=<"
     ],
     "correctAnswer": 2,
     "difficulty": "easy",
@@ -367,10 +367,10 @@
     "id": "th-029",
     "question": "¿Qué estructura de control se usa para tomar decisiones en el código?",
     "options": [
-      "`for`",
-      "`if`",
-      "`while`",
-      "`console.log`"
+      "for",
+      "if",
+      "while",
+      "console.log"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -393,10 +393,10 @@
     "id": "th-031",
     "question": "¿Qué operador ternario es equivalente a este if? `if (x > 0) { r = \"Positivo\"; } else { r = \"Negativo\"; }`",
     "options": [
-      "`r = x > 0 ? \"Positivo\" : \"Negativo\";`",
-      "`r = if(x > 0) \"Positivo\" else \"Negativo\";`",
-      "`r = (x > 0) ? \"Positivo\" ? \"Negativo\";`",
-      "`r = x > 0 : \"Positivo\" ? \"Negativo\";`"
+      "r = x > 0 ? \"Positivo\" : \"Negativo\";",
+      "r = if(x > 0) \"Positivo\" else \"Negativo\";",
+      "r = (x > 0) ? \"Positivo\" ? \"Negativo\";",
+      "r = x > 0 : \"Positivo\" ? \"Negativo\";"
     ],
     "correctAnswer": 0,
     "difficulty": "medium",
@@ -406,10 +406,10 @@
     "id": "th-032",
     "question": "¿Qué estructura se usa para evaluar múltiples casos posibles?",
     "options": [
-      "`if-else`",
-      "`switch`",
-      "`for`",
-      "`while`"
+      "if-else",
+      "switch",
+      "for",
+      "while"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -419,10 +419,10 @@
     "id": "th-033",
     "question": "¿Qué palabra clave se usa para salir de un `switch`?",
     "options": [
-      "`exit`",
-      "`break`",
-      "`stop`",
-      "`return`"
+      "exit",
+      "break",
+      "stop",
+      "return"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -445,10 +445,10 @@
     "id": "th-035",
     "question": "¿Cuál es la sintaxis correcta de un `if` en JavaScript?",
     "options": [
-      "`if (condicion) { }`",
-      "`if condicion { }`",
-      "`if (condicion) then { }`",
-      "`if { condicion }`"
+      "if (condicion) { }",
+      "if condicion { }",
+      "if (condicion) then { }",
+      "if { condicion }"
     ],
     "correctAnswer": 0,
     "difficulty": "easy",
@@ -471,10 +471,10 @@
     "id": "th-037",
     "question": "¿Qué bucle se usa cuando sabes exactamente cuántas veces iterar?",
     "options": [
-      "`while`",
-      "`for`",
-      "`do-while`",
-      "`loop`"
+      "while",
+      "for",
+      "do-while",
+      "loop"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -484,10 +484,10 @@
     "id": "th-038",
     "question": "¿Cuál es la sintaxis correcta de un bucle `for`?",
     "options": [
-      "`for (i = 0; i < 5; i++)`",
-      "`for (let i = 0; i < 5; i++)`",
-      "`for (let i = 0, i < 5, i++)`",
-      "`for let i = 0 to 5`"
+      "for (i = 0; i < 5; i++)",
+      "for (let i = 0; i < 5; i++)",
+      "for (let i = 0, i < 5, i++)",
+      "for let i = 0 to 5"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -523,10 +523,10 @@
     "id": "th-041",
     "question": "¿Qué bucle ejecuta su bloque al menos una vez?",
     "options": [
-      "`for`",
-      "`while`",
-      "`do-while`",
-      "`for-in`"
+      "for",
+      "while",
+      "do-while",
+      "for-in"
     ],
     "correctAnswer": 2,
     "difficulty": "medium",
@@ -565,7 +565,7 @@
       "Un bucle que se ejecuta 100 veces",
       "Un bucle cuya condición nunca se vuelve false",
       "Un bucle sin llaves",
-      "Un bucle que usa `break`"
+      "Un bucle que usa break"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -588,10 +588,10 @@
     "id": "th-046",
     "question": "¿Cómo se declara una función tradicional en JavaScript?",
     "options": [
-      "`function = miFuncion() {}`",
-      "`function miFuncion() {}`",
-      "`def miFuncion() {}`",
-      "`func miFuncion() {}`"
+      "function = miFuncion() {}",
+      "function miFuncion() {}",
+      "def miFuncion() {}",
+      "func miFuncion() {}"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -602,7 +602,7 @@
     "question": "¿Qué son las funciones flecha (arrow functions)?",
     "options": [
       "Funciones que solo pueden usarse en bucles",
-      "Una sintaxis más corta para escribir funciones usando `=>`",
+      "Una sintaxis más corta para escribir funciones usando =>",
       "Funciones que no pueden tener parámetros",
       "Funciones que solo retornan strings"
     ],
@@ -614,9 +614,9 @@
     "id": "th-048",
     "question": "¿Cuál es la sintaxis correcta de una función flecha?",
     "options": [
-      "`const suma = (a, b) => { return a + b; }`",
-      "`const suma = (a, b) => a + b;`",
-      "`const suma = function(a, b) => a + b;`",
+      "const suma = (a, b) => { return a + b; }",
+      "const suma = (a, b) => a + b;",
+      "const suma = function(a, b) => a + b;",
       "Todas las anteriores son válidas"
     ],
     "correctAnswer": 3,
@@ -627,10 +627,10 @@
     "id": "th-049",
     "question": "¿Qué palabra clave se usa para devolver un valor desde una función?",
     "options": [
-      "`return`",
-      "`send`",
-      "`output`",
-      "`give`"
+      "return",
+      "send",
+      "output",
+      "give"
     ],
     "correctAnswer": 0,
     "difficulty": "easy",
@@ -666,8 +666,8 @@
     "id": "th-052",
     "question": "¿Qué sucede si una función no tiene `return`?",
     "options": [
-      "Retorna `null`",
-      "Retorna `undefined`",
+      "Retorna null",
+      "Retorna undefined",
       "Retorna 0",
       "Lanza un error"
     ],
@@ -679,10 +679,10 @@
     "id": "th-053",
     "question": "¿Cómo se asigna un valor por defecto a un parámetro?",
     "options": [
-      "`function saludo(nombre = \"Invitado\")`",
-      "`function saludo(nombre: \"Invitado\")`",
-      "`function saludo(nombre || \"Invitado\")`",
-      "`function saludo(def nombre = \"Invitado\")`"
+      "function saludo(nombre = \"Invitado\")",
+      "function saludo(nombre: \"Invitado\")",
+      "function saludo(nombre || \"Invitado\")",
+      "function saludo(def nombre = \"Invitado\")"
     ],
     "correctAnswer": 0,
     "difficulty": "medium",
@@ -694,8 +694,8 @@
     "options": [
       "No hay diferencia",
       "Las funciones flecha no pueden tener parámetros",
-      "Las funciones flecha tienen una sintaxis más corta y no tienen su propio `this`",
-      "Las funciones declaradas no pueden usar `return`"
+      "Las funciones flecha tienen una sintaxis más corta y no tienen su propio this",
+      "Las funciones declaradas no pueden usar return"
     ],
     "correctAnswer": 2,
     "difficulty": "hard",
@@ -718,10 +718,10 @@
     "id": "th-056",
     "question": "¿Cómo se crea un array en JavaScript?",
     "options": [
-      "`let arr = (1, 2, 3)`",
-      "`let arr = [1, 2, 3]`",
-      "`let arr = {1, 2, 3}`",
-      "`let arr = <1, 2, 3>`"
+      "let arr = (1, 2, 3)",
+      "let arr = [1, 2, 3]",
+      "let arr = {1, 2, 3}",
+      "let arr = <1, 2, 3>"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -744,10 +744,10 @@
     "id": "th-058",
     "question": "¿Cómo accedes al tercer elemento de un array llamado `colores`?",
     "options": [
-      "`colores[3]`",
-      "`colores[2]`",
-      "`colores(2)`",
-      "`colores.3`"
+      "colores[3]",
+      "colores[2]",
+      "colores(2)",
+      "colores.3"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -757,10 +757,10 @@
     "id": "th-059",
     "question": "¿Qué propiedad devuelve la cantidad de elementos de un array?",
     "options": [
-      "`size`",
-      "`length`",
-      "`count`",
-      "`total`"
+      "size",
+      "length",
+      "count",
+      "total"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -783,10 +783,10 @@
     "id": "th-061",
     "question": "¿Cómo se crea un objeto literal en JavaScript?",
     "options": [
-      "`let obj = [clave: valor]`",
-      "`let obj = { clave: \"valor\" }`",
-      "`let obj = (clave: \"valor\")`",
-      "`let obj = <clave: \"valor\">`"
+      "let obj = [clave: valor]",
+      "let obj = { clave: \"valor\" }",
+      "let obj = (clave: \"valor\")",
+      "let obj = <clave: \"valor\">"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -796,10 +796,10 @@
     "id": "th-062",
     "question": "¿Cómo accedes a la propiedad `nombre` de un objeto `persona`?",
     "options": [
-      "`persona[nombre]`",
-      "`persona.nombre`",
-      "`persona->nombre`",
-      "`persona::nombre`"
+      "persona[nombre]",
+      "persona.nombre",
+      "persona->nombre",
+      "persona::nombre"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -809,10 +809,10 @@
     "id": "th-063",
     "question": "¿Qué notación usarías para acceder a una propiedad con un nombre dinámico?",
     "options": [
-      "`objeto.propiedad`",
-      "`objeto[propiedad]`",
-      "`objeto->propiedad`",
-      "`objeto::propiedad`"
+      "objeto.propiedad",
+      "objeto[propiedad]",
+      "objeto->propiedad",
+      "objeto::propiedad"
     ],
     "correctAnswer": 1,
     "difficulty": "medium",
@@ -835,10 +835,10 @@
     "id": "th-065",
     "question": "¿Cómo agregas una nueva propiedad a un objeto existente?",
     "options": [
-      "`objeto.add(\"nueva\", valor)`",
-      "`objeto.nueva = valor`",
-      "`objeto.push(\"nueva\", valor)`",
-      "`objeto[\"nueva\"] = valor`"
+      "objeto.add(\"nueva\", valor)",
+      "objeto.nueva = valor",
+      "objeto.push(\"nueva\", valor)",
+      "objeto[\"nueva\"] = valor"
     ],
     "correctAnswer": 3,
     "difficulty": "medium",
@@ -861,10 +861,10 @@
     "id": "th-067",
     "question": "¿Qué palabra clave se usa para crear una clase en JavaScript?",
     "options": [
-      "`class`",
-      "`object`",
-      "`template`",
-      "`struct`"
+      "class",
+      "object",
+      "template",
+      "struct"
     ],
     "correctAnswer": 0,
     "difficulty": "easy",
@@ -874,10 +874,10 @@
     "id": "th-068",
     "question": "¿Qué método especial se llama automáticamente al crear una instancia de una clase?",
     "options": [
-      "`init()`",
-      "`start()`",
-      "`constructor()`",
-      "`create()`"
+      "init()",
+      "start()",
+      "constructor()",
+      "create()"
     ],
     "correctAnswer": 2,
     "difficulty": "easy",
@@ -887,10 +887,10 @@
     "id": "th-069",
     "question": "¿Cómo se crea una instancia de una clase `Jugador`?",
     "options": [
-      "`let j = Jugador.new()`",
-      "`let j = new Jugador()`",
-      "`let j = Jugador()`",
-      "`let j = create Jugador()`"
+      "let j = Jugador.new()",
+      "let j = new Jugador()",
+      "let j = Jugador()",
+      "let j = create Jugador()"
     ],
     "correctAnswer": 1,
     "difficulty": "easy",
@@ -965,8 +965,8 @@
     "id": "th-075",
     "question": "¿Cuál es la diferencia entre `let` y `var` respecto al scope?",
     "options": [
-      "`let` tiene scope de bloque, `var` tiene scope de función",
-      "`var` tiene scope de bloque, `let` tiene scope de función",
+      "let tiene scope de bloque, var tiene scope de función",
+      "var tiene scope de bloque, let tiene scope de función",
       "Ambos tienen scope de bloque",
       "Ambos tienen scope global"
     ],
@@ -991,10 +991,10 @@
     "id": "th-077",
     "question": "¿Cuál de los siguientes es un valor falsy en JavaScript?",
     "options": [
-      "`\"false\"`",
-      "`[]`",
-      "`0`",
-      "`{}`"
+      "\"false\"",
+      "[]",
+      "0",
+      "{}"
     ],
     "correctAnswer": 2,
     "difficulty": "medium",
@@ -1030,10 +1030,10 @@
     "id": "th-080",
     "question": "¿Qué operador se usa para la concatenación de strings?",
     "options": [
-      "`&`",
-      "`.`",
-      "`+`",
-      "`,`"
+      "&",
+      ".",
+      "+",
+      ","
     ],
     "correctAnswer": 2,
     "difficulty": "easy",

@@ -61,41 +61,12 @@ export default function ArenaExamsView({ onBack, onComplete, playCorrect, playEr
         {/* Examen Teórico */}
         <CyberCard borderColor="green" className="cursor-pointer hover:scale-[1.02] transition-transform">
           <div className="text-center">
-            <Brain className="mx-auto mb-4 text-cyber-green" size={42} strokeWidth={1.5} aria-hidden="true" />
+            <BookOpen className="mx-auto mb-4 text-cyber-green" size={42} strokeWidth={1.5} aria-hidden="true" />
             <h2 className="font-mono text-xl font-bold text-cyber-green mb-2">
               Examen Teórico
             </h2>
             <p className="font-mono text-xs text-cyber-text mb-4">
-              Conceptos de programación: variables, funciones, POO, estructuras de control y más.
-            </p>
-            <div className="space-y-1 mb-4">
-              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-cyan">
-                <BookOpen size={13} aria-hidden="true" /> {theoryBank.length} preguntas disponibles
-              </p>
-              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-yellow">
-                <Target size={13} aria-hidden="true" /> 25 preguntas <span aria-hidden="true">·</span> <Clock3 size={13} aria-hidden="true" /> 30 min
-              </p>
-            </div>
-            <CyberButton
-              color="green"
-              onClick={() =>
-                setSelectedExam({ id: 'theory', title: 'Examen Teórico', bank: theoryBank })
-              }
-            >
-              COMENZAR
-            </CyberButton>
-          </div>
-        </CyberCard>
-
-        {/* Examen Técnico Web */}
-        <CyberCard borderColor="cyan" className="cursor-pointer hover:scale-[1.02] transition-transform">
-          <div className="text-center">
-            <BookOpen className="mx-auto mb-4 text-cyber-cyan" size={42} strokeWidth={1.5} aria-hidden="true" />
-            <h2 className="font-mono text-xl font-bold text-cyber-cyan mb-2">
-              Examen Técnico Web
-            </h2>
-            <p className="font-mono text-xs text-cyber-text mb-4">
-              HTML5, CSS3, JavaScript, React y Git. Tecnologías fundamentales del desarrollo web.
+              HTML5, CSS3, React, Git y tecnologías fundamentales del desarrollo web.
             </p>
             <div className="space-y-1 mb-4">
               <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-cyan">
@@ -106,9 +77,38 @@ export default function ArenaExamsView({ onBack, onComplete, playCorrect, playEr
               </p>
             </div>
             <CyberButton
+              color="green"
+              onClick={() =>
+                setSelectedExam({ id: 'theory', title: 'Examen Teórico', bank: webTechBank })
+              }
+            >
+              COMENZAR
+            </CyberButton>
+          </div>
+        </CyberCard>
+
+        {/* Examen Técnico Web */}
+        <CyberCard borderColor="cyan" className="cursor-pointer hover:scale-[1.02] transition-transform">
+          <div className="text-center">
+            <Brain className="mx-auto mb-4 text-cyber-cyan" size={42} strokeWidth={1.5} aria-hidden="true" />
+            <h2 className="font-mono text-xl font-bold text-cyber-cyan mb-2">
+              Examen Técnico Web
+            </h2>
+            <p className="font-mono text-xs text-cyber-text mb-4">
+              Conceptos de programación: variables, funciones, POO, estructuras de control y ejercicios de "¿Qué imprime?".
+            </p>
+            <div className="space-y-1 mb-4">
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-cyan">
+                <BookOpen size={13} aria-hidden="true" /> {theoryBank.length} preguntas disponibles
+              </p>
+              <p className="flex items-center justify-center gap-1 font-mono text-[10px] text-cyber-yellow">
+                <Target size={13} aria-hidden="true" /> 25 preguntas <span aria-hidden="true">·</span> <Clock3 size={13} aria-hidden="true" /> 30 min
+              </p>
+            </div>
+            <CyberButton
               color="cyan"
               onClick={() =>
-                setSelectedExam({ id: 'webtech', title: 'Examen Técnico Web', bank: webTechBank })
+                setSelectedExam({ id: 'webtech', title: 'Examen Técnico Web', bank: theoryBank })
               }
             >
               COMENZAR

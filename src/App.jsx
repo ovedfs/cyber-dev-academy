@@ -307,6 +307,7 @@ function App() {
         rank={getRank()}
         soundEnabled={gameState.soundEnabled}
         onToggleSound={toggleSound}
+        onHome={() => setCurrentView('home')}
       />
 
       {/* Main Content */}

@@ -201,10 +201,49 @@ function processCodeBlock(code) {
 }
 
 /**
+ * Determina si un segmento de código es inline (palabra clave aislada)
+ * o si debe mostrarse como bloque de código completo.
+ * 
+ * Reglas:
+ * - Código multilínea → bloque
+ * - Palabra clave o símbolo individual → inline
+ * - Contiene punto y coma → bloque (sentencia completa)
+ * - Control flow / función / clase → bloque
+ * - Expresión corta (≤40 chars) → inline
+ * - Largo → bloque
+ */
+function isInlineCode(content) {
+  if (!content) return true
+  if (content.includes('\n')) return false
+
+  const trimmed = content.trim()
+
+  // Palabra clave individual (let, const, if, return, map, etc.)
+  const singleWordPattern = /^[a-zA-Z_$][a-zA-Z0-9_$]*$/
+  // Símbolo aislado ({}, [], (), +, =>, etc.)
+  const singleSymbolPattern = /^[{}()\[\]+\-*/%=<>!&|^~;:,.?'"`@#$]+$/
+
+  if (singleWordPattern.test(trimmed) || singleSymbolPattern.test(trimmed)) return true
+
+  // Sentencia completa con punto y coma → bloque
+  if (trimmed.includes(';')) return false
+
+  // Estructuras de control, función o clase → bloque
+  if (/^(for|while|if|switch|function|class)\s*\(/.test(trimmed)) return false
+
+  // Expresión corta (typeof x, x > 5, "Hola", etc.) → inline
+  if (trimmed.length <= 40) return true
+
+  // Por defecto, contenido largo → bloque
+  return false
+}
+
+/**
  * FormattedQuestion - Renderiza preguntas con código formateado
  * 
  * Detecta bloques de código dentro de backticks `` `codigo` ``
  * y los renderiza con formato de bloque de código con sintaxis coloreada.
+ * Las palabras clave aisladas se renderizan como inline code.
  */
 export default function FormattedQuestion({ text }) {
   if (!text) return null
@@ -249,6 +288,20 @@ export default function FormattedQuestion({ text }) {
     <div className="font-mono text-base sm:text-lg text-cyber-text leading-relaxed">
       {segments.map((segment, i) => {
         if (segment.type === 'code') {
+          // Determinar si es inline o bloque
+          if (isInlineCode(segment.content)) {
+            // Inline code: renderizar como <code> en línea
+            return (
+              <code
+                key={i}
+                className="px-1.5 py-0.5 bg-cyber-dark/60 border border-cyber-border/30 rounded text-sm font-mono text-cyber-cyan mx-1"
+              >
+                {segment.content}
+              </code>
+            )
+          }
+
+          // Block code: renderizar con el formato completo existente
           const codeLines = processCodeBlock(segment.content)
           
           return (
