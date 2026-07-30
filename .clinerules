@@ -4,7 +4,7 @@
 
 # PROTOCOLO DE TRABAJO (PASO A PASO)
 1. **Paso Único:** Identifica la primera tarea pendiente (`[ ]`) en `PLAN.md`. Trabaja SOLO en esa tarea. No te adelantes ni modifiques tareas futuras.
-2. **Pruebas:** Verifica que el código compile/funcione (ej. `npm run build` o linter) antes de responder.
+2. **Pruebas:** Verifica que el código compile/funcione (ej. `npm run build` o linter) antes de responder (ve guia al final).
 3. **Pausa y Formato de Entrega:** Al terminar y probar la tarea, DETENTE y responde ÚNICAMENTE usando el siguiente formato:
 
 =================================================
@@ -32,3 +32,15 @@ Pruebas ejecutadas:
    - Pregunta si desea hacer Commit/Push.
    - Genera el mensaje usando Conventional Commits (ej. `feat: ...`, `fix: ...`).
    - Espera confirmación explícita antes de ejecutar `git push`.
+
+## Estrategia de validación preferida
+
+La ejecución de comandos tiene un coste y puede bloquear el flujo de trabajo.
+
+Antes de ejecutar cualquier comando, pregúntate:
+
+- ¿Puedo verificar esto leyendo el código?
+- ¿Puedo inferir el resultado?
+- ¿Es realmente necesario ejecutar algo?
+
+Si la respuesta es sí, no ejecutes ningún comando.

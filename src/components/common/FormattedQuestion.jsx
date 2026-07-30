@@ -102,35 +102,88 @@ function formatCodeLine(line) {
  * Procesa un bloque de código: divide en líneas, identa correctamente
  */
 function processCodeBlock(code) {
-  // Si el código ya tiene saltos de línea, procesar normalmente
+  // Si el código ya tiene saltos de línea, procesar con balanceo de profundidad
   if (code.includes('\n')) {
     const rawLines = code.split('\n')
-    let currentIndent = 0
+    let parenDepth = 0
+    let bracketDepth = 0
+    let braceDepth = 0
+    // Stack para rastrear si cada '{' en nivel raíz es bloque u objeto literal
+    const braceIsBlock = []
+    let inString = false
+    let stringChar = null
 
     return rawLines.map((line) => {
       const trimmed = line.trim()
       if (!trimmed) return { fragments: [], indent: 0 }
 
-      // Si la línea empieza con } o ] o ), reducir indentación
-      let displayIndent = currentIndent
+      // Calcular indentación de visualización basada en braceDepth antes de procesar la línea
+      let displayIndent = braceDepth
+
+      // Si la línea empieza con } o ] o ), reducir indentación visual
       if (trimmed.startsWith('}') || trimmed.startsWith(']') || trimmed.startsWith(')')) {
-        displayIndent = Math.max(0, currentIndent - 1)
+        displayIndent = Math.max(0, braceDepth - 1)
       }
 
-      // Actualizar indentación para la siguiente línea
-      const openCount = (trimmed.match(/[{[(]/g) || []).length
-      const closeCount = (trimmed.match(/[}\])]/g) || []).length
-      currentIndent = Math.max(0, currentIndent + openCount - closeCount)
+      // Procesar la línea carácter por carácter para actualizar profundidades correctamente
+      for (let i = 0; i < line.length; i++) {
+        const char = line[i]
+
+        // Manejar strings
+        if ((char === '"' || char === "'" || char === '`') && !inString) {
+          inString = true
+          stringChar = char
+        } else if (char === stringChar && inString) {
+          if (i === 0 || line[i - 1] !== '\\') {
+            inString = false
+            stringChar = null
+          }
+        } else if (!inString) {
+          if (char === '{') {
+            const isRootLevel = parenDepth === 0 && bracketDepth === 0
+            // Detectar objeto literal: '{' precedido por '=' o ':' (en nivel raíz)
+            const prevChars = line.slice(0, i).trimEnd()
+            const prevChar = prevChars.length > 0 ? prevChars[prevChars.length - 1] : ''
+            const isObjectLiteral = isRootLevel && (prevChar === '=' || prevChar === ':')
+
+            if (isRootLevel && !isObjectLiteral) {
+              // Bloque de control → incrementa indentación
+              braceDepth++
+              braceIsBlock.push(true)
+            } else {
+              // Objeto literal o dentro de paréntesis → no cambia indentación
+              braceIsBlock.push(false)
+            }
+          } else if (char === '}') {
+            const wasBlock = braceIsBlock.length > 0 ? braceIsBlock.pop() : false
+            if (wasBlock) {
+              braceDepth = Math.max(0, braceDepth - 1)
+            }
+          } else if (char === '(') {
+            parenDepth++
+          } else if (char === ')') {
+            parenDepth = Math.max(0, parenDepth - 1)
+          } else if (char === '[') {
+            bracketDepth++
+          } else if (char === ']') {
+            bracketDepth = Math.max(0, bracketDepth - 1)
+          }
+        }
+      }
 
       return { fragments: highlightLine(trimmed), indent: displayIndent }
     })
   }
 
-  // Código en una sola línea: parsear caracter por caracter
-  // para dividir correctamente por {, }, ; respetando strings
+  // Código en una sola línea: parsear respetando balanceo de paréntesis/llaves
+  // para NO dividir for(...), objetos literales, funciones anónimas, etc.
   const lines = []
   let current = ''
-  let depth = 0
+  let parenDepth = 0      // profundidad de paréntesis ()
+  let bracketDepth = 0    // profundidad de corchetes []
+  let braceDepth = 0      // profundidad de llaves {}
+  // Stack para rastrear si cada '{' en nivel raíz es bloque (true) u objeto literal (false)
+  const braceIsBlock = []
   let inString = false
   let stringChar = null
 
@@ -143,7 +196,6 @@ function processCodeBlock(code) {
       stringChar = char
       current += char
     } else if (char === stringChar && inString) {
-      // Verificar que no sea escapado
       if (i === 0 || code[i - 1] !== '\\') {
         inString = false
         stringChar = null
@@ -151,34 +203,58 @@ function processCodeBlock(code) {
       current += char
     } else if (!inString) {
       if (char === '{') {
-        // Si hay contenido antes de la llave, empujarlo como línea
-        if (current.trim()) {
-          lines.push({ text: current.trim(), indent: depth })
+        const isRootLevel = parenDepth === 0 && bracketDepth === 0 && braceDepth === 0
+        // Detectar si es objeto literal: '{' precedido por '=', ':', o '=>' (en nivel raíz)
+        const trimmed = current.trimEnd()
+        const prevChar = trimmed.length > 0 ? trimmed[trimmed.length - 1] : ''
+        const isObjectLiteral = isRootLevel && (prevChar === '=' || prevChar === ':')
+        
+        if (isRootLevel && current.trim() && !isObjectLiteral) {
+          // Bloque de control (if, for, function, etc.) → forzar salto de línea
+          lines.push({ text: current.trim(), indent: braceDepth })
+          lines.push({ text: '{', indent: braceDepth })
+          braceDepth++
+          braceIsBlock.push(true)
+          current = ''
+        } else {
+          // Objeto literal o dentro de paréntesis → mantener inline
+          braceDepth++
+          braceIsBlock.push(false) // NO es un bloque de control, mantener inline
+          current += char
         }
-        // La llave va en su propia línea
-        lines.push({ text: '{', indent: depth })
-        depth++
-        current = ''
       } else if (char === '}') {
-        // Si hay contenido antes de cerrar, empujarlo
-        if (current.trim()) {
-          lines.push({ text: current.trim(), indent: depth })
+        const wasBlock = braceIsBlock.length > 0 ? braceIsBlock.pop() : false
+        braceDepth = Math.max(0, braceDepth - 1)
+        const isRootLevel = parenDepth === 0 && bracketDepth === 0 && braceDepth === 0
+        if (isRootLevel && wasBlock && current.trim()) {
+          lines.push({ text: current.trim(), indent: braceDepth })
+          lines.push({ text: '}', indent: braceDepth })
+          current = ''
+        } else {
+          current += char
         }
-        depth = Math.max(0, depth - 1)
-        // La llave de cierre va en su propia línea
-        lines.push({ text: '}', indent: depth })
-        current = ''
       } else if (char === ';') {
-        current += ';'
-        if (current.trim()) {
-          lines.push({ text: current.trim(), indent: depth })
+        // Solo dividir por ; si estamos en nivel raíz (no dentro de for(...) ni objetos anidados)
+        if (parenDepth === 0 && bracketDepth === 0 && braceDepth === 0) {
+          current += ';'
+          if (current.trim()) {
+            lines.push({ text: current.trim(), indent: braceDepth })
+          }
+          current = ''
+        } else {
+          current += char
         }
-        current = ''
-      } else if (char === '[' || char === '(') {
-        depth++
+      } else if (char === '(') {
+        parenDepth++
         current += char
-      } else if (char === ']' || char === ')') {
-        depth--
+      } else if (char === ')') {
+        parenDepth = Math.max(0, parenDepth - 1)
+        current += char
+      } else if (char === '[') {
+        bracketDepth++
+        current += char
+      } else if (char === ']') {
+        bracketDepth = Math.max(0, bracketDepth - 1)
         current += char
       } else {
         current += char
@@ -190,7 +266,7 @@ function processCodeBlock(code) {
 
   // Lo que quede pendiente
   if (current.trim()) {
-    lines.push({ text: current.trim(), indent: depth })
+    lines.push({ text: current.trim(), indent: braceDepth })
   }
 
   // Convertir a formato de fragmentos con resaltado
