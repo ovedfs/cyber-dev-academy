@@ -5,6 +5,7 @@ import CyberCard from './components/common/CyberCard'
 import CyberButton from './components/common/CyberButton'
 import Modal from './components/common/Modal'
 import useGameProgress from './hooks/useGameProgress'
+import useSound from './hooks/useSound'
 import ArenaExamsView from './views/ArenaExamsView'
 import FixTheCodeView from './views/FixTheCodeView'
 import MissionMap from './components/mission/MissionMap'
@@ -24,6 +25,8 @@ function App() {
     addBadge,
   } = useGameProgress()
 
+  const { playCorrect, playError, playLevelUp, playClick } = useSound(gameState.soundEnabled)
+
   const [currentView, setCurrentView] = useState('home') // home | exams | fix-code | missions | logic | achievements
   const [modalOpen, setModalOpen] = useState(false)
 
@@ -32,10 +35,13 @@ function App() {
     // Otorgar XP si el score es >= 80%
     if (results.score >= 80) {
       addXP(200)
+      playLevelUp()
     } else if (results.score >= 60) {
       addXP(100)
+      playCorrect()
     } else {
       addXP(50)
+      playError()
     }
   }
 
@@ -55,6 +61,7 @@ function App() {
     completeChallenge(challengeId)
     // Otorgar XP
     addXP(xpEarned)
+    playLevelUp()
     // Verificar si es el primer desafío completado para dar insignia
     if (gameState.completedChallenges.length === 0) {
       addBadge('bug-hunter')
@@ -66,6 +73,7 @@ function App() {
     completeLogicChallenge(challengeId, userCode)
     // Otorgar XP
     addXP(xpEarned)
+    playLevelUp()
     // Verificar si es el primer desafío de lógica completado para dar insignia
     if (gameState.completedLogicChallenges.length === 0) {
       addBadge('logic-pioneer')
@@ -80,6 +88,9 @@ function App() {
           <ArenaExamsView
             onBack={() => setCurrentView('home')}
             onComplete={handleExamComplete}
+            playCorrect={playCorrect}
+            playError={playError}
+            playLevelUp={playLevelUp}
           />
         )
       case 'fix-code':
@@ -88,6 +99,9 @@ function App() {
             onBack={() => setCurrentView('home')}
             onComplete={handleChallengeComplete}
             completedChallenges={gameState.completedChallenges}
+            playCorrect={playCorrect}
+            playError={playError}
+            playLevelUp={playLevelUp}
           />
         )
       case 'logic':
@@ -96,6 +110,9 @@ function App() {
             onBack={() => setCurrentView('home')}
             onComplete={handleLogicChallengeComplete}
             completedChallenges={gameState.completedLogicChallenges}
+            playCorrect={playCorrect}
+            playError={playError}
+            playLevelUp={playLevelUp}
           />
         )
       case 'missions':
@@ -113,6 +130,7 @@ function App() {
             addBadge={addBadge}
             addXP={addXP}
             onBack={() => setCurrentView('home')}
+            playLevelUp={playLevelUp}
           />
         )
       default:

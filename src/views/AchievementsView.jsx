@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { ArrowLeft, Trophy, Zap, Lock, Unlock } from 'lucide-react'
+import confetti from 'canvas-confetti'
 import CyberCard from '../components/common/CyberCard'
 import CyberButton from '../components/common/CyberButton'
 import AchievementBadge from '../components/common/AchievementBadge'
@@ -10,7 +11,9 @@ export default function AchievementsView({
   addBadge,
   addXP,
   onBack,
+  playLevelUp,
 }) {
+  const viewRef = useRef(null)
   const {
     achievements,
     unlockedAchievements,
@@ -30,6 +33,17 @@ export default function AchievementsView({
     if (newlyUnlocked.length > 0) {
       setNewAchievements((prev) => [...prev, ...newlyUnlocked.map((a) => a.id)])
       setShowNewBanner(true)
+      if (playLevelUp) playLevelUp()
+      // Confetti al desbloquear logros
+      const rect = viewRef.current?.getBoundingClientRect()
+      if (rect) {
+        confetti({
+          particleCount: 120,
+          spread: 100,
+          origin: { x: 0.5, y: 0.3 },
+          colors: ['#ffcc00', '#00e5ff', '#9d00ff', '#00ff66', '#ff66cc'],
+        })
+      }
       const timer = setTimeout(() => setShowNewBanner(false), 5000)
       return () => clearTimeout(timer)
     }
@@ -52,7 +66,7 @@ export default function AchievementsView({
   ]
 
   return (
-    <div className="animate-page-enter">
+    <div ref={viewRef} className="animate-page-enter">
       {/* Banner de nuevos logros */}
       {showNewBanner && newAchievements.length > 0 && (
         <div className="fixed top-20 left-1/2 -translate-x-1/2 z-50 animate-fade-in">

@@ -43,6 +43,9 @@ export default function LogicLabView({
   onBack,
   onComplete,
   completedChallenges: externalCompletedChallenges = [],
+  playCorrect,
+  playError,
+  playLevelUp,
 }) {
   // Normalizar IDs de completados (soporta objetos {id, code} o strings legacy)
   const completedIdsList = externalCompletedChallenges.map(
@@ -163,6 +166,8 @@ export default function LogicLabView({
           xpEarned: challenge.xpReward,
         })
         setVictoryModalOpen(true)
+        if (playCorrect) playCorrect()
+        if (playLevelUp) playLevelUp()
 
         const rect = viewRef.current?.getBoundingClientRect()
         if (rect) {
@@ -173,6 +178,8 @@ export default function LogicLabView({
             colors: ['#ffcc00', '#00e5ff', '#9d00ff', '#00ff66'],
           })
         }
+      } else {
+        if (playError) playError()
       }
     }, 300)
   }, [currentChallengeId, userCode])

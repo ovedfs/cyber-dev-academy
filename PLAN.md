@@ -14,9 +14,9 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 ---
 
 ## 📌 Estado del Proyecto
-- **Fase Actual:** Fase 5 (Lógica & Gamificación)
-- **Última Tarea:** Zona de Lógica (`LogicLabView.jsx`) completado.
-- **Próxima Tarea:** Sistema de Logros (`AchievementBadge.jsx`).
+- **Fase Actual:** Fase 5 (Lógica & Gamificación) — ✅ COMPLETADA
+- **Última Tarea:** Audio/FX (sonidos y confetti) completado.
+- **Próxima Tarea:** Fase 6 — Optimización y Despliegue.
 
 ---
 
@@ -45,7 +45,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - [x] **Mapa de Misiones (`MissionMap.jsx`):** Renderizar nodos estilo videojuego con estados (bloqueado/desbloqueado/estrellas) vinculados al XP del usuario.
 - [x] **Zona de Lógica (`LogicLabView.jsx`):** Vista de retos interactivos de algoritmos JS (arreglos, métodos, funciones) evaluando el resultado en tiempo real con Monaco Editor, motor de evaluación, tips pedagógicos y consola de resultados.
 - [x] **Sistema de Logros (`AchievementBadge.jsx`):** Galería de medallas/insignias guardadas en `localStorage` que se desbloquean al cumplir hitos (ej. 3 bugs corregidos, puntaje perfecto).
-- [ ] **Audio/FX:** Integrar efectos de sonido con Howler.js (acierto, error, level up) y partículas Confetti al ganar.
+- [x] **Audio/FX:** Integrar efectos de sonido con Howler.js (acierto, error, level up) y partículas Confetti al ganar.
 
 ### Fase 6: Optimización y Despliegue
 - [ ] Pruebas en pantalla/laptops de resolución estándar
@@ -60,3 +60,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-27:** Completada Zona de Lógica con 10 retos JS, Monaco Editor, evaluador con test cases, tips pedagógicos y consola redimensionable.
 - **2026-07-28:** Persistencia de código solución en desafíos de lógica + libre elección de desafíos + compatibilidad con datos legacy en localStorage.
 - **2026-07-28:** Completado Sistema de Logros: 14 logros, hook useAchievements, galería con filtros, tooltips, barra de progreso, banner de nuevos logros y tarjeta de acceso en home.
+- **2026-07-29:** Completado Audio/FX: sonidos procedurales con Web Audio API (correcto, error, level up, click) + confetti en exámenes, desafíos, lógica y logros. Finalizada Fase 5.

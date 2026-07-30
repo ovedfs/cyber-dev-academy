@@ -1,13 +1,31 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
 import { BookOpen, Brain, Clock3, Target } from 'lucide-react'
+import confetti from 'canvas-confetti'
 import CyberCard from '../components/common/CyberCard'
 import CyberButton from '../components/common/CyberButton'
 import ExamRunner from '../components/exam/ExamRunner'
 import theoryBank from '../data/theoryBank.json'
 import webTechBank from '../data/webTechBank.json'
 
-export default function ArenaExamsView({ onBack, onComplete }) {
+export default function ArenaExamsView({ onBack, onComplete, playCorrect, playError, playLevelUp }) {
+  const viewRef = useRef(null)
   const [selectedExam, setSelectedExam] = useState(null)
+
+  const handleExamComplete = (examId, results) => {
+    if (onComplete) onComplete(examId, results)
+    // Confetti si puntaje >= 80%
+    if (results.score >= 80) {
+      const rect = viewRef.current?.getBoundingClientRect()
+      if (rect) {
+        confetti({
+          particleCount: 100,
+          spread: 80,
+          origin: { x: 0.5, y: 0.4 },
+          colors: ['#00ff66', '#00e5ff', '#9d00ff', '#ffcc00'],
+        })
+      }
+    }
+  }
 
   if (selectedExam) {
     return (
@@ -15,15 +33,16 @@ export default function ArenaExamsView({ onBack, onComplete }) {
         questionBank={selectedExam.bank}
         examTitle={selectedExam.title}
         onBack={() => setSelectedExam(null)}
-        onComplete={(results) => {
-          if (onComplete) onComplete(selectedExam.id, results)
-        }}
+        onComplete={(results) => handleExamComplete(selectedExam.id, results)}
+        playCorrect={playCorrect}
+        playError={playError}
+        playLevelUp={playLevelUp}
       />
     )
   }
 
   return (
-    <div className="max-w-4xl mx-auto">
+    <div ref={viewRef} className="max-w-4xl mx-auto">
       {/* Encabezado */}
       <div className="text-center mb-8">
         <p className="font-mono text-sm text-cyber-green mb-2">

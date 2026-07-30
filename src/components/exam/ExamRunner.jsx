@@ -5,7 +5,7 @@ import QuestionCard from './QuestionCard'
 import CyberButton from '../common/CyberButton'
 import ExamResults from './ExamResults'
 
-export default function ExamRunner({ questionBank, examTitle, onBack, onComplete }) {
+export default function ExamRunner({ questionBank, examTitle, onBack, onComplete, playCorrect, playError, playLevelUp }) {
   const {
     currentQuestion,
     currentIndex,
@@ -40,6 +40,10 @@ export default function ExamRunner({ questionBank, examTitle, onBack, onComplete
     const res = getResults()
     setResults(res)
     if (onComplete) onComplete(res)
+    // Sonido según resultado
+    if (res.score >= 80 && playLevelUp) playLevelUp()
+    else if (res.score >= 60 && playCorrect) playCorrect()
+    else if (playError) playError()
   }
 
   const handleBackToMenu = () => {

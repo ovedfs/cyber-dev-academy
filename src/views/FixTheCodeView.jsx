@@ -34,6 +34,9 @@ export default function FixTheCodeView({
   onComplete,
   completedChallenges: externalCompletedChallenges = [],
   hintsUsed: externalHintsUsed = 0,
+  playCorrect,
+  playError,
+  playLevelUp,
 }) {
   // Estado del desafío actual: buscar el primer desafío no completado
   const getInitialChallengeId = () => {
@@ -149,6 +152,8 @@ export default function FixTheCodeView({
           hintsUsed,
         })
         setVictoryModalOpen(true)
+        if (playCorrect) playCorrect()
+        if (playLevelUp) playLevelUp()
 
         const rect = viewRef.current?.getBoundingClientRect()
         if (rect) {
@@ -159,6 +164,8 @@ export default function FixTheCodeView({
             colors: ['#00ff66', '#00e5ff', '#9d00ff', '#ffcc00'],
           })
         }
+      } else {
+        if (playError) playError()
       }
     }, 300)
   }, [currentChallengeId, userFiles, hintsUsed])
