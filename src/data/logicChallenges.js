@@ -202,7 +202,17 @@ jugador.subirNivel();
 console.log(jugador.nivel); // 2`,
     testCases: [
       { input: ["Heroe", "Goblin"], expected: { vidaEnemigo: 90, nivelJugador: 2 } }
-    ]
+    ],
+    evaluate(PlayerClass, testCases) {
+      return testCases.map(({ input }) => {
+        const [nombreJugador, nombreEnemigo] = input
+        const jugador = new PlayerClass(nombreJugador)
+        const enemigo = new PlayerClass(nombreEnemigo)
+        jugador.atacar(enemigo)
+        jugador.subirNivel()
+        return { vidaEnemigo: enemigo.vida, nivelJugador: jugador.nivel }
+      })
+    }
   },
   {
     id: "logic-007",
@@ -265,7 +275,14 @@ console.log(dragon.nombre); // "Smaug"`,
       { input: ["Smaug", "dragon"], expected: { rugido: "RAAAWR!", nombre: "Smaug" } },
       { input: ["Uruk", "orc"], expected: { rugido: "GRRR!", nombre: "Uruk" } },
       { input: ["Gobby", "goblin"], expected: { rugido: "¡Grr!", nombre: "Gobby" } }
-    ]
+    ],
+    evaluate(EnemyClass, testCases) {
+      return testCases.map(({ input }) => {
+        const [nombre, tipo] = input
+        const enemigo = new EnemyClass(nombre, tipo)
+        return { rugido: enemigo.rugir(), nombre: enemigo.nombre }
+      })
+    }
   },
   {
     id: "logic-008",

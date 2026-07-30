@@ -16,42 +16,108 @@ export function evaluateLogicChallenge(challenge, userCode) {
   }
 
   try {
-    // Extraer el nombre de la función definida por el usuario
-    const funcNameMatch = userCode.match(/function\s+(\w+)\s*\(/)
-    const funcName = funcNameMatch ? funcNameMatch[1] : null
-
-    if (!funcName) {
-      throw new Error('No se encontró una función definida en tu código.')
-    }
-
     // Limpiar el código: solo quitamos comentarios, NO console.logs
     const cleanCode = userCode
       .replace(/\/\/.*$/gm, '') // Quitar comentarios de una línea
       .replace(/\/\*[\s\S]*?\*\//g, '') // Quitar comentarios multi-línea
 
-    // Ejecutar el código limpio para definir la función en el ámbito
-    const fn = new Function(cleanCode + `\nreturn ${funcName};`)
-    const userFunction = fn()
+    // Detectar si el código define una clase
+    // Primero busca clase que hereda (la más específica), luego clase simple
+    const classMatch = cleanCode.match(/class\s+(\w+)\s+extends/) || cleanCode.match(/class\s+(\w+)/)
+    // Detectar si el código define una función
+    const funcMatch = cleanCode.match(/function\s+(\w+)\s*\(/)
 
-    for (const testCase of challenge.testCases) {
-      try {
-        const actual = userFunction(...testCase.input)
-        const passed = deepEqual(actual, testCase.expected)
-        results.push({
-          input: testCase.input,
-          expected: testCase.expected,
-          actual,
-          passed,
-        })
-      } catch (testError) {
-        results.push({
-          input: testCase.input,
-          expected: testCase.expected,
-          actual: null,
-          passed: false,
-          error: testError.message,
-        })
+    if (classMatch) {
+      // --- EVALUACIÓN DE CLASES ---
+      const className = classMatch[1]
+
+      // Ejecutar el código limpio para definir la clase en el ámbito
+      const fn = new Function(cleanCode + `\nreturn ${className};`)
+      const userClass = fn()
+
+      // Si el desafío tiene un método evaluate personalizado, usarlo
+      if (typeof challenge.evaluate === 'function') {
+        const actualResults = challenge.evaluate(userClass, challenge.testCases)
+        for (let i = 0; i < challenge.testCases.length; i++) {
+          const testCase = challenge.testCases[i]
+          const actual = actualResults[i]
+          const passed = deepEqual(actual, testCase.expected)
+          results.push({
+            input: testCase.input,
+            expected: testCase.expected,
+            actual,
+            passed,
+          })
+        }
+      } else {
+        // Fallback: intentar instanciar y llamar métodos genéricamente
+        for (const testCase of challenge.testCases) {
+          try {
+            const instance = new userClass(...testCase.input)
+            // Si el test espera un objeto con propiedades, verificamos cada una
+            if (typeof testCase.expected === 'object' && testCase.expected !== null && !Array.isArray(testCase.expected)) {
+              const actual = {}
+              for (const key of Object.keys(testCase.expected)) {
+                actual[key] = instance[key]
+              }
+              const passed = deepEqual(actual, testCase.expected)
+              results.push({
+                input: testCase.input,
+                expected: testCase.expected,
+                actual,
+                passed,
+              })
+            } else {
+              // Si no, comparamos directamente la instancia
+              const passed = deepEqual(instance, testCase.expected)
+              results.push({
+                input: testCase.input,
+                expected: testCase.expected,
+                actual: instance,
+                passed,
+              })
+            }
+          } catch (testError) {
+            results.push({
+              input: testCase.input,
+              expected: testCase.expected,
+              actual: null,
+              passed: false,
+              error: testError.message,
+            })
+          }
+        }
       }
+    } else if (funcMatch) {
+      // --- EVALUACIÓN DE FUNCIONES (original) ---
+      const funcName = funcMatch[1]
+
+      // Ejecutar el código limpio para definir la función en el ámbito
+      const fn = new Function(cleanCode + `\nreturn ${funcName};`)
+      const userFunction = fn()
+
+      for (const testCase of challenge.testCases) {
+        try {
+          const actual = userFunction(...testCase.input)
+          const passed = deepEqual(actual, testCase.expected)
+          results.push({
+            input: testCase.input,
+            expected: testCase.expected,
+            actual,
+            passed,
+          })
+        } catch (testError) {
+          results.push({
+            input: testCase.input,
+            expected: testCase.expected,
+            actual: null,
+            passed: false,
+            error: testError.message,
+          })
+        }
+      }
+    } else {
+      throw new Error('No se encontró una función o clase definida en tu código.')
     }
   } catch (evalError) {
     error = evalError.message

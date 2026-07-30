@@ -53,7 +53,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - [x] **Tipos de examen invertidos:** Intercambiar bancos theoryBank ↔ webTechBank.
 - [x] **Separar pregunta de código:** Mejorar espaciado en FormattedQuestion.
 - [x] **Formato for loop:** Corregir parser para que no divida `for(...)` en líneas.
-- [ ] **Clases en LogicLab:** Evaluador debe soportar `class` además de `function`.
+- [x] **Clases en LogicLab:** Evaluador debe soportar `class` además de `function`.
 - [ ] **Mapa de Misiones:** Corregir contador de exámenes completados.
 
 ### Fase 6: Optimización y Despliegue
@@ -75,3 +75,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-29:** Corrección #3: Tipos de examen invertidos — Examen Teórico ahora usa webTechBank y Examen Técnico Web usa theoryBank.
 - **2026-07-29:** Corrección #4: Separar pregunta de código en FormattedQuestion — inline code para palabras clave aisladas, block code para código multilínea/completo.
 - **2026-07-29:** Corrección #5: Parser de código en FormattedQuestion — balanceo de profundidad para no dividir for(...), objetos literales, funciones anónimas, etc.
+- **2026-07-30:** Corrección #6: Clases en LogicLab — Evaluador ahora soporta `class` además de `function` con método `evaluate` personalizado en desafíos OOP.
