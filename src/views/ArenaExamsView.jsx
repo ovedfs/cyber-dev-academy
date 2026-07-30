@@ -79,7 +79,7 @@ export default function ArenaExamsView({ onBack, onComplete, playCorrect, playEr
             <CyberButton
               color="green"
               onClick={() =>
-                setSelectedExam({ id: 'theory', title: 'Examen Teórico', bank: webTechBank })
+                setSelectedExam({ id: 'exam-001', title: 'Examen Teórico', bank: webTechBank })
               }
             >
               COMENZAR
@@ -108,7 +108,7 @@ export default function ArenaExamsView({ onBack, onComplete, playCorrect, playEr
             <CyberButton
               color="cyan"
               onClick={() =>
-                setSelectedExam({ id: 'webtech', title: 'Examen Técnico Web', bank: theoryBank })
+                setSelectedExam({ id: 'exam-002', title: 'Examen Técnico Web', bank: theoryBank })
               }
             >
               COMENZAR

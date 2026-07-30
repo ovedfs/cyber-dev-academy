@@ -54,7 +54,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - [x] **Separar pregunta de código:** Mejorar espaciado en FormattedQuestion.
 - [x] **Formato for loop:** Corregir parser para que no divida `for(...)` en líneas.
 - [x] **Clases en LogicLab:** Evaluador debe soportar `class` además de `function`.
-- [ ] **Mapa de Misiones:** Corregir contador de exámenes completados.
+- [x] **Mapa de Misiones:** Corregir contador de exámenes completados.
 
 ### Fase 6: Optimización y Despliegue
 - [ ] Pruebas en pantalla/laptops de resolución estándar
@@ -76,3 +76,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-29:** Corrección #4: Separar pregunta de código en FormattedQuestion — inline code para palabras clave aisladas, block code para código multilínea/completo.
 - **2026-07-29:** Corrección #5: Parser de código en FormattedQuestion — balanceo de profundidad para no dividir for(...), objetos literales, funciones anónimas, etc.
 - **2026-07-30:** Corrección #6: Clases en LogicLab — Evaluador ahora soporta `class` además de `function` con método `evaluate` personalizado en desafíos OOP.
+- **2026-07-30:** Corrección #7: Contador de exámenes en Mapa de Misiones — IDs alineados (ArenaExamsView con exam-001/exam-002), misión exam-003 eliminada. Módulo Arena muestra 0/2 real.
