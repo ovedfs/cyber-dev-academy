@@ -59,7 +59,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 ### Fase 6: Optimización y Despliegue
 - [x] Pruebas en pantalla/laptops de resolución estándar
 - [x] Optimización de carga (Lazy loading para Monaco Editor)
-- [ ] Configuración de script/workflow para despliegue (Vercel/GitHub Pages)
+- [x] Configuración de script/workflow para despliegue (Vercel/GitHub Pages)
 
 ---
 
