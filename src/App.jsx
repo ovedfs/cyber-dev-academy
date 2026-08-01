@@ -142,7 +142,7 @@ function App() {
                 <p className="font-mono text-sm text-cyber-green mb-2">
                   {'>'} SYSTEM INITIALIZED...
                 </p>
-                <h1 className="font-mono text-4xl sm:text-5xl lg:text-6xl font-bold text-cyber-cyan drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">
+                <h1 className="font-mono text-3xl sm:text-4xl lg:text-6xl font-bold text-cyber-cyan drop-shadow-[0_0_15px_rgba(0,229,255,0.5)]">
                   CyberDev Academy
                 </h1>
                 <p className="font-mono text-base sm:text-lg text-cyber-purple mt-4 max-w-2xl mx-auto">

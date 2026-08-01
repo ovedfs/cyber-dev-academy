@@ -236,7 +236,7 @@ export default function LogicLabView({
   return (
     <div
       ref={viewRef}
-      className="w-screen relative left-1/2 right-1/2 -ml-[50vw] h-[calc(100vh-5rem)] bg-cyber-dark overflow-hidden"
+      className="w-full h-[calc(100vh-5rem)] bg-cyber-dark overflow-hidden"
     >
       <div className="px-2 sm:px-4 py-2 h-full flex flex-col">
         {/* Header */}

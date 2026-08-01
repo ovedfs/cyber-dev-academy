@@ -125,7 +125,7 @@ export default function AchievementsView({
       </CyberCard>
 
       {/* Filtros */}
-      <div className="flex gap-2 mb-6">
+      <div className="flex flex-wrap gap-2 mb-6">
         {filterOptions.map(({ value, label, icon: Icon }) => (
           <button
             key={value}

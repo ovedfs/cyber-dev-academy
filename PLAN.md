@@ -57,7 +57,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - [x] **Mapa de Misiones:** Corregir contador de exámenes completados.
 
 ### Fase 6: Optimización y Despliegue
-- [ ] Pruebas en pantalla/laptops de resolución estándar
+- [x] Pruebas en pantalla/laptops de resolución estándar
 - [ ] Optimización de carga (Lazy loading para Monaco Editor)
 - [ ] Configuración de script/workflow para despliegue (Vercel/GitHub Pages)
 
@@ -77,3 +77,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-29:** Corrección #5: Parser de código en FormattedQuestion — balanceo de profundidad para no dividir for(...), objetos literales, funciones anónimas, etc.
 - **2026-07-30:** Corrección #6: Clases en LogicLab — Evaluador ahora soporta `class` además de `function` con método `evaluate` personalizado en desafíos OOP.
 - **2026-07-30:** Corrección #7: Contador de exámenes en Mapa de Misiones — IDs alineados (ArenaExamsView con exam-001/exam-002), misión exam-003 eliminada. Módulo Arena muestra 0/2 real.
+- **2026-07-31:** Fase 6 — Pruebas en pantalla/laptops de resolución estándar: corregido scroll horizontal en LogicLabView y FixTheCodeView, hero text responsive, padding responsive en CyberCard, flex-wrap en filtros de AchievementsView.
