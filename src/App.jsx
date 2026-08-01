@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { BookOpenCheck, Wrench, Map, Code2, Trophy } from 'lucide-react'
 import Navbar from './components/common/Navbar'
 import CyberCard from './components/common/CyberCard'
@@ -6,11 +6,25 @@ import CyberButton from './components/common/CyberButton'
 import Modal from './components/common/Modal'
 import useGameProgress from './hooks/useGameProgress'
 import useSound from './hooks/useSound'
-import ArenaExamsView from './views/ArenaExamsView'
-import FixTheCodeView from './views/FixTheCodeView'
-import MissionMap from './components/mission/MissionMap'
-import LogicLabView from './views/LogicLabView'
-import AchievementsView from './views/AchievementsView'
+
+// Lazy loading para vistas que usan Monaco Editor (código pesado)
+const ArenaExamsView = lazy(() => import('./views/ArenaExamsView'))
+const FixTheCodeView = lazy(() => import('./views/FixTheCodeView'))
+const MissionMap = lazy(() => import('./components/mission/MissionMap'))
+const LogicLabView = lazy(() => import('./views/LogicLabView'))
+const AchievementsView = lazy(() => import('./views/AchievementsView'))
+
+// Componente fallback para Suspense
+function ViewFallback() {
+  return (
+    <div className="flex items-center justify-center h-64">
+      <div className="text-center font-mono">
+        <p className="text-cyber-cyan text-sm animate-pulse">{'>'} CARGANDO MÓDULO...</p>
+        <div className="mt-4 w-8 h-8 border-2 border-cyber-cyan border-t-transparent rounded-full animate-spin mx-auto" />
+      </div>
+    </div>
+  )
+}
 
 function App() {
   const {
@@ -312,9 +326,11 @@ function App() {
 
       {/* Main Content */}
       <main id="main-content" className="pt-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div key={currentView} className="animate-page-enter">
-          {renderView()}
-        </div>
+        <Suspense fallback={<ViewFallback />}>
+          <div key={currentView} className="animate-page-enter">
+            {renderView()}
+          </div>
+        </Suspense>
       </main>
 
       {/* Modal */}

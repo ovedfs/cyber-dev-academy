@@ -58,7 +58,7 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 
 ### Fase 6: Optimización y Despliegue
 - [x] Pruebas en pantalla/laptops de resolución estándar
-- [ ] Optimización de carga (Lazy loading para Monaco Editor)
+- [x] Optimización de carga (Lazy loading para Monaco Editor)
 - [ ] Configuración de script/workflow para despliegue (Vercel/GitHub Pages)
 
 ---
@@ -78,3 +78,4 @@ Plataforma gamificada con estética cyberpunk para evaluar y ejercitar conceptos
 - **2026-07-30:** Corrección #6: Clases en LogicLab — Evaluador ahora soporta `class` además de `function` con método `evaluate` personalizado en desafíos OOP.
 - **2026-07-30:** Corrección #7: Contador de exámenes en Mapa de Misiones — IDs alineados (ArenaExamsView con exam-001/exam-002), misión exam-003 eliminada. Módulo Arena muestra 0/2 real.
 - **2026-07-31:** Fase 6 — Pruebas en pantalla/laptops de resolución estándar: corregido scroll horizontal en LogicLabView y FixTheCodeView, hero text responsive, padding responsive en CyberCard, flex-wrap en filtros de AchievementsView.
+- **2026-07-31:** Fase 6 — Optimización de carga: lazy loading con React.lazy + Suspense para todas las vistas, tema Monaco diferido con useEffect, bundle principal reducido de 447 kB a 204 kB (~54%).
